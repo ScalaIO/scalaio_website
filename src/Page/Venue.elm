@@ -1,6 +1,5 @@
-module Page.Hello.Name_ exposing (Data, Model, Msg, page)
+module Page.Venue exposing (Model, Msg, Data, page)
 
-import Components.Helpers as Help exposing (publicHeader)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
@@ -18,28 +17,24 @@ type alias Model =
 type alias Msg =
     Never
 
-
 type alias RouteParams =
-    { name : String }
-
+    {}
 
 page : Page RouteParams Data
 page =
-    Page.prerender
+    Page.single
         { head = head
-        , routes = routes
         , data = data
         }
         |> Page.buildNoState { view = view }
 
 
-routes : DataSource (List RouteParams)
-routes =
-    DataSource.succeed [ { name = "Fabrice" } ]
+type alias Data =
+    ()
 
 
-data : RouteParams -> DataSource Data
-data routeParams =
+data : DataSource Data
+data =
     DataSource.succeed ()
 
 
@@ -63,13 +58,10 @@ head static =
         |> Seo.website
 
 
-type alias Data =
-    ()
-
-
 view :
-    Maybe PageUrl -> Shared.Model -> StaticPayload Data RouteParams -> View Msg
+    Maybe PageUrl
+    -> Shared.Model
+    -> StaticPayload Data RouteParams
+    -> View Msg
 view maybeUrl sharedModel static =
-    { title = "NamePage"
-    , body = publicHeader
-    }
+    View.placeholder "Venue"

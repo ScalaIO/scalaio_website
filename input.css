@@ -1,12 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer utilities {
-    .nav header a.brand {
-        font-size: 1.4em;
-        margin-left: 5px;
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    @layer utilities {
+        body {
+            font-size: 100%;
+            font-family: Lato, sans-serif;
+        }
+        .nav header a.brand {
+            font-size: 1.4em;
+            margin-left: 5px;
+        }
+        .red {
+            color: #BC1321;
+        }
+        .navheaderColor {
+            background-color: rgb(51, 51, 51);
+            color: #FFF;
+        }
+        .header {
+            padding: 0 5px;
+            /*margin-top: 40px;*/
+            background-color: #000
+        }
+        .headerTitle {
+            font-size: 3rem;
+            line-height: 1.05;
+            color: #FFF;
+        }
+        .header img {
+            width: 45%;
+            max-height: 200px;
+        }
+        .teaser {
+            color: #FFF;
+            margin-top: 5px;
+            font-size: 2.25em;
+            line-height: 1.25;
+        }
     }
-    .red {
-        color: #BC1321;
-    }
-}
+    /*
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-grow: 1;*/

@@ -2,18 +2,24 @@ module Components.DropDown exposing (..)
 
 import Html exposing (Html, button, div)
 import Html.Attributes as Attr exposing (..)
+import Html.Events exposing (onClick)
 import Shared exposing (Msg)
 import Svg exposing (..)
 import Svg.Attributes as SvgAttr exposing (..)
-import Html.Events exposing (onClick)
 
 
+type MsgChangeState
+    = ChangeState
 
-type MsgChangeState = ChangeState
 
-type alias  Model = Bool
-init: Model
-init = False
+type alias Model =
+    Bool
+
+
+init : Model
+init =
+    False
+
 
 menuButton : Html MsgChangeState
 menuButton =
@@ -23,14 +29,14 @@ menuButton =
         [ div []
             [ button
                 [ Attr.type_ "button"
-                , Attr.class "inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                , Attr.class "inline-flex justify-center w-full rounded-md shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
                 , Attr.id "menu-button"
                 , Attr.attribute "aria-expanded" "true"
                 , Attr.attribute "aria-haspopup" "true"
                 , onClick ChangeState
                 ]
-                [ Html.text "Options", 
-                  svg
+                [ Html.text "Previous editions"
+                , svg
                     [ SvgAttr.class "-mr-1 ml-2 h-5 w-5"
                     , SvgAttr.viewBox "0 0 20 20"
                     , SvgAttr.fill "currentColor"
@@ -48,10 +54,24 @@ menuButton =
         ]
 
 
-menuDropDown : Html msg
-menuDropDown =
+view : Model -> Html MsgChangeState
+view model =
+    Html.div [] [ menuButton, menuDropDown model ]
+
+
+menuDropDown : Model -> Html msg
+menuDropDown model =
+    let
+        status =
+            if model then
+                "block"
+
+            else
+                "hidden"
+    in
+    
     div
-        [ Attr.class "origin-top-right absolute right--6 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+        [ Attr.class (status ++ " origin-top-right absolute right--6 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none")
         , Attr.attribute "role" "menu"
         , Attr.attribute "aria-orientation" "vertical"
         , Attr.attribute "aria-labelledby" "menu-button"
@@ -71,7 +91,8 @@ menuDropDown =
         ]
 
 
-
 update : MsgChangeState -> Model -> Model
-update msg model = case msg of 
-    ChangeState -> not model
+update msg model =
+    case msg of
+        ChangeState ->
+            not model
