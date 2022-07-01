@@ -4,6 +4,7 @@ import Components.DropDown as DropDown exposing (..)
 import Components.Utils exposing (capitalize)
 import Html exposing (Html, div, h3, img, input, label, li, nav, p, span, ul)
 import Html.Attributes as Attr exposing (..)
+import Shared exposing (Msg(..))
 import String exposing (..)
 import Svg exposing (..)
 
@@ -87,4 +88,6 @@ publicFooter =
 
 
 
+globalPageStructure : Html Msg -> Shared.Model -> List (Html Msg)
 
+globalPageStructure bodyContent model= [ publicNav model.dropdown DropDownMsg, publicHeader, bodyContent, publicFooter ]

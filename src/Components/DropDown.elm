@@ -3,7 +3,6 @@ module Components.DropDown exposing (..)
 import Html exposing (Html, button, div)
 import Html.Attributes as Attr exposing (..)
 import Html.Events exposing (onClick)
-import Shared exposing (Msg)
 import Svg exposing (..)
 import Svg.Attributes as SvgAttr exposing (..)
 

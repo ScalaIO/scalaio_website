@@ -1,6 +1,7 @@
 module Shared exposing (Data, Model, Msg(..), SharedMsg(..), template)
 
 import Browser.Navigation
+import Components.DropDown as DropDown
 import DataSource
 import Html exposing (Html)
 import Pages.Flags
@@ -29,6 +30,7 @@ type Msg
         , fragment : Maybe String
         }
     | SharedMsg SharedMsg
+    | DropDownMsg DropDown.MsgChangeState
 
 
 type alias Data =
@@ -40,7 +42,8 @@ type SharedMsg
 
 
 type alias Model =
-    { showMobileMenu : Bool
+    { showMobileMenu : Bool,
+    dropdown : DropDown.Model
     }
 
 
@@ -59,7 +62,7 @@ init :
             }
     -> ( Model, Cmd Msg )
 init navigationKey flags maybePagePath =
-    ( { showMobileMenu = False }
+    ( { showMobileMenu = False, dropdown = False }
     , Cmd.none
     )
 
@@ -72,6 +75,7 @@ update msg model =
 
         SharedMsg globalMsg ->
             ( model, Cmd.none )
+        DropDownMsg -> ( model, Cmd.none )
 
 
 subscriptions : Path -> Model -> Sub Msg
