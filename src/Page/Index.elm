@@ -6,6 +6,7 @@ import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
 import Html exposing (..)
+import Html.Attributes as Attr
 import Page exposing (Page, StaticPayload, PageWithState)
 import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
@@ -81,7 +82,7 @@ view :
     -> View Msg
 view maybeUrl sharedModel model static =
     { title = "Home"
-    , body = [ publicNav model.dropdown DropDownMsg, publicHeader, div [] [ Html.text "Body" ], publicFooter ]
+    , body = [ publicNav model.dropdown DropDownMsg, publicHeader, div [Attr.class "body"] [ Html.text "Body" ], publicFooter ]
     }
 
 

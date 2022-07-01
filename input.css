@@ -2,6 +2,8 @@
     @tailwind components;
     @tailwind utilities;
     @layer utilities {
+    html, body { height: 100%; }
+
         body {
             font-size: 100%;
             font-family: Lato, sans-serif;
@@ -20,7 +22,7 @@
         .header {
             padding: 0 5px;
             /*margin-top: 40px;*/
-            background-color: #000
+            background-color: #000;
         }
         .headerTitle {
             font-size: 3rem;
@@ -31,17 +33,44 @@
             width: 45%;
             max-height: 200px;
         }
+
         .teaser {
             color: #FFF;
             margin-top: 5px;
             font-size: 2.25em;
             line-height: 1.25;
         }
+
+        .body{
+        min-height:100vh;
+
+        }
+
+        .social h3, .newsletter h3 {
+            font-size: 1.75em;
+            line-height: 1.25;
+            padding:3px;
+        }
+
+        .footer {
+         color: #FFF;
+          padding: 0 5px;
+          background-color: #000;
+          display: flex;
+            flex-direction: column;
+        }
+
+        .footer .newsletter {
+            text-align:right
+        }
+        footer .social {
+          width: 50%;
+        }
+
+        .copyright {
+        	width: 100%;
+        	background-color: #000;
+        	color: #FFF;
+        	align-items: center;
+        }
     }
-    /*
-    display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-grow: 1;*/
