@@ -1,5 +1,6 @@
 module Page.Venue exposing (Model, Msg, Data, page)
 
+import Components.Structs exposing (globalPageStructure)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
@@ -8,6 +9,7 @@ import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
 import Shared
 import View exposing (View)
+import View.Venue
 
 
 type alias Model =
@@ -64,4 +66,6 @@ view :
     -> StaticPayload Data RouteParams
     -> View Msg
 view maybeUrl sharedModel static =
-    View.placeholder "Venue"
+   { title = "Venue"
+       , body = globalPageStructure View.Venue.view
+       }

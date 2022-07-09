@@ -30,7 +30,6 @@ type Msg
         , fragment : Maybe String
         }
     | SharedMsg SharedMsg
-    | DropDownMsg DropDown.MsgChangeState
 
 
 type alias Data =
@@ -75,7 +74,6 @@ update msg model =
 
         SharedMsg globalMsg ->
             ( model, Cmd.none )
-        DropDownMsg -> ( model, Cmd.none )
 
 
 subscriptions : Path -> Model -> Sub Msg

@@ -1,19 +1,18 @@
-module Page.Index exposing (Data, Msg, page)
+module Page.Index exposing (Model, Data, Msg, page)
 
-import Components.DropDown as DropDown
+
 import Components.Structs exposing (..)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
-import Html exposing (..)
-import Html.Attributes as Attr
 import Page exposing (Page, StaticPayload, PageWithState)
 import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
-import Shared
+import Shared exposing (Msg(..))
 import View exposing (View)
-import Browser.Navigation
+
 import Path exposing (..)
+import View.Home
 
 
 init:Maybe PageUrl -> Shared.Model -> StaticPayload Data RouteParams -> ( Shared.Model, Cmd Msg )
@@ -22,21 +21,23 @@ init _ _ _  = ({showMobileMenu = False,dropdown = False}, Cmd.none)
 subscriptions : Maybe PageUrl -> RouteParams -> Path -> Shared.Model -> Sub Msg
 subscriptions _ _ _ model = Sub.none
 
-type Msg
-    = Never
+type alias Model =
+    ()
 
+type alias Msg =
+    Never
 
 type alias RouteParams =
     {}
 
 
-page : PageWithState RouteParams Data Shared.Model Msg
+page : Page RouteParams Data
 page =
     Page.single
         { head = head
         , data = data
         }
-        |> Page.buildWithLocalState { view = view, init = init, update = update, subscriptions = subscriptions }
+        |> Page.buildNoState { view = view }
 
 
 data : DataSource Data
@@ -68,6 +69,8 @@ type alias Data =
     ()
 
 
+
+
 view :
     Maybe PageUrl
     -> Shared.Model
@@ -75,15 +78,12 @@ view :
     -> View Msg
 view maybeUrl sharedModel static =
     { title = "Home"
-    , body = [ publicNav sharedModel.dropdown DropDownMsg, publicHeader, div [Attr.class "body"] [ Html.text "Body" ], publicFooter ]
+    , body = globalPageStructure View.Home.view
     }
 
 
-update : PageUrl -> Maybe Browser.Navigation.Key -> Shared.Model -> StaticPayload Data RouteParams -> Msg -> ( Shared.Model, Cmd Msg )
-update maybeUrl _ sharedModel static msg =
-    case msg of
-        Never ->
-            ( sharedModel, Cmd.none )
-
-        DropDownMsg m ->
-            ( { sharedModel | dropdown = DropDown.update m sharedModel.dropdown }, Cmd.none )
+--update : PageUrl -> Maybe Browser.Navigation.Key -> Shared.Model -> StaticPayload Data RouteParams -> Shared.Msg -> ( Shared.Model, Cmd Msg )
+--update maybeUrl _ sharedModel static msg =
+ --   case msg of
+--        DropDownMsg m ->
+ --           ( { sharedModel | dropdown = DropDown.update m sharedModel.dropdown }, Cmd.none )

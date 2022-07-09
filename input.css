@@ -46,6 +46,12 @@
 
         }
 
+        .body h1  {
+            font-size: 3rem;
+            line-height: 1.05;
+            margin: 2px;
+        }
+
         .social h3, .newsletter h3 {
             font-size: 1.75em;
             line-height: 1.25;

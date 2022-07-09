@@ -1,6 +1,6 @@
-module Components.Structs exposing (publicFooter, publicHeader, publicNav)
+module Components.Structs exposing (globalPageStructure)
 
-import Components.DropDown as DropDown exposing (..)
+
 import Components.Utils exposing (capitalize)
 import Html exposing (Html, div, h3, img, input, label, li, nav, p, span, ul)
 import Html.Attributes as Attr exposing (..)
@@ -23,8 +23,8 @@ publicHeader =
         ]
 
 
-publicNav : DropDown.Model -> (DropDown.MsgChangeState -> msg) -> Html msg
-publicNav model wrapDd  =
+publicNav : Html msg
+publicNav  =
     nav [ Attr.class "flex justify-center items-center gap-x-8 navheaderColor" ]
         [ Html.header []
             [ Html.a [ Attr.class "brand" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ] ]
@@ -36,7 +36,7 @@ publicNav model wrapDd  =
         , Html.div [] [ viewLink "Videos" ]
         , Html.div [] [ viewLink "FAQ" ]
         , Html.div [] [ viewLink "Hall of fame" ]
-        , DropDown.view model |> Html.map wrapDd
+        --, DropDown.view model |> Html.map wrapDd
         ]
 
 
@@ -88,6 +88,6 @@ publicFooter =
 
 
 
-globalPageStructure : Html Msg -> Shared.Model -> List (Html Msg)
+globalPageStructure : Html msg  -> List (Html msg)
 
-globalPageStructure bodyContent model= [ publicNav model.dropdown DropDownMsg, publicHeader, bodyContent, publicFooter ]
+globalPageStructure bodyContent= [ publicNav , publicHeader, div[Attr.class "body"][bodyContent], publicFooter ]
