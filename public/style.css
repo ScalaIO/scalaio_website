@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -676,10 +676,6 @@ video {
   align-content: center;
 }
 
-.content-around {
-  align-content: space-around;
-}
-
 .items-center {
   align-items: center;
 }
@@ -692,13 +688,17 @@ video {
   justify-content: space-around;
 }
 
-.justify-items-center {
-  justify-items: center;
+.gap-y-8 {
+  row-gap: 2rem;
 }
 
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+
+.gap-y-20 {
+  row-gap: 5rem;
 }
 
 .rounded-md {
@@ -801,7 +801,8 @@ body {
 
 .teaser {
   color: #FFF;
-  margin-top: 5px;
+  margin-top: 26px;
+  margin-bottom: 26px;
   font-size: 2.25em;
   line-height: 1.25;
 }
@@ -843,6 +844,20 @@ footer .social {
   background-color: #000;
   color: #FFF;
   align-items: center;
+}
+
+.billeterie {
+  width:100%;
+  height:400px;
+  scrolling:"auto";
+  frameborder:"0";
+  id:"yurplan-widget-89504";
+  data-id:"89504";
+}
+
+.twitter-link {
+  color: #428bca;
+  text-decoration: none;
 }
 
 .focus\:outline-none:focus {
