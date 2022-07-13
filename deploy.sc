@@ -13,7 +13,7 @@ def main(env: String) = {
 
   "elm-pages build" !
 
-  "cd dist" !
+  "cd ./dist" !
 
   "pwd" !
 
