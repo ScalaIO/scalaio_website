@@ -1,5 +1,6 @@
-
+import $ivy.`com.lihaoyi::ammonite-ops:2.4.0`
 import sys.process._
+import ammonite.ops._
 import scala.language.postfixOps
 
 
@@ -13,7 +14,7 @@ def main(env: String) = {
 
   "elm-pages build" !
 
-  "cd ./dist" !
+  cd! "dist"
 
   "pwd" !
 

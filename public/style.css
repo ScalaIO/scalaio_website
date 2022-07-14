@@ -855,6 +855,16 @@ footer .social {
   data-id:"89504";
 }
 
+.tickets_disclaimer {
+  font-size: .75rem;
+  font-style: italic;
+}
+
+.href-link{
+  color: #428bca;
+  text-decoration: underline;
+}
+
 .twitter-link {
   color: #428bca;
   text-decoration: none;

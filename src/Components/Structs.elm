@@ -47,7 +47,8 @@ publicFooter =
     Html.footer [Attr.class "flex grow flex-row"] [    div
                     [ Attr.class "flex social flex-col content-center items-center"]
                     [ h3 [][ text "Social Network" ]
-                    , ul [] [li [][ Html.a [Attr.href "https://twitter.com/ScalaIO_FR", Attr.target "_blank", class "twitter-link"][Html.text "Twitter"]]]],
+                    , ul [] [li [][ Html.a [Attr.href "https://twitter.com/ScalaIO_FR", Attr.target "_blank", class "twitter-link"][Html.text "Twitter"]]]]
+                   {- ,
                   div[ Attr.class "flex newsletter flex-col content-center justify-items justify-around"][h3 [][ text "Newsletter" ]
                        , p [][ text "Subscribe to our newsletter and be the first to know about our news !" ]
                        ,         {- Begin MailChimp Signup Form -}
@@ -80,8 +81,9 @@ publicFooter =
                           Html.button [Attr.type_ "submit"][text "Subscribe"]
 
                            ]
-                       ]
-                  ],    div  [class "copyright"][ p [][ text "Scala", span [ Attr.class "red"][ text "IO" ]
+                       ]-}
+                  ]
+                  ,    div  [class "copyright"][ p [][ text "Scala", span [ Attr.class "red"][ text "IO" ]
                                 , text "conference, All Rights Reserved." ]
                             ]
                   ]
