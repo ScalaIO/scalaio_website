@@ -48,12 +48,12 @@ publicFooter =
                     [ Attr.class "flex social flex-col content-center items-center"]
                     [ h3 [][ text "Social Network" ]
                     , ul [] [li [][ Html.a [Attr.href "https://twitter.com/ScalaIO_FR", Attr.target "_blank", class "twitter-link"][Html.text "Twitter"]]]]
-                   {- ,
+                    ,
                   div[ Attr.class "flex newsletter flex-col content-center justify-items justify-around"][h3 [][ text "Newsletter" ]
                        , p [][ text "Subscribe to our newsletter and be the first to know about our news !" ]
                        ,         {- Begin MailChimp Signup Form -}
                        Html.form
-                           [ action "https://scala.us7.list-manage.com/subscribe/post?u=d1e91c63df589371ca4d8a48e&id=8ea1a2ab18",
+                           [ action "https://scala.us13.list-manage.com/subscribe/post?u=32bc8243e81ad6b3dde9a6717&amp;id=c28c7e3f2b",
                            method "post",
                             id "mc-embedded-subscribe-form",
                             name "mc-embedded-subscribe-form",
@@ -81,7 +81,7 @@ publicFooter =
                           Html.button [Attr.type_ "submit"][text "Subscribe"]
 
                            ]
-                       ]-}
+                       ]
                   ]
                   ,    div  [class "copyright"][ p [][ text "Scala", span [ Attr.class "red"][ text "IO" ]
                                 , text "conference, All Rights Reserved." ]

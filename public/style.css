@@ -835,6 +835,10 @@ body {
   text-align:right
 }
 
+.footer .newsletter input {
+  color: #000;
+}
+
 footer .social {
   width: 50%;
 }

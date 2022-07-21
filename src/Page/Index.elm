@@ -53,14 +53,14 @@ head static =
         { canonicalUrlOverride = Nothing
         , siteName = "ScalaIO"
         , image =
-            { url = Pages.Url.external "TODO"
+            { url = Pages.Url.external "https://scalaio-teasing.cleverapps.io/assets/images/favicon.png"
             , alt = "scalaIO logo"
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "TODO"
+        , description = "ScalaIO - Home page"
         , locale = Nothing
-        , title = "TODO title" -- metadata.title -- TODO
+        , title = "Scala IO" -- metadata.title -- TODO
         }
         |> Seo.website
 
@@ -77,7 +77,7 @@ view :
     -> StaticPayload Data RouteParams
     -> View Msg
 view maybeUrl sharedModel static =
-    { title = "Home"
+    { title = "ScalaIO - Home"
     , body = globalPageStructure View.Home.view
     }
 

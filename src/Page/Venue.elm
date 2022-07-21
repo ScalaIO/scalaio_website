@@ -66,6 +66,6 @@ view :
     -> StaticPayload Data RouteParams
     -> View Msg
 view maybeUrl sharedModel static =
-   { title = "Venue"
+   { title = "ScalaIO - Venue"
        , body = globalPageStructure View.Venue.view
        }
