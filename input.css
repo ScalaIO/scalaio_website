@@ -109,4 +109,31 @@
             text-decoration: none;
 
         }
+
+        .footer-platinum-logo {
+         width:400px;
+         height:200px;
+         margin:10px
+        }
+
+        .footer-platinum-logo {
+         width:100%;
+         max-width:400px;
+         max-height:200px;
+         margin:10px
+        }
+
+        .footer-gold-logo {
+         width:200px;
+         height:100px;
+         margin:10px
+        }
+
+        .footer-gold-logo {
+         width:100%;
+         max-width:200px;
+         max-height:100px;
+         margin:10px
+        }
+
     }

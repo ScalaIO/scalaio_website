@@ -24,8 +24,8 @@ view = div[Attr.class "flex  flex-col gap-y-20"][div[Attr.class "flex justify-ce
           ]
           [],
           div[class "flex tickets_disclaimer justify-center"][text "If you get an error buying through the Iframe, please try using the  ",
-           a [Attr.href "https://yurplan.com/event/Scala-IO-2022/88496", Attr.target "_blank", class "href-link"][text " minisite  "],
-           text " and ",
-           a [Attr.href "mailto:contact@scala.io", Attr.target "_blank", class "href-link"][text " let us know"] ]
+           a [Attr.href "https://yurplan.com/event/Scala-IO-2022/88496", Attr.target "_blank", class "href-link  mx-1"][text " minisite  "],
+           text " and",
+           a [Attr.href "mailto:contact@scala.io", Attr.target "_blank", class "href-link  mx-1"][text " let us know"] ]
 
  ]

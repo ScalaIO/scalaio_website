@@ -1,6 +1,6 @@
-module Page.Venue exposing (Model, Msg, Data, page)
+module Page.Partners exposing (Model, Msg, Data, page)
 
-import Components.DataStruct exposing (GlobalData)
+import Components.DataStruct as DataStruct exposing (GlobalData)
 import Components.WebSiteStruct exposing (globalPageStructure)
 import DataSource exposing (DataSource)
 import Head
@@ -10,7 +10,7 @@ import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
 import Shared
 import View exposing (View)
-import View.Venue
+import View.Partners
 
 
 type alias Model =
@@ -37,7 +37,7 @@ type alias Data =
 
 
 data : DataSource Data
-data = Components.DataStruct.data
+data =DataStruct.data
 
 
 head :
@@ -46,16 +46,16 @@ head :
 head static =
     Seo.summary
         { canonicalUrlOverride = Nothing
-        , siteName = "elm-pages"
+        , siteName = "ScalaIO"
         , image =
             { url = Pages.Url.external "TODO"
-            , alt = "elm-pages logo"
+            , alt = "ScalaIO logo"
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "TODO"
+        , description = "ScalaIO - Partners"
         , locale = Nothing
-        , title = "TODO title" -- metadata.title -- TODO
+        , title = "ScalaIO - Partners" -- metadata.title -- TODO
         }
         |> Seo.website
 
@@ -66,6 +66,6 @@ view :
     -> StaticPayload Data RouteParams
     -> View Msg
 view maybeUrl sharedModel static =
-   { title = "ScalaIO - Venue"
-       , body = globalPageStructure static.data View.Venue.view
-       }
+    { title = "ScalaIO - Partners"
+            , body = globalPageStructure static.data (View.Partners.view static.data)
+        }

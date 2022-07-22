@@ -1,7 +1,8 @@
 module Page.Index exposing (Model, Data, Msg, page)
 
 
-import Components.Structs exposing (..)
+import Components.DataStruct as DataStruct exposing (GlobalData, Sponsor)
+import Components.WebSiteStruct exposing (globalPageStructure)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
@@ -11,15 +12,8 @@ import Pages.Url
 import Shared exposing (Msg(..))
 import View exposing (View)
 
-import Path exposing (..)
 import View.Home
 
-
-init:Maybe PageUrl -> Shared.Model -> StaticPayload Data RouteParams -> ( Shared.Model, Cmd Msg )
-init _ _ _  = ({showMobileMenu = False,dropdown = False}, Cmd.none)
-
-subscriptions : Maybe PageUrl -> RouteParams -> Path -> Shared.Model -> Sub Msg
-subscriptions _ _ _ model = Sub.none
 
 type alias Model =
     ()
@@ -41,8 +35,7 @@ page =
 
 
 data : DataSource Data
-data =
-    DataSource.succeed ()
+data = DataStruct.data
 
 
 head :
@@ -65,8 +58,7 @@ head static =
         |> Seo.website
 
 
-type alias Data =
-    ()
+type alias Data = GlobalData
 
 
 
@@ -78,7 +70,7 @@ view :
     -> View Msg
 view maybeUrl sharedModel static =
     { title = "ScalaIO - Home"
-    , body = globalPageStructure View.Home.view
+        , body = globalPageStructure static.data View.Home.view
     }
 
 

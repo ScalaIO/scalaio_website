@@ -1,11 +1,13 @@
-module Components.Structs exposing (globalPageStructure)
+module Components.WebSiteStruct exposing (globalPageStructure)
 
 
+import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCss)
 import Components.Utils exposing (capitalize)
-import Html exposing (Html, div, h3, img, input, label, li, nav, p, span, ul)
+import Html exposing (Html, div, h3, img, input, label, li, nav, p, span, text, ul)
 import Html.Attributes as Attr exposing (..)
 import String exposing (..)
-import Svg exposing (..)
+import Components.Utils exposing (transform)
+
 
 
 viewLink : String -> Html msg
@@ -19,7 +21,7 @@ publicHeader =
         [ img [ src "assets/logos/scalaio/scalaio_black.svg", alt "scalaio logo" ] []
         , div[class "flex flex-col gap-y-8 justify-around "][
         Html.h1 [ Attr.class "headerTitle flex " ] [ Html.text "The Scala event in France!" ]
-        , Html.h2 [ Attr.class "teaser flex " ] [ Html.text "November 4th, 2022 - ", Html.span [ Attr.class "red" ] [ Html.text "Paris"], Html.text ", France" ]
+        , Html.h2 [ Attr.class "teaser flex mx-2" ] [ Html.text "November 4th, 2022-", Html.span [ Attr.class "red" ] [ Html.text "Paris"], Html.text ", France" ]
         ]
         ]
 
@@ -31,7 +33,7 @@ publicNav  =
             [ Html.a [ Attr.class "brand" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ] ]
         --, Html.div [] [ viewLink "venue" ]
         --, Html.div [] [ viewLink "Speakers" ]
-        --, Html.div [] [ viewLink "Partners" ]
+        , Html.div [] [ viewLink "partners" ]
         --, Html.div [] [ viewLink "Talks" ]
         --, Html.div [] [ viewLink "Schedule" ]
         --, Html.div [] [ viewLink "Videos" ]
@@ -90,6 +92,12 @@ publicFooter =
 
 
 
-globalPageStructure : Html msg  -> List (Html msg)
 
-globalPageStructure bodyContent= [ publicNav , publicHeader, div[Attr.class "body"][bodyContent], publicFooter ]
+
+
+publicSponsors : GlobalData -> Html msg
+publicSponsors data = div[class "flex flex-col"][div[class "flex justify-around"](transform  data.sponsors.platine Platine),div[class "flex  flex-wrap justify-around "](transform  data.sponsors.gold Gold)]
+
+globalPageStructure : GlobalData -> Html msg  -> List (Html msg)
+
+globalPageStructure data bodyContent= [ publicNav , publicHeader, div[Attr.class "body"][bodyContent],publicSponsors data, publicFooter ]
