@@ -68,7 +68,6 @@ menuDropDown model =
             else
                 "hidden"
     in
-    
     div
         [ Attr.class (status ++ " origin-top-right absolute right--6 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none")
         , Attr.attribute "role" "menu"

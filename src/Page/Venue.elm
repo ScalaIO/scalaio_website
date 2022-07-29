@@ -1,4 +1,4 @@
-module Page.Venue exposing (Model, Msg, Data, page)
+module Page.Venue exposing (Data, Model, Msg, page)
 
 import Components.DataStruct exposing (GlobalData)
 import Components.WebSiteStruct exposing (globalPageStructure)
@@ -20,8 +20,10 @@ type alias Model =
 type alias Msg =
     Never
 
+
 type alias RouteParams =
     {}
+
 
 page : Page RouteParams Data
 page =
@@ -37,7 +39,8 @@ type alias Data =
 
 
 data : DataSource Data
-data = Components.DataStruct.data
+data =
+    Components.DataStruct.data
 
 
 head :
@@ -66,6 +69,6 @@ view :
     -> StaticPayload Data RouteParams
     -> View Msg
 view maybeUrl sharedModel static =
-   { title = "ScalaIO - Venue"
-       , body = globalPageStructure static.data View.Venue.view
-       }
+    { title = "ScalaIO - Venue"
+    , body = globalPageStructure static.data View.Venue.view
+    }

@@ -1,25 +1,25 @@
-module Page.Index exposing (Model, Data, Msg, page)
-
+module Page.Index exposing (Data, Model, Msg, page)
 
 import Components.DataStruct as DataStruct exposing (GlobalData, Sponsor)
 import Components.WebSiteStruct exposing (globalPageStructure)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
-import Page exposing (Page, StaticPayload, PageWithState)
+import Page exposing (Page, PageWithState, StaticPayload)
 import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
 import Shared exposing (Msg(..))
 import View exposing (View)
-
 import View.Home
 
 
 type alias Model =
     ()
 
+
 type alias Msg =
     Never
+
 
 type alias RouteParams =
     {}
@@ -35,7 +35,8 @@ page =
 
 
 data : DataSource Data
-data = DataStruct.data
+data =
+    DataStruct.data
 
 
 head :
@@ -58,9 +59,8 @@ head static =
         |> Seo.website
 
 
-type alias Data = GlobalData
-
-
+type alias Data =
+    GlobalData
 
 
 view :
@@ -70,12 +70,13 @@ view :
     -> View Msg
 view maybeUrl sharedModel static =
     { title = "ScalaIO - Home"
-        , body = globalPageStructure static.data View.Home.view
+    , body = globalPageStructure static.data View.Home.view
     }
+
 
 
 --update : PageUrl -> Maybe Browser.Navigation.Key -> Shared.Model -> StaticPayload Data RouteParams -> Shared.Msg -> ( Shared.Model, Cmd Msg )
 --update maybeUrl _ sharedModel static msg =
- --   case msg of
+--   case msg of
 --        DropDownMsg m ->
- --           ( { sharedModel | dropdown = DropDown.update m sharedModel.dropdown }, Cmd.none )
+--           ( { sharedModel | dropdown = DropDown.update m sharedModel.dropdown }, Cmd.none )

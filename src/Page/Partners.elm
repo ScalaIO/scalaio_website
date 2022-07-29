@@ -1,4 +1,4 @@
-module Page.Partners exposing (Model, Msg, Data, page)
+module Page.Partners exposing (Data, Model, Msg, page)
 
 import Components.DataStruct as DataStruct exposing (GlobalData)
 import Components.WebSiteStruct exposing (globalPageStructure)
@@ -20,8 +20,10 @@ type alias Model =
 type alias Msg =
     Never
 
+
 type alias RouteParams =
     {}
+
 
 page : Page RouteParams Data
 page =
@@ -37,7 +39,8 @@ type alias Data =
 
 
 data : DataSource Data
-data =DataStruct.data
+data =
+    DataStruct.data
 
 
 head :
@@ -67,5 +70,5 @@ view :
     -> View Msg
 view maybeUrl sharedModel static =
     { title = "ScalaIO - Partners"
-            , body = globalPageStructure static.data (View.Partners.view static.data)
-        }
+    , body = globalPageStructure static.data (View.Partners.view static.data)
+    }

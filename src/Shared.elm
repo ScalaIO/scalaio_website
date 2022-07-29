@@ -41,8 +41,8 @@ type SharedMsg
 
 
 type alias Model =
-    { showMobileMenu : Bool,
-    dropdown : DropDown.Model
+    { showMobileMenu : Bool
+    , dropdown : DropDown.Model
     }
 
 
