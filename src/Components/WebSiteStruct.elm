@@ -1,6 +1,7 @@
 module Components.WebSiteStruct exposing (globalPageStructure)
 
 import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCss)
+import Components.Footer exposing (footer)
 import Components.Utils exposing (capitalize, transform)
 import Html exposing (Html, div, h3, img, input, label, li, nav, p, span, text, ul)
 import Html.Attributes as Attr exposing (..)
@@ -41,65 +42,6 @@ publicNav =
         --, DropDown.view model |> Html.map wrapDd
         ]
 
-
-publicFooter : Html msg
-publicFooter =
-    div [ Attr.class "flex grow flex-row footer justify-center" ]
-        [ Html.footer [ Attr.class "flex grow flex-row" ]
-            [ div
-                [ Attr.class "flex social flex-col content-center items-center" ]
-                [ h3 [] [ text "Social Network" ]
-                , ul [] [ li [] [ Html.a [ Attr.href "https://twitter.com/ScalaIO_FR", Attr.target "_blank", class "twitter-link" ] [ Html.text "Twitter" ] ] ]
-                ]
-            , div [ Attr.class "flex newsletter flex-col content-center justify-items justify-around" ]
-                [ h3 [] [ text "Newsletter" ]
-                , p [] [ text "Subscribe to our newsletter and be the first to know about our news !" ]
-                , {- Begin MailChimp Signup Form -}
-                  Html.form
-                    [ action "https://scala.us13.list-manage.com/subscribe/post?u=32bc8243e81ad6b3dde9a6717&amp;id=c28c7e3f2b"
-                    , method "post"
-                    , id "mc-embedded-subscribe-form"
-                    , name "mc-embedded-subscribe-form"
-                    , class "validate"
-                    , target "_blank"
-                    , novalidate True
-                    ]
-                    [ div [ Attr.class "controls mc-field-group" ]
-                        [ div [ Attr.class "form-group" ]
-                            [ label
-                                [ Attr.for "mce-EMAIL" ]
-                                [ text "Email Address"
-                                , span
-                                    [ Attr.class "asterisk"
-                                    ]
-                                    [ text "*" ]
-                                ]
-                            , input
-                                [ Attr.type_ "email"
-                                , Attr.value ""
-                                , Attr.name "EMAIL"
-                                , Attr.class "required email form-control"
-                                , Attr.id "mce-EMAIL"
-                                ]
-                                []
-                            ]
-
-                        {- /row -}
-                        ]
-                    , {- /container -} Html.button [ Attr.type_ "submit" ] [ text "Subscribe" ]
-                    ]
-                ]
-            ]
-        , div [ class "copyright" ]
-            [ p []
-                [ text "Scala"
-                , span [ Attr.class "red" ] [ text "IO" ]
-                , text "conference, All Rights Reserved."
-                ]
-            ]
-        ]
-
-
 publicSponsors : GlobalData -> Html msg
 publicSponsors data =
     div [ class "flex flex-col" ] [ div [ class "flex justify-around" ] (transform data.sponsors.platine Platine), div [ class "flex  flex-wrap justify-around " ] (transform data.sponsors.gold Gold) ]
@@ -107,4 +49,4 @@ publicSponsors data =
 
 globalPageStructure : GlobalData -> Html msg -> List (Html msg)
 globalPageStructure data bodyContent =
-    [ publicNav, publicHeader, div [ Attr.class "body" ] [ bodyContent ], publicSponsors data, publicFooter ]
+    [ publicNav, publicHeader, div [ Attr.class "body" ] [ bodyContent ], publicSponsors data, footer ]
