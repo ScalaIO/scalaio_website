@@ -26,7 +26,7 @@ newsletter =
             , target "_blank"
             , novalidate True
             ]
-            [ div [ ]
+            [ div []
                 [ div []
                     [ label
                         [ Attr.for "mce-EMAIL" ]

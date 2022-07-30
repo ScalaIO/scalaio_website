@@ -15,12 +15,10 @@ viewLink path =
 
 publicHeader : Html msg
 publicHeader =
-    div [ Attr.class "flex grow flex-col items-center header justify-around" ]
-        [ img [ src "assets/logos/scalaio/scalaio_black.svg", alt "scalaio logo" ] []
-        , div [ class "flex flex-col gap-y-8 justify-around " ]
-            [ Html.h1 [ Attr.class "headerTitle flex " ] [ Html.text "The Scala event in France!" ]
-            , Html.h2 [ Attr.class "teaser flex mx-2" ] [ Html.text "November 4th, 2022-", Html.span [ Attr.class "red" ] [ Html.text "Paris" ], Html.text ", France" ]
-            ]
+    div [ Attr.class "header" ]
+        [ img [ src "assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
+        , Html.h1 [ Attr.class "header-title" ] [ Html.text "The Scala event in France!" ]
+        , Html.h2 [ Attr.class "header-teaser" ] [ Html.text "November 4th, 2022 - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ], Html.text ", France" ]
         ]
 
 
@@ -41,6 +39,7 @@ publicNav =
         --, Html.div [] [ viewLink "Hall of fame" ]
         --, DropDown.view model |> Html.map wrapDd
         ]
+
 
 publicSponsors : GlobalData -> Html msg
 publicSponsors data =
