@@ -7,12 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-    html, body { height: 100%; }
+    html, body { height: 100%;}
 
     body {
-        font-size: 100%;
         font-family: Lato, sans-serif;
     }
+
     .nav header a.brand {
         font-size: 1.4em;
         margin-left: 5px;
@@ -32,7 +32,7 @@
         align-items: center;
     }
 
-    .header img {
+    .header svg {
         width: 45%;
         max-height: 200px;
     }
@@ -52,10 +52,6 @@
         font-size: 1.75em;
     }
 
-    .body{
-    min-height:100vh;
-    }
-
     .body h1  {
         font-size: 3rem;
         line-height: 1.05;
@@ -68,16 +64,29 @@
         padding:3px;
     }
 
-    .billeterie {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .home-title {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .home-ticketing {
+        margin-top: 40px;
         width:100%;
-        height:400px;
+        height:485px;
         scrolling:"auto";
         frameborder:"0";
         id:"yurplan-widget-89504";
         data-id:"89504";
     }
 
-    .tickets_disclaimer {
+    .home-ticketing-disclaimer {
       font-size: .75rem;
       font-style: italic;
       }
