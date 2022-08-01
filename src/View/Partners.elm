@@ -16,4 +16,5 @@ view gd =
         , div [ Attr.class "flex justify-center" ] [ h1 [] [ text "Silver Sponsor" ] ]
         , div [ class "flex justify-around" ] (transform gd.sponsors.silver SponsorKind.Silver)
         , div [ Attr.class "flex justify-center" ] [ h1 [] [ text "J'aime Scala Sponsor" ] ]
+        , Html.hr[][]
         ]
