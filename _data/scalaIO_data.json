@@ -1,6 +1,9 @@
 {
   "sponsors": {
-    "platine": [],
+    "platine": [{
+      "name": "lunatech",
+      "url": "https://lunatech.com/"
+    }],
     "gold": [],
     "silver": []
   }
