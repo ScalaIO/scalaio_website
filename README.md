@@ -16,7 +16,17 @@ We use [Tailwind CSS](https://tailwindcss.com/) for the CSS, so you have to run:
 npx tailwindcss -i ./input.css -o ./public/style.css --watch
 ```
 
-You can now use [Elm](https://elm-lang.org/) to generate the webstie:
+You can now use [Elm](https://elm-lang.org/) to run locally the website (`watch` mode is activated) :
 ```bash
 npm start
+```
+then launch it from here : 
+
+```bash
+http://localhost:1234
+```
+
+You can use [Elm](https://elm-lang.org/) to generate the static website : 
+```bash
+npm build
 ```
