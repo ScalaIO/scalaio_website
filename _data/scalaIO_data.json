@@ -3,6 +3,9 @@
     "platine": [{
       "name": "lunatech",
       "url": "https://lunatech.com/"
+    },{
+      "name": "strangebee",
+      "url": "https://www.strangebee.com/"
     }],
     "gold": [],
     "silver": []
