@@ -11,20 +11,18 @@ You first have to install all the packages:
 npm install
 ```
 
-We use [Tailwind CSS](https://tailwindcss.com/) for the CSS, so you have to run:
+You then have to run the following command to start the website locally:
 ```bash
-npx tailwindcss -i ./input.css -o ./public/style.css --watch
+npm run dev
 ```
 
-You can now use [Elm](https://elm-lang.org/) to run locally the website (`watch` mode is activated) :
-```bash
-npm start
-```
-then launch it from here : 
+Then launch it from here : 
 
 ```bash
 http://localhost:1234
 ```
+
+## Tips
 
 You can use [Elm](https://elm-lang.org/) to generate the static website : 
 ```bash

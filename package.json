@@ -3,9 +3,11 @@
   "scripts": {
     "postinstall": "elm-tooling install",
     "start": "elm-pages dev",
-    "build": "elm-pages build"
+    "build": "elm-pages build",
+    "dev": "concurrently -n elm,tailwind -c blue,green -k \"elm-pages dev\" \"npx tailwindcss -i ./input.css -o ./public/style.css --watch\""
   },
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "elm-format": "^0.8.5",
     "elm-optimize-level-2": "0.2.3",
     "elm-pages": "2.1.10",
