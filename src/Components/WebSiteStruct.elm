@@ -26,7 +26,7 @@ navbar : Html msg
 navbar =
     nav [ Attr.class "flex justify-center items-center gap-x-8 navheaderColor" ]
         [ Html.header []
-            [ Html.a [ Attr.class "brand" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ] ]
+            [ Html.a [ Attr.href "/", Attr.class "brand" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ] ]
 
         --, Html.div [] [ viewLink "venue" ]
         --, Html.div [] [ viewLink "Speakers" ]
