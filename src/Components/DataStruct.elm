@@ -15,13 +15,13 @@ computeCss : SponsorKind -> String
 computeCss k =
     case k of
         Platine ->
-            "footer-platinum-logo"
+            "sponsors-platine-logo"
 
         Gold ->
-            "footer-gold-logo"
+            "sponsors-gold-logo"
 
         Silver ->
-            "footer-silver-logo"
+            "sponsors-silver-logo"
 
 
 type alias Sponsor =

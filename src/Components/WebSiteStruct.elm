@@ -13,8 +13,8 @@ viewLink path =
     Html.a [ Attr.href path ] [ Html.text (capitalize path) ]
 
 
-publicHeader : Html msg
-publicHeader =
+header : Html msg
+header =
     div [ Attr.class "header" ]
         [ img [ src "assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
         , Html.h1 [ Attr.class "header-title" ] [ Html.text "The Scala event in France!" ]
@@ -22,8 +22,8 @@ publicHeader =
         ]
 
 
-publicNav : Html msg
-publicNav =
+navbar : Html msg
+navbar =
     nav [ Attr.class "flex justify-center items-center gap-x-8 navheaderColor" ]
         [ Html.header []
             [ Html.a [ Attr.class "brand" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ] ]
@@ -41,11 +41,16 @@ publicNav =
         ]
 
 
-publicSponsors : GlobalData -> Html msg
-publicSponsors data =
-    div [ class "flex flex-col" ] [ div [ class "flex justify-around" ] (transform data.sponsors.platine Platine), div [ class "flex  flex-wrap justify-around " ] (transform data.sponsors.gold Gold) ]
+sponsors : GlobalData -> Html msg
+sponsors data =
+    div [ class "sponsors" ]
+        [ div [ class "sponsors-containers" ] (transform data.sponsors.platine Platine)
+
+        -- div [ class "sponsors-containers" ] (transform data.sponsors.gold Gold), TODO: Add when a gold sponsor is added
+        -- div [ class "sponsors-containers" ] (transform data.sponsors.gold Silver) TODO: Add when a silver sponsor is added
+        ]
 
 
 globalPageStructure : GlobalData -> Html msg -> List (Html msg)
 globalPageStructure data bodyContent =
-    [ publicNav, publicHeader, div [ Attr.class "body" ] [ bodyContent ], publicSponsors data, footer ]
+    [ navbar, header, div [ Attr.class "body" ] [ bodyContent ], sponsors data, footer ]

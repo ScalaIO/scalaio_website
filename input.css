@@ -78,8 +78,8 @@
 
     .home-ticketing {
         margin-top: 40px;
-        width:100%;
-        height:485px;
+        width: 100%;
+        height: 485px;
         scrolling:"auto";
         frameborder:"0";
         id:"yurplan-widget-89504";
@@ -96,30 +96,37 @@
         text-decoration: underline;
     }
 
-    .footer-platinum-logo {
-     width:400px;
-     height:200px;
-     margin:10px
+    .sponsors {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top: 1px solid rgba(15,18,36,0.06);
     }
 
-    .footer-platinum-logo {
-     width:100%;
-     max-width:400px;
-     max-height:200px;
-     margin:10px
+    .sponsors-containers {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .footer-gold-logo {
-     width:200px;
-     height:100px;
-     margin:10px
+    .sponsors-platine-logo {
+        width: 400px;
+        height: 200px;
+        padding: 0 20px;
     }
 
-    .footer-gold-logo {
-     width:100%;
-     max-width:200px;
-     max-height:100px;
-     margin:10px
+    .sponsors-gold-logo {
+        width: 200px;
+        height: 100px;
+        padding: 0 10px;
+    }
+
+    .sponsors-silver-logo {
+        width: 100px;
+        height: 50px;
+        padding: 0 5px;
     }
 
     .footer {
