@@ -8,6 +8,7 @@
     "dev": "concurrently -n elm,tailwind -c blue,green -k \"elm-pages dev\" \"npx tailwindcss -i ./input.css -o ./public/style.css --watch\""
   },
   "devDependencies": {
+    "clever-tools": "^2.9.1",
     "concurrently": "^7.3.0",
     "elm-format": "^0.8.5",
     "elm-optimize-level-2": "0.2.3",
