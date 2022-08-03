@@ -3,7 +3,7 @@
   "scripts": {
     "postinstall": "elm-tooling install",
     "start": "elm-pages dev",
-    "build": "elm-pages build",
+    "build": "npx tailwindcss -i ./input.css -o ./public/style.css && elm-pages build",
     "format": "elm-format .",
     "dev": "concurrently -n elm,tailwind -c blue,green -k \"elm-pages dev\" \"npx tailwindcss -i ./input.css -o ./public/style.css --watch\""
   },

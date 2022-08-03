@@ -33,18 +33,13 @@ npm build
 
 To deploy scalaio's website on clever, following steps below front root folder: 
 
-1) be sure that last version of css file has been built by tailwinCss. 
-       (to achive that use the following command :
-```bash
-npx tailwindcss -i ./input.css -o ./public/style.css
-```
-2) build the static website : 
+1) build the static website : 
 
 ```bash
-npm build
+npm run build
 ```
 
-3) Go into dist directory where website has been generated
+2) Go into dist directory where website has been generated
 
 _Here you have to init a git repository, and add both remotes below_
 
@@ -53,17 +48,17 @@ git remote add prod git+ssh://git@push-n2-par-clevercloud-customers.services.cle
 git remote add preprod git+ssh://git@push-n2-par-clevercloud-customers.services.clever-cloud.com/app_ac41bb13-ae16-4344-927b-4de9aaa53a69.git
 ```
 
-4) Now your environment is ready to deploy.
+3) Now your environment is ready to deploy.
 
-    4.1) Add all file to index and commit them 
-    4.2) Do a push force on preprod : 
+    3.1) Add all file to index and commit them 
+    3.2) Do a push force on preprod : 
 
 ```bash
 git push -f preprod master
 ```
 
-5) Check if all is ok on preprod here : https://preprod.scala.io
-6) If all is ok, go prod! :
+4) Check if all is ok on preprod here : https://preprod.scala.io
+5) If all is ok, go prod! :
 
 ```bash
 git push -f prod master
