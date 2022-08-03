@@ -8,7 +8,7 @@ view : Html msg
 view =
     div [ Attr.class "home" ]
         [ h1 [ Attr.class "home-title" ] [ text "Buy your ticket for edition 2022 now" ]
-        , text "ScalaIO is a community based, non-profit event. See our F.A.Q for more information."
+        , text "ScalaIO is a community based, non-profit event. See our F.A.Q for more information. TEST"
         , iframe
             [ Attr.src "https://yurplan.com/event/Scala-IO-2022/88496/tickets/widget?widget=dGlja2V0aW5nV2lkZ2V0WXBfODY1MzdfODk1MDQ%3D&from=widget_89504&wversion=1&culture=fr"
             , class "home-ticketing"
