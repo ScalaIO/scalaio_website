@@ -41,6 +41,10 @@ npm run build
 
 2) Go into dist directory where website has been generated
 
+```bash
+cd dist
+```
+
 _Here you have to init a git repository, and add both remotes below_
 
 ```bash
