@@ -5,18 +5,16 @@ on:
     branches: ["master"]
 
 jobs:
-  build:
-    name: Build static website
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - run: npm install && npm run build
   deploy:
     needs: [build]
     name: Deploy the website in preproduction
     runs-on: ubuntu-latest
     steps:
-    - working-directory: dist
+    - name: Build static website
+      uses: actions/checkout@v1
+      run: npm install && npm run build
+    - name: Deploy the website in preproduction
+      working-directory: dist
       run: |
         clever login --token ${{ secrets.CLEVER_TOKEN }} --secret ${{ secrets.CLEVER_SECRET }}
         clever link ${{ secrets.CLEVER_APP_ID_PREPROD }}
