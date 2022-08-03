@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Check linting
-        run: npm install && npm run build
+      - run: npm install && npm run build
   deploy:
+    needs: [build]
     name: Deploy the website in preproduction
     runs-on: ubuntu-latest
     steps:
