@@ -23,7 +23,7 @@ jobs:
       run: |
         git config --global user.email ${{ secrets.GIT_EMAIL }}
         git config --global user.name ${{ secrets.GIT_NAME }}
-        ssh-keygen -t ed25519 -C -N "${{ secrets.GIT_EMAIL }}" -f ~/.ssh/id_ed25519
+        ssh-keygen -t ed25519 -C "${{ secrets.GIT_EMAIL }}" -f ~/.ssh/id_ed25519
         git init
         git remote add preprod git+ssh://git@push-n2-par-clevercloud-customers.services.clever-cloud.com/${{ secrets.CLEVER_APP_ID_PREPROD }}.git
         git add -f .
