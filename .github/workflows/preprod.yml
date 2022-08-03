@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy:
-    needs: [build]
     name: Deploy the website in preproduction
     runs-on: ubuntu-latest
     steps:
