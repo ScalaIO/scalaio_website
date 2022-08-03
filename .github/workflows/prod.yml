@@ -1,4 +1,4 @@
-name: Publish to preprod
+name: Publish to prod
 
 on:
   push:
