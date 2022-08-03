@@ -3,5 +3,5 @@ elm-stuff/
 .elm-pages/
 functions/render/elm-pages-cli.js
 .idea
-/dist
+dist/
 public/style.css
