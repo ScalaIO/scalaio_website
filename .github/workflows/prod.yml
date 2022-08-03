@@ -20,6 +20,8 @@ jobs:
       working-directory: dist
       run: |
         npm install -g clever-tools 
+        git config --global user.email ${{ secrets.GIT_EMAIL }}
+        git config --global user.name ${{ secrets.GIT_NAME }}
         git init
         git remote add prod git+ssh://git@push-n2-par-clevercloud-customers.services.clever-cloud.com/${{ secrets.CLEVER_APP_ID_PROD }}.git
         git add -f .
