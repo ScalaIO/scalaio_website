@@ -16,7 +16,7 @@ jobs:
     name: Deploy the website in preproduction
     runs-on: ubuntu-latest
     steps:
-    - working-directory: ./dist
+    - working-directory: dist
       run: |
         clever login --token ${{ secrets.CLEVER_TOKEN }} --secret ${{ secrets.CLEVER_SECRET }}
         clever link ${{ secrets.CLEVER_APP_ID_PREPROD }}
