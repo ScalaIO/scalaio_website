@@ -27,7 +27,7 @@ http://localhost:1234
 You can use [Elm](https://elm-lang.org/) to generate the static website : 
 
 ```bash
-npm build
+npm run build
 ```
 
 ## Deployment preprod / prod
