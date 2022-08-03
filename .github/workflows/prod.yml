@@ -20,6 +20,10 @@ jobs:
       working-directory: dist
       run: |
         npm install -g clever-tools 
+        git init
+        git remote add prod git+ssh://git@push-n2-par-clevercloud-customers.services.clever-cloud.com/${{ secrets.CLEVER_APP_ID_PROD }}.git
+        git add -f .
+        git commit -m "chore: forward changed to prod"
         clever login --token ${{ secrets.CLEVER_TOKEN }} --secret ${{ secrets.CLEVER_SECRET }}
         clever link ${{ secrets.CLEVER_APP_ID_PROD }}
         clever deploy --force
