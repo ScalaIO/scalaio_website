@@ -35,7 +35,8 @@ navbar =
         --, Html.div [] [ viewLink "Talks" ]
         --, Html.div [] [ viewLink "Schedule" ]
         --, Html.div [] [ viewLink "Videos" ]
-        --, Html.div [] [ viewLink "FAQ" ]
+        , Html.div [] [ viewLink "faq" ]
+
         --, Html.div [] [ viewLink "Hall of fame" ]
         --, DropDown.view model |> Html.map wrapDd
         ]

@@ -21,6 +21,12 @@
         font-size: 2.5rem;
         margin: 2px;
         font-weight: bold;
+        text-align: center;
+    }
+
+    h3  {
+        font-size: 2rem;
+        margin: 2px;
     }
 
     p {
@@ -106,6 +112,10 @@
     }
 
     .venue {
+        padding: 20px 300px;
+    }
+
+    .faq {
         padding: 20px 300px;
     }
 
@@ -245,6 +255,10 @@
     /* Tablet */
     @media only screen and (max-width: 1280px) {
         .venue {
+            padding: 20px;
+        }
+
+        .faq {
             padding: 20px;
         }
 
