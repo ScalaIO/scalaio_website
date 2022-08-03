@@ -21,11 +21,13 @@ jobs:
     - name: Deploy the website in preproduction
       working-directory: dist
       run: |
+        npm install -g clever-tools 
         git config --global user.email ${{ secrets.GIT_EMAIL }}
         git config --global user.name ${{ secrets.GIT_NAME }}
-        ssh-keygen -t ed25519 -C "${{ secrets.GIT_EMAIL }}" -f ~/.ssh/id_ed25519
         git init
         git remote add preprod git+ssh://git@push-n2-par-clevercloud-customers.services.clever-cloud.com/${{ secrets.CLEVER_APP_ID_PREPROD }}.git
         git add -f .
         git commit -m "chore: forward changed to preprod"
-        git push -f preprod master
+        clever login --token ${{ secrets.CLEVER_TOKEN }} --secret ${{ secrets.CLEVER_SECRET }}
+        clever link ${{ secrets.CLEVER_APP_ID_PREPROD }}
+        clever deploy --force
