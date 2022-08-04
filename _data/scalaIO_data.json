@@ -7,8 +7,20 @@
       "name": "strangebee",
       "url": "https://www.strangebee.com/"
     }],
-    "gold": [],
-    "silver": []
+    "gold": [{
+      "name": "lunatech",
+      "url": "https://lunatech.com/"
+    },{
+      "name": "strangebee",
+      "url": "https://www.strangebee.com/"
+    }],
+    "silver": [{
+      "name": "lunatech",
+      "url": "https://lunatech.com/"
+    },{
+      "name": "strangebee",
+      "url": "https://www.strangebee.com/"
+    }]
   }
 }
 

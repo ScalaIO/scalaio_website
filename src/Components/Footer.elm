@@ -1,6 +1,6 @@
 module Components.Footer exposing (footer)
 
-import Html exposing (Html, div, h1, h3, input, label, li, p, span, text, ul)
+import Html exposing (Html, button, div, h3, input, label, li, p, span, text, ul)
 import Html.Attributes as Attr exposing (action, class, id, method, name, novalidate, target)
 
 
@@ -26,26 +26,22 @@ newsletter =
             , target "_blank"
             , novalidate True
             ]
-            [ div []
-                [ div []
-                    [ label
-                        [ Attr.for "mce-EMAIL" ]
-                        [ text "Email Address"
-                        , span
-                            []
-                            [ text "* " ]
-                        ]
-                    , input
-                        [ Attr.type_ "email"
-                        , Attr.value ""
-                        , Attr.name "EMAIL"
-                        , Attr.class "required email form-control"
-                        , Attr.id "mce-EMAIL"
-                        ]
-                        []
-                    ]
+            [ label
+                [ Attr.for "mce-EMAIL" ]
+                [ text "Email Address"
+                , span
+                    []
+                    [ text "*" ]
                 ]
-            , Html.button [ Attr.type_ "submit", Attr.class "footer-newsletter-form-button" ] [ text "Subscribe" ]
+            , input
+                [ Attr.type_ "email"
+                , Attr.value ""
+                , Attr.name "EMAIL"
+                , Attr.class "required email form-control"
+                , Attr.id "mce-EMAIL"
+                ]
+                []
+            , button [ Attr.type_ "submit", Attr.class "footer-newsletter-form-button" ] [ text "Subscribe" ]
             ]
         ]
 
