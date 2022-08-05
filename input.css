@@ -238,6 +238,25 @@
         margin-right: 4px;
     }
 
+   
+    .venue-reach-instruction-details{
+        margin-left: 70px;
+        row-gap:10px;
+
+    }
+    .venue-reach-instruction-details-item{
+        display:flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .icon-venue{
+        display:flex;
+        width: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
     /* Mobile phone */
     @media only screen and (max-width: 600px) {
