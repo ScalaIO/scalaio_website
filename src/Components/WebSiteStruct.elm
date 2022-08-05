@@ -46,9 +46,9 @@ sponsors : GlobalData -> Html msg
 sponsors data =
     div [ class "sponsors" ]
         [ div [ class "sponsors-containers" ] (transform data.sponsors.platine Platine)
-        , div [ class "sponsors-containers" ] (transform data.sponsors.gold Gold)
-        , -- TODO: Add when a gold sponsor is added
-          div [ class "sponsors-containers" ] (transform data.sponsors.gold Silver) -- TODO: Add when a silver sponsor is added
+
+        --, div [ class "sponsors-containers" ] (transform data.sponsors.gold Gold), TODO: Add when a gold sponsor is added
+        --  div [ class "sponsors-containers" ] (transform data.sponsors.gold Silver) TODO: Add when a silver sponsor is added
         ]
 
 

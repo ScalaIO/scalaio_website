@@ -31,7 +31,6 @@
 
     h3  {
         font-size: 2rem;
-        margin: 2px;
     }
 
     p {
@@ -46,6 +45,11 @@
     .uncommon-a {
         color: white;
         text-decoration: none;
+    }
+
+    .list {
+        list-style-type: disc;
+        margin: 40px;
     }
 
     .wrapper {
@@ -131,12 +135,16 @@
         padding: 20px 300px;
     }
 
-    .faq {
+    .faq, .coc {
         padding: 20px 300px;
     }
 
-    .venue-title {
+    .venue-title, .faq-title, .coc-title {
         margin-bottom: 20px;
+    }
+
+    .faq-sub-title, .coc-sub-title {
+        margin-top: 30px;
     }
 
     .venue-reach {
@@ -319,7 +327,7 @@
             padding: 20px;
         }
 
-        .faq {
+        .faq .coc {
             padding: 20px;
         }
 
