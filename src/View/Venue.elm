@@ -4,14 +4,20 @@ import FontAwesome as Icon exposing (Icon)
 import FontAwesome.Attributes as Icon
 import FontAwesome.Solid as Icon
 import FontAwesome.Styles as Icon
-import Html exposing (Html, a, div, h2, i, iframe, p, text)
+import Html exposing (Html, a, div, h2, i, iframe, img, li, p, text, ul)
 import Html.Attributes exposing (class, height, href, property, src, target, width)
 import Json.Encode
 import Svg.Attributes as SvgA
 
-
+route : Icon id ->  String -> Html msg
 route icon indications =
     div [] [ icon |> Icon.styled [ SvgA.class "red" ] |> Icon.view, text " ", text indications ]
+
+
+subListRoute : List ((String,String)) -> Html msg
+subListRoute items =
+            div [class "venue-reach-instruction-details"] [ ul[](
+                    List.map (\item -> li[class "venue-reach-instruction-details-item"][img [ src ("assets/icons/"++ (Tuple.second item) ++".svg"),class "icon-venue"][],text (Tuple.first item)]) items)]
 
 
 view : Html msg
@@ -34,12 +40,17 @@ view =
                 []
             , div [ class "venue-reach-instruction" ]
                 [ Icon.css
-                , route Icon.plane "Once at Lyon Part Dieu, switch to T4 heading for La DOUA - I.U.T Feyssine and stop at La Doua - Gaston Berger."
-                , route Icon.subway "La Grande Crypt is a few stops away from the Lyon Part-Dieu train station using tram T1 or tram T4, heading for La DOUA - I.U.T Feyssine and stop at La Doua - Gaston Berger. (10-15 minutes)."
+                , route Icon.train "The closest train stations from the venue : "
+                , subListRoute [("Gare de Lyon","train"),("Gare de Montparnasse","train"),("Gare de Saint Lazare","train")]
+                , route Icon.subway "The venue can be accessed by subway :"
+                , subListRoute [("Station Boissière, Ligne 6","metro6"), ("Station Victor-Hugo, Ligne 2","metro2"), ("Station Trocadero, Ligne 9", "metro9"), ("Charles de Gaulle-Étoile, RER A", "rera")]
                 , route Icon.car "Use the following address for your GPS :"
-                , route Icon.bicycle "For the healthiest of us, there are numerous bike rental stations around and there is one very close to the CPE School (Velo'v DOUA/ Avenue des arts)."
+                , subListRoute [("Lat.: 48.862725, Long.: 2.287592","boussole")]
+                , route Icon.car "Available car park close to the venue :"
+                , subListRoute [("Autocité, Avenue Foch (2000 places at 300m)","parking"),("74 avenue Victor Hugo (600 places at 50m)","parking"),("120 avenue Victor Hugo (500 places at 300m)","parking"),("35 rue St Didier (200 places at 200m)","parking")]
+                , route Icon.bicycle "For the healthiest of us, there are numerous bike rental stations around and there is one very close to the venue."
                 ]
             ]
-        , h2 [ class "venue-title" ] [ text "Hotels" ]
-        , p [] [ text "We haven't been able to negociate an interesting group deal, you can check the ", a [ href "https://shorturl.at/pQWZ4", target "_blank" ] [ text "Hotels around the venue" ], text "." ]
+        --, h2 [ class "venue-title" ] [ text "Hotels" ]
+        --, p [] [ text "We haven't been able to negociate an interesting group deal, you can check the ", a [ href "https://shorturl.at/pQWZ4", target "_blank" ] [ text "Hotels around the venue" ], text "." ]
         ]
