@@ -4,6 +4,7 @@ import Browser.Navigation
 import Components.DropDown as DropDown
 import DataSource
 import Html exposing (Html)
+import Html.Attributes exposing (class)
 import Pages.Flags
 import Pages.PageUrl exposing (PageUrl)
 import Path exposing (Path)
@@ -97,6 +98,6 @@ view :
     -> View msg
     -> { body : Html msg, title : String }
 view sharedData page model toMsg pageView =
-    { body = Html.div [] pageView.body
+    { body = Html.div [ class "wrapper" ] pageView.body
     , title = pageView.title
     }

@@ -7,7 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-    html, body { height: 100%;}
+    html, body {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
     body {
         font-family: Lato, sans-serif;
@@ -41,6 +46,17 @@
     .uncommon-a {
         color: white;
         text-decoration: none;
+    }
+
+    .wrapper {
+        box-sizing: border-box;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body {
+        flex-grow: 1;
     }
 
     .nav header a.brand {
@@ -269,6 +285,13 @@
             display: flex;
             justify-content: center;
         }
+
+        .footer-newsletter-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
     }
 
     /* Tablet */
@@ -285,17 +308,9 @@
             border: 0;
         }
 
-        .footer-newsletter-form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 10px;
-        }
-
         .footer {
             padding: 20px 20px;
         }
-
     }
 
 }
