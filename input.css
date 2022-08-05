@@ -222,6 +222,7 @@
         margin-right: 4px;
     }
 
+   
     .venue-reach-instruction-details{
         margin-left: 70px;
         row-gap:10px;
@@ -237,7 +238,7 @@
     .icon-venue{
         display:flex;
         width: 25px;
-        margin-bottom: 10px;
+        margin-top: 5px;
         margin-bottom: 5px;
     }
 
