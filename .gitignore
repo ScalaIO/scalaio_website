@@ -5,3 +5,5 @@ functions/render/elm-pages-cli.js
 .idea
 dist/
 public/style.css
+*/**/.DS_Store
+.DS_Store
