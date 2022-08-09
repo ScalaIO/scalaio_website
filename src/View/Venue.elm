@@ -1,11 +1,10 @@
 module View.Venue exposing (..)
 
 import FontAwesome as Icon exposing (Icon)
-import FontAwesome.Attributes as Icon
 import FontAwesome.Solid as Icon
 import FontAwesome.Styles as Icon
-import Html exposing (Html, a, div, h2, i, iframe, img, li, p, text, ul)
-import Html.Attributes exposing (class, height, href, property, src, target, width)
+import Html exposing (Html, div, h2, iframe, img, li, p, text, ul)
+import Html.Attributes exposing (class, height, property, src, width)
 import Json.Encode
 import Svg.Attributes as SvgA
 
@@ -25,8 +24,8 @@ subListRoute items =
 
 view : Html msg
 view =
-    div [ class "venue" ]
-        [ h2 [ class "venue-title" ] [ text "ScalaIO will be held in La Grande Crypte in Paris, France" ]
+    div [ class "centered-body" ]
+        [ h2 [ class "centered-body-title" ] [ text "ScalaIO will be held in La Grande Crypte in Paris, France" ]
         , p [] [ text "La Grande Crypte is great for 300-500 people and perfectly equipped for conferences and hosts other international conferences." ]
         , p [] [ text "Should you have the time, we recommend extending your stay in Paris beyond the conference to enjoy the city. It is famous all over the world for it's gastronomy and quality of life." ]
         , h2 [ class "venue-title" ] [ text "Getting to La Grande Crypte" ]

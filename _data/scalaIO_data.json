@@ -16,6 +16,95 @@
       "name": "besodo",
       "url": "https://besedo.com/"
     }]
-  }
+  },
+  "contributions": [
+    {
+      "year": 2019,
+      "contributors": [
+        {
+          "name": "Olivier CHIROUZE",
+          "twitter": "https://twitter.com/OlivierChirouze",
+          "company": "Criteo"
+        },
+        {
+          "name": "Brice LAURENCIN",
+          "company": "Criteo"
+        },
+        {
+          "name": "Rémi LAVOLÉE",
+          "company": "Ubilab"
+        },
+        {
+          "name": "Guillaume NOIREAUX",
+          "company": "Ubilab"
+        },
+        {
+          "name": "Guillaume BADIN",
+          "twitter": "http://twitter.com/guillaumebadin",
+          "company": "Ubilab"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "contributors": [
+        {
+          "name": "Francois ARMAND",
+          "twitter": "http://twitter.com/fanf42",
+          "company": "www.normation.com"
+        },
+        {
+          "name": "Karol CHMIST",
+          "twitter": "http://twitter.com/karolchmist",
+          "company": "Freelance"
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "contributors": [
+        {
+          "name": "Emmanuel FELLER",
+          "twitter": "http://twitter.com/moyowi",
+          "company": "innovation-box.fr"
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "contributors": [
+        {
+          "name": "Emmanuel FELLER",
+          "twitter": "http://twitter.com/moyowi",
+          "company": "innovation-box.fr"
+        },
+        {
+          "name": "Andy HICKS",
+          "twitter": "http://twitter.com/andy1138",
+          "company": "Freelance"
+        },
+        {
+          "name": "Guillaume BADIN",
+          "twitter": "http://twitter.com/guillaumebadin",
+          "company": "Ubilab"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "contributors": [
+        {
+          "name": "Emmanuel FELLER",
+          "twitter": "http://twitter.com/moyowi",
+          "company": "innovation-box.fr"
+        },
+        {
+          "name": "Andy HICKS",
+          "twitter": "http://twitter.com/andy1138",
+          "company": "Freelance"
+        }
+      ]
+    }
+  ]
 }
 

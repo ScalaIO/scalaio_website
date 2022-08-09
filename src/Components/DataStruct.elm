@@ -42,8 +42,22 @@ type alias Sponsors =
     }
 
 
+type alias Contributor =
+    { name : String
+    , twitter : Maybe String
+    , company : String
+    }
+
+
+type alias Contribution =
+    { year : Int
+    , contributors : List Contributor
+    }
+
+
 type alias GlobalData =
     { sponsors : Sponsors
+    , contributions : List Contribution
     }
 
 
@@ -68,10 +82,36 @@ sponsorsItemDecoder =
         (D.field "jaimescala" listSponsorDecoder)
 
 
+contributorDecoder : D.Decoder Contributor
+contributorDecoder =
+    D.map3 Contributor
+        (D.field "name" D.string)
+        (D.optionalField "twitter" D.string)
+        (D.field "company" D.string)
+
+
+contributorsDecoder : D.Decoder (List Contributor)
+contributorsDecoder =
+    D.list contributorDecoder
+
+
+contributionDecoder : D.Decoder Contribution
+contributionDecoder =
+    D.map2 Contribution
+        (D.field "year" D.int)
+        (D.field "contributors" contributorsDecoder)
+
+
+contributionsDecoder : D.Decoder (List Contribution)
+contributionsDecoder =
+    D.list contributionDecoder
+
+
 globalData : D.Decoder GlobalData
 globalData =
-    D.map GlobalData
+    D.map2 GlobalData
         (D.field "sponsors" sponsorsItemDecoder)
+        (D.field "contributions" contributionsDecoder)
 
 
 data : DataSource GlobalData

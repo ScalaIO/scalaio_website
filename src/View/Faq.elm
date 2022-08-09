@@ -6,8 +6,8 @@ import Html.Attributes exposing (class, href, target)
 
 view : Html msg
 view =
-    div [ class "faq" ]
-        [ h2 [ class "faq-title" ] [ text "Frequently Asked Questions" ]
+    div [ class "centered-body" ]
+        [ h2 [ class "centered-body-title" ] [ text "Frequently Asked Questions" ]
         , h3 [ class "faq-sub-title" ] [ text "Is there a Code of Conduct ?" ]
         , p [] [ text "Yes, there is a ", a [ href "/code-of-conduct", target "_blank" ] [ text "Code of Conduct" ], text "." ]
         , h3 [ class "faq-sub-title" ] [ text "Are you cool ?" ]

@@ -6,12 +6,12 @@ import Html.Attributes exposing (class, href, target)
 
 view : Html msg
 view =
-    div [ class "coc" ]
-        [ h2 [ class "coc-title" ] [ text "Code of conduct" ]
+    div [ class "centered-body" ]
+        [ h2 [ class "centered-body-title" ] [ text "Code of conduct" ]
         , p [] [ text "ScalaIO is an all-ages event for people from many different backgrounds. We expect presenters, exhibitors, and attendees to help make ScalaIO enjoyable for everyone, regardless of age, gender, sexuality, religious or ethnic identity, or ability." ]
         , h3 [ class "faq-sub-title" ] [ text "All attendees" ]
         , p [] [ text "Please show respect for all attendees. In particular:" ]
-        , ul [class "list"]
+        , ul [ class "list" ]
             [ li [] [ text "Offensive behavior such as verbal abuse, intimidation, or harassment will not be tolerated." ]
             , li [] [ text "Offensive behavior such as verbal abuse, intimidation, or harassment will not be tolerated." ]
             , li [] [ text "Remember that all our attendees are here for similar reasons, and do not make assumptions about anyone's interests, skill level, or profession based on their appearance or background." ]
@@ -21,7 +21,7 @@ view =
             ]
         , h3 [ class "faq-sub-title" ] [ text "Speakers" ]
         , p [] [ text "Please ensure that your presentation does not stigmatize, alienate, or marginalize any individual or group. In particular:" ]
-        , ul [class "list"]
+        , ul [ class "list" ]
             [ li [] [ text "Keep your slide deck G-rated." ]
             , li [] [ text "Anything beyond the occasional mild cuss word is not appropriate." ]
             , li [] [ text "While criticism of software, programming practices, etc, is OK, please try to offer constructive improvements or alternatives as part of your talk." ]
