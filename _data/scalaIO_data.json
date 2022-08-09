@@ -11,7 +11,11 @@
       "name": "reach5",
       "url": "https://www.reachfive.com/"
     }],
-    "silver": []
+    "silver": [],
+    "jaimescala": [{
+      "name": "besodo",
+      "url": "https://besedo.com/"
+    }]
   }
 }
 

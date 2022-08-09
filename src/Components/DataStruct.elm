@@ -9,6 +9,7 @@ type SponsorKind
     = Platine
     | Gold
     | Silver
+    | JaimeScala
 
 
 computeCss : SponsorKind -> String
@@ -23,6 +24,9 @@ computeCss k =
         Silver ->
             "sponsors-silver-logo"
 
+        JaimeScala ->
+            "sponsors-jaimescala-logo"
+
 
 type alias Sponsor =
     { url : String
@@ -34,6 +38,7 @@ type alias Sponsors =
     { platine : List Sponsor
     , gold : List Sponsor
     , silver : List Sponsor
+    , jaimeScala : List Sponsor
     }
 
 
@@ -56,10 +61,11 @@ listSponsorDecoder =
 
 sponsorsItemDecoder : D.Decoder Sponsors
 sponsorsItemDecoder =
-    D.map3 Sponsors
+    D.map4 Sponsors
         (D.field "platine" listSponsorDecoder)
         (D.field "gold" listSponsorDecoder)
         (D.field "silver" listSponsorDecoder)
+        (D.field "jaimescala" listSponsorDecoder)
 
 
 globalData : D.Decoder GlobalData
