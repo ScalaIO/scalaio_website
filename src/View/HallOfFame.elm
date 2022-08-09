@@ -35,7 +35,7 @@ showContribution : Contribution -> Html msg
 showContribution contribution =
     div [ class "flex flex-col items-center" ]
         [ h3 [] [ String.fromInt contribution.year |> String.append "Scala.IO " |> text ]
-        , ul [ class "hof-contributors flex justify-center flex-col" ] (map showContributor contribution.contributors)
+        , ul [ class "hof-contributors flex items-center flex-col" ] (map showContributor contribution.contributors)
         ]
 
 
