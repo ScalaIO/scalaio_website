@@ -119,7 +119,7 @@
     .home-ticketing {
         margin-top: 40px;
         width: 100%;
-        height: 485px;
+        height: 550px;
         scrolling:"auto";
         frameborder:"0";
         id:"yurplan-widget-89504";
@@ -137,6 +137,10 @@
 
     .faq, .coc {
         padding: 20px 300px;
+    }
+
+    .partners {
+        padding: 20px 20px;
     }
 
     .venue-title, .faq-title, .coc-title {
