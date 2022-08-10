@@ -34,7 +34,7 @@ navbar =
 
         --, Html.div [] [ viewLink "Talks" ]
         --, Html.div [] [ viewLink "Schedule" ]
-        --, Html.div [] [ viewLink "Videos" ]
+        , Html.div [] [ viewLink "sponsorship" ]
         , Html.div [] [ viewLink "faq" ]
         , Html.div [] [ viewLink "hall-of-fame" ]
 
