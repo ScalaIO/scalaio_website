@@ -6,18 +6,22 @@ import Html.Attributes as Attr exposing (class)
 
 cfp : Html msg
 cfp =
+    div[class "home-news"][h2 [ Attr.class "home-title" ] [ text "Call for paper for edition 2022 is open" ],
     div [ class "cfp" ]
         [ span [ Attr.class "cfp-icon" ] [ text "💡" ]
         , p [] [ text "We actively are looking for speakers. If you want to share some functional programming aspect with us, feel free to fulfill ", a [ Attr.href "https://www.papercall.io/scalaio2022", Attr.target "_blank" ] [ text "your submission" ], text "." ]
+        ]
         ]
 
 
 view : Html msg
 view =
     div [ Attr.class "home" ]
-        [ h2 [ Attr.class "home-title" ] [ text "Buy your ticket for edition 2022 now" ]
+        [
+         cfp,
+         h2 [ Attr.class "home-title" ] [ text "Buy your ticket for edition 2022 now" ]
         , p [] [ text "ScalaIO is a community based, non-profit event. See our ", a [ Attr.href "/faq", Attr.target "_blank" ] [ text "F.A.Q" ], text " for more information." ]
-        , cfp
+
         , iframe
             [ Attr.src "https://yurplan.com/event/Scala-IO-2022/88496/tickets/widget?widget=dGlja2V0aW5nV2lkZ2V0WXBfODY1MzdfODk1MDQ%3D&from=widget_89504&wversion=1&culture=fr"
             , class "home-ticketing"
