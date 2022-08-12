@@ -16,7 +16,7 @@ viewLink path =
 header : Html msg
 header =
     div [ Attr.class "header" ]
-        [ img [ src "assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
+        [ img [ src "/assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
         , h1 [ Attr.class "header-title" ] [ Html.text "The Scala event in France!" ]
         , span [ Attr.class "header-teaser" ] [ Html.text "November 4th, 2022 - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ], Html.text ", France" ]
         ]
