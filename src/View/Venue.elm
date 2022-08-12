@@ -18,7 +18,7 @@ subListRoute : List ( String, String ) -> Html msg
 subListRoute items =
     div [ class "venue-reach-instruction-details" ]
         [ ul []
-            (List.map (\item -> li [ class "venue-reach-instruction-details-item" ] [ img [ src ("assets/icons/" ++ Tuple.second item ++ ".svg"), class "icon-venue" ] [], text (Tuple.first item) ]) items)
+            (List.map (\item -> li [ class "venue-reach-instruction-details-item" ] [ img [ src ("/assets/icons/" ++ Tuple.second item ++ ".svg"), class "icon-venue" ] [], text (Tuple.first item) ]) items)
         ]
 
 
