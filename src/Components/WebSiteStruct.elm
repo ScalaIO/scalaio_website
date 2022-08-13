@@ -3,7 +3,7 @@ module Components.WebSiteStruct exposing (globalPageStructure)
 import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCss)
 import Components.Footer exposing (footer)
 import Components.Utils exposing (capitalize, transform)
-import Html exposing (Html, div, h1, h3, img, input, label, li, nav, p, span, text)
+import Html exposing (Html, div, h1, h3, img, input, label, li, nav, p, span, text, ul)
 import Html.Attributes as Attr exposing (..)
 import String exposing (..)
 
@@ -24,21 +24,33 @@ header =
 
 navbar : Html msg
 navbar =
-    nav [ Attr.class "flex justify-center items-center gap-x-8 navheaderColor" ]
-        [ Html.header []
-            [ Html.a [ Attr.href "/", class "uncommon-a" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ] ]
-        , Html.div [] [ viewLink "venue" ]
+    Html.header [class "navheaderColor"][
+        Html.a [ Attr.href "/", class "uncommon-a" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ],
+        label[for "toggle-1", class "toggle-menu"][
+              ul[][
+                li [][],
+                li [][],
+                li [][]
+              ]
+            ],
+            input [type_  "checkbox", id "toggle-1"][],
+       nav []
+        [
+        ul[][
+        li [] [ viewLink "venue" ]
 
         --, Html.div [] [ viewLink "Speakers" ]
-        , Html.div [] [ viewLink "partners" ]
+        , li [] [ viewLink "partners" ]
 
-        --, Html.div [] [ viewLink "Talks" ]
-        --, Html.div [] [ viewLink "Schedule" ]
-        , Html.div [] [ viewLink "sponsorship" ]
-        , Html.div [] [ viewLink "faq" ]
-        , Html.div [] [ viewLink "hall-of-fame" ]
+        --, li [] [ viewLink "Talks" ]
+        --, li [] [ viewLink "Schedule" ]
+        , li [] [ viewLink "sponsorship" ]
+        , li [] [ viewLink "faq" ]
+        , li [] [ viewLink "hall-of-fame" ]
 
         --, DropDown.view model |> Html.map wrapDd
+        ]
+        ]
         ]
 
 
