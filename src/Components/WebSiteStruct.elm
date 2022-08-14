@@ -24,7 +24,7 @@ header =
 
 navbar : Html msg
 navbar =
-    Html.header [class "navheaderColor"][
+    Html.header [class "navbar"][
         Html.a [ Attr.href "/", class "uncommon-a" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ],
         label[for "toggle-1", class "toggle-menu"][
               ul[][
