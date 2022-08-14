@@ -422,13 +422,11 @@
       display: none;
     }
 
-    @media only screen and (max-width: 980px) {
+    @media only screen and (max-width: 600px) {
       header {
         padding: 20px 0px;
       }
-      #logo {
-        padding: 0px;
-      }
+
       input[type="checkbox"] {
         position: absolute;
         top: -9999px;
