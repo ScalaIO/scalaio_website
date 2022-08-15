@@ -10,7 +10,7 @@ import String exposing (..)
 
 viewLink : String -> Html msg
 viewLink path =
-    Html.a [ Attr.href path, class "uncommon-a" ] [ Html.text (String.replace "-" " " path |> capitalize) ]
+    Html.a [ Attr.href ("/" ++path), class "uncommon-a" ] [ Html.text (String.replace "-" " " path |> capitalize) ]
 
 
 header : Html msg
