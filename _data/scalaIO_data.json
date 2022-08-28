@@ -10,6 +10,9 @@
     "gold": [{
       "name": "reach5",
       "url": "https://www.reachfive.com/"
+    },{
+      "name": "gatling",
+      "url": "https://gatling.io/"
     }],
     "silver": [],
     "jaimescala": [{
