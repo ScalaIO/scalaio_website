@@ -1,8 +1,8 @@
 module Components.WebSiteStruct exposing (globalPageStructure)
 
-import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCss)
+import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCssSponsor)
 import Components.Footer exposing (footer)
-import Components.Utils exposing (capitalize, transform)
+import Components.Utils exposing (capitalize, transformSponsor)
 import Html exposing (Html, div, h1, h3, img, input, label, li, nav, p, span, text, ul)
 import Html.Attributes as Attr exposing (..)
 import String exposing (..)
@@ -38,8 +38,7 @@ navbar =
         [
         ul[][
         li [] [ viewLink "venue" ]
-
-        --, Html.div [] [ viewLink "Speakers" ]
+        , li [] [ viewLink "speakers" ]
         , li [] [ viewLink "partners" ]
 
         --, li [] [ viewLink "Talks" ]
@@ -57,8 +56,8 @@ navbar =
 sponsors : GlobalData -> Html msg
 sponsors data =
     div [ class "sponsors" ]
-        [ div [ class "sponsors-containers" ] (transform data.sponsors.platine Platine)
-        , div [ class "sponsors-containers" ] (transform data.sponsors.gold Gold)
+        [ div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
+        , div [ class "sponsors-containers" ] (transformSponsor data.sponsors.gold Gold)
 
         --  div [ class "sponsors-containers" ] (transform data.sponsors.gold Silver) TODO: Add when a silver sponsor is added
         ]

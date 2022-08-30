@@ -216,13 +216,50 @@
     }
 
     .sponsors-jaimescala-logo {
-        height: 45px;
+        height: 70px;
         padding: 0 5px;
     }
 
     .hof-contributors {
         margin: 20px;
     }
+
+
+
+    .speakers-keynote-picture {
+        height: 325px;
+        padding: 0 20px;
+    }
+
+    .speakers-talk {
+        display:flex;
+        justify-content:space-around;
+
+    }
+
+    .speakers-talk-picture {
+        height: 250px;
+        padding: 0 20px;
+    }
+
+    .speakers-display {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .speakers-display-name {
+         font-size: 27px;
+         font-weight: 200;
+    }
+
+    .speakers-display-title {
+         font-size: 20px;
+         font-style: italic;
+
+    }
+
+
 
     .footer {
         color: #FFF;
@@ -354,6 +391,14 @@
             justify-content: center;
             gap: 10px;
         }
+
+        .speakers-talk {
+                display:flex;
+                justify-content:arround;
+                flex-direction:column;
+                 row-gap: 30px;
+            }
+
     }
 
     /* Tablet */
@@ -369,6 +414,12 @@
         .footer {
             padding: 20px 20px;
         }
+        .speakers-talk {
+                        display:flex;
+                        justify-content:arround;
+                        flex-direction:column;
+                         row-gap: 30px;
+                    }
     }
 
     /*nav bar responsive*/
@@ -490,6 +541,13 @@
       nav ul li a i {
         color: #fde428;
         padding-right: 13px;
+      }
+
+      .speakers-talk {
+          display:flex;
+          justify-content:arround;
+          flex-direction:column;
+          row-gap: 30px;
       }
     }
 

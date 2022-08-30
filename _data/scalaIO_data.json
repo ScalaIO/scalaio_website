@@ -1,24 +1,44 @@
 {
   "sponsors": {
-    "platine": [{
-      "name": "lunatech",
-      "url": "https://lunatech.com/"
-    },{
-      "name": "strangebee",
-      "url": "https://www.strangebee.com/"
-    }],
-    "gold": [{
-      "name": "reach5",
-      "url": "https://www.reachfive.com/"
-    },{
-      "name": "gatling",
-      "url": "https://gatling.io/"
-    }],
-    "silver": [],
-    "jaimescala": [{
-      "name": "besodo",
-      "url": "https://besedo.com/"
-    }]
+    "platine": [
+      {
+        "name": "lunatech",
+        "url": "https://lunatech.com/"
+      },
+      {
+        "name": "strangebee",
+        "url": "https://www.strangebee.com/"
+      }
+    ],
+    "gold": [
+      {
+        "name": "reach5",
+        "url": "https://www.reachfive.com/"
+      },
+      {
+        "name": "gatling",
+        "url": "https://gatling.io/"
+      }
+    ],
+    "silver": [{
+      "name": "hawk",
+      "url": "https://hawk-tech.io/"
+    }
+    ],
+    "jaimescala": [
+      {
+        "name": "besodo",
+        "url": "https://besedo.com/"
+      },
+      {
+        "name": "rudder",
+        "url": "https://www.rudder.io/"
+      },
+      {
+        "name": "univalence",
+        "url": "https://univalence.io/"
+      }
+    ]
   },
   "contributions": [
     {
@@ -108,6 +128,26 @@
         }
       ]
     }
-  ]
+  ],
+  "speakers": {
+    "keynote": [
+      {
+        "name": "Martin Odersky",
+        "title": "Academic Director - EPFL",
+        "picture": "martin-odersky"
+      }
+    ],
+    "talk": [
+      {
+        "name": "Nicolas Rinaudo",
+        "title": "Scala & FP enthusiast",
+        "picture": "nicolas-rinaudo"
+      },{
+        "name": "Jules Ivanic",
+        "title": "Functional Programmer",
+        "picture": "jules-ivanic"
+      }
+    ]
+  }
 }
 
