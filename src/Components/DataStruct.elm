@@ -167,3 +167,7 @@ globalData =
 data : DataSource GlobalData
 data =
     DataSource.File.jsonFile globalData "_data/scalaIO_data.json"
+
+dataSpeaker : DataSource GlobalData
+dataSpeaker =
+    DataSource.File.jsonFile globalData "_data/speaker_details.json"
