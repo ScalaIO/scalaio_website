@@ -13,7 +13,7 @@ capitalize str =
 
 sponsorToUrl : SponsorKind -> Sponsor -> Html msg
 sponsorToUrl k s =
-    a [ Attr.href s.url, Attr.target "_blank" ] [ img [ src ("/assets/sponsors/logo-" ++ s.name ++ ".svg"), alt s.name, class (computeCssSponsor k) ] [] ]
+    a [ Attr.href s.url, Attr.target "_blank" ] [ img [ src ("/assets/sponsors/logo-" ++ s.name ++ ".png"), alt s.name, class (computeCssSponsor k) ] [] ]
 
 
 

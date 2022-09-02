@@ -18,11 +18,19 @@
       {
         "name": "gatling",
         "url": "https://gatling.io/"
+      },
+      {
+        "name": "starlake",
+        "url": "https://www.starlake.ai"
       }
     ],
     "silver": [{
       "name": "hawk",
       "url": "https://hawk-tech.io/"
+    },
+      {
+      "name": "colisweb",
+      "url": "https://www.colisweb.com"
     }
     ],
     "jaimescala": [

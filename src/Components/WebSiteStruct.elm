@@ -58,8 +58,6 @@ sponsors data =
     div [ class "sponsors" ]
         [ div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
         , div [ class "sponsors-containers" ] (transformSponsor data.sponsors.gold Gold)
-
-        --  div [ class "sponsors-containers" ] (transform data.sponsors.gold Silver) TODO: Add when a silver sponsor is added
         ]
 
 
