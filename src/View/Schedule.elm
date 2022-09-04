@@ -6,12 +6,14 @@ import Html exposing (Html, div, h2, text)
 import Html.Attributes as Attr exposing (class)
 view : GlobalData -> Html msg
 view gd =
-    div [  ]
+    div [class "schedule" ]
         [  div [class "schedule-info"] [
            div[][text "The conference runs from 9:00 am to 6:30 pm"]]
-           ,div [class "schedule-info"] [div[][text "At 8 am, registration will open and a breakfast will be served"]
+           ,div [class "schedule-info"] [div[][text "At 8 am, registration will open and a breakfast will be served."]
            ],
            div [class "schedule-program-line"] [
+                        div[class "schedule-program-title-item"][text "ScalaIO 2022 Program"]]
+           ,div [class "schedule-program-line"] [
                 div[class "schedule-program-time-item"][text "08:00 - 09:00"]
                 ,div[class "schedule-program-subject-item"][text "Registration"]]
             ,div [class "schedule-program-line"] [
