@@ -219,6 +219,10 @@
         padding: 0 5px;
     }
 
+    hr{
+    color:#c4bbbb;
+    }
+
     .hof-contributors {
         margin: 20px;
     }
@@ -257,6 +261,63 @@
          font-style: italic;
 
     }
+
+    .schedule-info {
+        display:flex;
+        justify-content:center;
+        font-size: 2rem;
+        gap: 30px;
+
+    }
+
+    .schedule-program-line {
+        display:flex;
+        justify-content: center;
+    }
+
+     .schedule-program-subject-item {
+        display:flex;
+        justify-content:center;
+        font-size: 2rem;
+        width : 40%;
+        border: 1px solid #000;
+        gap: 30px;
+        margin: 4px;
+
+    }
+
+    .schedule-program-subject-talk {
+        display:flex;
+        justify-content:center;
+        font-size: 2rem;
+        width : 20%;
+        border: 1px solid #000;
+
+        margin: 4px 0px 4px 2px;
+
+    }
+
+    .schedule-program-time-item {
+            display:flex;
+            justify-content:center;
+            font-size: 2rem;
+            width : 20%;
+            border: 1px solid #000;
+            gap: 30px;
+            margin: 4px;
+
+        }
+
+        .schedule-program-line > .schedule-program-time-item {
+            display:flex;
+            justify-content:center;
+            font-size: 2rem;
+            width : 20%;
+            border: 1px solid #000;
+
+            margin: 4px 4px 4px 0px;
+
+        }
 
 
 
@@ -392,11 +453,11 @@
         }
 
         .speakers-talk {
-                display:flex;
-                justify-content:arround;
-                flex-direction:column;
-                 row-gap: 30px;
-            }
+            display:flex;
+            justify-content:arround;
+            flex-direction:column;
+             row-gap: 30px;
+        }
 
     }
 

@@ -3,7 +3,7 @@ module Components.WebSiteStruct exposing (globalPageStructure)
 import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCssSponsor)
 import Components.Footer exposing (footer)
 import Components.Utils exposing (capitalize, transformSponsor)
-import Html exposing (Html, div, h1, h3, img, input, label, li, nav, p, span, text, ul)
+import Html exposing (Html, div, h1, h3, hr, img, input, label, li, nav, p, span, text, ul)
 import Html.Attributes as Attr exposing (..)
 import String exposing (..)
 
@@ -38,6 +38,7 @@ navbar =
         [
         ul[][
         li [] [ viewLink "venue" ]
+        ,li [] [ viewLink "schedule" ]
         , li [] [ viewLink "speakers" ]
         , li [] [ viewLink "partners" ]
 
@@ -56,7 +57,8 @@ navbar =
 sponsors : GlobalData -> Html msg
 sponsors data =
     div [ class "sponsors" ]
-        [ div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
+        [hr[class "hr"][],
+         div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
         , div [ class "sponsors-containers" ] (transformSponsor data.sponsors.gold Gold)
         ]
 
