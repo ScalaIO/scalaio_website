@@ -2,7 +2,7 @@ module View.Schedule exposing (..)
 
 
 import Components.DataStruct exposing (GlobalData)
-import Html exposing (Html, div, h2, text)
+import Html exposing (Html, a, div, h2, p, span, text)
 import Html.Attributes as Attr exposing (class)
 view : GlobalData -> Html msg
 view gd =
@@ -12,7 +12,12 @@ view gd =
            ,div [class "schedule-info"] [div[][text "At 8 am, registration will open and a breakfast will be served."]
            ],
            div [class "schedule-program-line"] [
-                        div[class "schedule-program-title-item"][text "ScalaIO 2022 Program"]]
+                        div[class "schedule-program-title-item"][
+                        text "ScalaIO 2022 Program"]]
+           ,div [class "schedule-program-line"] [
+                        div[class "schedule-program-subtitle-item"][
+                        p [][text "The CFP is still opened. ", a [ Attr.href "https://www.papercall.io/scalaio2022", Attr.target "_blank" ][text "(here)"]]
+                        ,p [][text "The schedule will be published later."]]]
            ,div [class "schedule-program-line"] [
                 div[class "schedule-program-time-item"][text "08:00 - 09:00"]
                 ,div[class "schedule-program-subject-item"][text "Registration"]]

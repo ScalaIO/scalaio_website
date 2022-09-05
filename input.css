@@ -260,6 +260,21 @@
          gap: 30px;
          margin: 4px;
     }
+
+    .schedule-program-subtitle-item > p{
+         margin: 0px;
+         color:#bc1321;
+    }
+
+    .schedule-program-subtitle-item{
+         display:flex;
+         justify-content:center;
+         font-size: 1.6rem;
+         margin: 0px 0px 0px 0px;
+         flex-direction:column;
+    }
+
+
      .footer {
          color: #FFF;
          padding: 20px 200px;
@@ -542,8 +557,20 @@
              gap: 30px;
         }
          .schedule-program-title-item{
+             display:flex;
+             justify-content:center;
              font-size: 2rem;
              margin: 18px 0px -6px 0px
+        }
+        .schedule-program-subtitle-item > p{
+            margin: 0px;
+        }
+        .schedule-program-subtitle-item{
+             display:flex;
+             justify-content:center;
+             font-size: 0.9rem;
+             margin: 0px 0px 0px 0px;
+             flex-direction:column;
         }
     }
 }
