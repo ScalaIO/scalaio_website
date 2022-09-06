@@ -56,9 +56,9 @@ head static =
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "TODO"
+        , description = "ScalaIO - Venue"
         , locale = Nothing
-        , title = "TODO title" -- metadata.title -- TODO
+        , title = "ScalaIO - Venue" -- metadata.title -- TODO
         }
         |> Seo.website
 

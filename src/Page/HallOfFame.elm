@@ -57,7 +57,7 @@ head static =
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "TODO"
+        , description = "ScalaIO - Hall of fame"
         , locale = Nothing
         , title = "ScalaIO - Hall of fame"
         }

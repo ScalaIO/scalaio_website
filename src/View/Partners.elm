@@ -8,13 +8,13 @@ import Html.Attributes as Attr exposing (class)
 
 view : GlobalData -> Html msg
 view gd =
-    div [ Attr.class "flex  flex-col gap-y-20 partners" ]
-        [ div [ Attr.class "flex justify-center" ] [ h2 [] [ text "Platinum Sponsor" ] ]
-        , div [ class "flex justify-around" ] (transformSponsor gd.sponsors.platine SponsorKind.Platine)
-        , div [ Attr.class "flex justify-center" ] [ h2 [] [ text "Gold Sponsor" ] ]
-        , div [ class "flex justify-around" ] (transformSponsor gd.sponsors.gold SponsorKind.Gold)
-        , div [ Attr.class "flex justify-center" ] [ h2 [] [ text "Silver Sponsor" ] ]
-        , div [ class "flex justify-around" ] (transformSponsor gd.sponsors.silver SponsorKind.Silver)
-        , div [ Attr.class "flex justify-center" ] [ h2 [] [ text "J'aime Scala Sponsor" ] ]
-        , div [ class "flex justify-around" ] (transformSponsor gd.sponsors.jaimeScala SponsorKind.JaimeScala)
+    div [ Attr.class "partners" ]
+        [ div [ Attr.class "sponsors-title" ] [ h2 [] [ text "Platinum Sponsor" ] ]
+        , div [ class "partners-logo" ] (transformSponsor gd.sponsors.platine SponsorKind.Platine)
+        , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "Gold Sponsor" ] ]
+        , div [ class "partners-logo" ] (transformSponsor gd.sponsors.gold SponsorKind.Gold)
+        , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "Silver Sponsor" ] ]
+        , div [ class "partners-logo" ] (transformSponsor gd.sponsors.silver SponsorKind.Silver)
+        , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "J'aime Scala Sponsor" ] ]
+        , div [ class "partners-logo" ] (transformSponsor gd.sponsors.jaimeScala SponsorKind.JaimeScala)
         ]
