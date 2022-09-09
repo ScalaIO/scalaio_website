@@ -1,5 +1,6 @@
 module Page.speakerDetails/id_ exposing (Model, Msg, Data, page)
 
+import Api exposing (routes)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
@@ -18,15 +19,21 @@ type alias Msg =
     Never
 
 type alias RouteParams =
-    {}
+    {id:String}
 
 page : Page RouteParams Data
 page =
-    Page.single
-        { head = head
-        , data = data
+    Page.prerender
+        { data = data
+        , head = head
+        , routes = routes
         }
         |> Page.buildNoState { view = view }
+
+
+routes : DataSource.DataSource (List RouteParams)
+routes =
+    DataSource.succeed [ { id = "introducing-elm-pages" } ]
 
 
 type alias Data =

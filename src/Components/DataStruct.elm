@@ -131,12 +131,26 @@ contributionDecoder =
         (D.field "contributors" contributorsDecoder)
 
 
+detailsSpeakerDecoder : D.Decoder Details
+detailsSpeakerDecoder =
+    D.map7 Details
+        (D.field "avatar" D.string)
+        (D.field "bio" D.string)
+        (D.field "talk_format" D.string)
+        (D.field "description" D.string)
+        (D.field "abstract" D.string)
+        (D.field "audience_level" D.string)
+        (D.field "organisation" D.string)
+
+
+
 speakerDecoder : D.Decoder Speaker
 speakerDecoder =
-    D.map3 Speaker
+    D.map4 Speaker
         (D.field "name" D.string)
         (D.field "title" D.string)
         (D.field "picture" D.string)
+        (D.field "details" detailsSpeakerDecoder)
 
 
 listSpeakerDecoder : D.Decoder (List Speaker)
