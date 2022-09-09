@@ -166,6 +166,10 @@
         "name": "Daniel Beskin",
         "title": "Tech lead",
         "picture": "daniel-beskin"
+      },{
+        "name": "Chris Kipp",
+        "title": "Maintainer on Scalameta/metals",
+        "picture": "chris-kipp"
       }
     ]
   }

@@ -205,10 +205,12 @@
      .speakers-talk {
          display:flex;
          justify-content:space-around;
+         flex-wrap: wrap;
     }
      .speakers-talk-picture {
          height: 250px;
          padding: 0 20px;
+         margin:40px 0;
     }
      .speakers-display {
          display:flex;
