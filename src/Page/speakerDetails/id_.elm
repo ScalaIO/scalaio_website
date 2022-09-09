@@ -1,6 +1,7 @@
 module Page.speakerDetails/id_ exposing (Model, Msg, Data, page)
 
-import Api exposing (routes)
+import Components.DataStruct as DataStruct exposing (GlobalData)
+import Components.WebSiteStruct exposing (globalPageStructure)
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
@@ -9,6 +10,7 @@ import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
 import Shared
 import View exposing (View)
+import View.Speakerdetails
 
 
 type alias Model =
@@ -18,31 +20,31 @@ type alias Model =
 type alias Msg =
     Never
 
-type alias RouteParams =
-    {id:String}
+type alias RouteParams = { speakerId : String }
 
 page : Page RouteParams Data
 page =
     Page.prerender
-        { data = data
-        , head = head
-        , routes = routes
+        { head = head
+        ,routes=routes
+        , data = data
+
         }
         |> Page.buildNoState { view = view }
 
 
-routes : DataSource.DataSource (List RouteParams)
+routes : DataSource (List RouteParams)
 routes =
-    DataSource.succeed [ { id = "introducing-elm-pages" } ]
-
+    -- define all the allowed routes (all possible slugs)
+    --Article.all |> DataSource.map (List.map (\article -> RouteParams article.slug))
 
 type alias Data =
-    ()
+    GlobalData
 
 
 data : DataSource Data
 data =
-    DataSource.succeed ()
+    DataStruct.data
 
 
 head :
@@ -70,5 +72,7 @@ view :
     -> Shared.Model
     -> StaticPayload Data RouteParams
     -> View Msg
-view maybeUrl sharedModel static =
-    View.placeholder "speakerDetails/id_"
+view _ _ static =
+    { title = "ScalaIO - Hall of fame"
+    , body = globalPageStructure static.data (View.Speakerdetails.view static.data)
+    }
