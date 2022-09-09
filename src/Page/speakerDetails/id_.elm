@@ -25,16 +25,17 @@ type alias RouteParams = { speakerId : String }
 page : Page RouteParams Data
 page =
     Page.prerender
-        { head = head
+        {data = data
+         , head = head
         ,routes=routes
-        , data = data
 
         }
         |> Page.buildNoState { view = view }
 
 
 routes : DataSource (List RouteParams)
-routes =
+routes = DataSource.succeed( RouteParams.(""))
+
     -- define all the allowed routes (all possible slugs)
     --Article.all |> DataSource.map (List.map (\article -> RouteParams article.slug))
 
@@ -42,8 +43,9 @@ type alias Data =
     GlobalData
 
 
-data : DataSource Data
-data =
+
+data : RouteParams ->DataSource Data
+data rp =
     DataStruct.data
 
 

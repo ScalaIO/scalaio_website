@@ -178,14 +178,6 @@
           "created_at": "2022-08-09T12:31:58.325Z",
           "additional_info": null
         }
-      },{
-        "name": "Daniel Beskin",
-        "title": "Tech lead",
-        "picture": "daniel-beskin"
-      },{
-        "name": "Chris Kipp",
-        "title": "Maintainer on Scalameta/metals",
-        "picture": "chris-kipp"
       }
     ]
   }
