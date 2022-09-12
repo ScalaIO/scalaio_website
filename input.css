@@ -1,14 +1,12 @@
 :root {
-    --main-bg-color: #BC1321;
+
+    --main-bg-color: #bc1321;
     --darker-main-bg-color: #880d18;
 }
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer utilities {
-
     html,
     body {
         box-sizing: border-box;
@@ -20,11 +18,9 @@
     body {
         font-family: Lato, sans-serif;
     }
-
     h1 {
         font-size: 3rem;
     }
-
     h2 {
         font-size: 2.5rem;
         margin: 2px;
@@ -104,11 +100,10 @@
         font-size: 3rem;
         line-height: 1;
         text-align: center;
-        color: #FFF;
+        color: #fff;
     }
-
     .header-teaser {
-        color: #FFF;
+        color: #fff;
         margin-top: 0;
         text-align: center;
         font-size: 1.75em;
@@ -125,7 +120,6 @@
         padding: 20px;
         border-bottom: 1px solid rgba(15, 18, 36, 0.06);
     }
-
     .home-title {
         text-align: center;
     }
@@ -139,12 +133,10 @@
         id: "yurplan-widget-89504";
         data-id: "89504";
     }
-
     .home-ticketing-disclaimer {
         font-size: .75rem;
         font-style: italic;
     }
-
     .cfp {
         background-color: rgb(241, 241, 239);
         display: flex;
@@ -176,24 +168,23 @@
     .centered-body-title {
         margin-bottom: 20px;
     }
-
+    .centered-body-title {
+        margin-bottom: 20px;
+    }
     .faq-sub-title,
     .coc-sub-title {
         margin-top: 30px;
     }
-
     .venue-reach {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-
     .venue-reach-map {
         border: 0;
         min-width: 100px;
     }
-
     .sponsors {
         padding: 20px;
         display: flex;
@@ -201,19 +192,16 @@
         justify-content: center;
         border-top: 1px solid rgba(15, 18, 36, 0.06);
     }
-
     .sponsors-containers {
         padding: 20px;
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-
     .sponsors-title>h2 {
         display: flex;
         justify-content: center;
     }
-
     .sponsors-platine-logo {
         height: 275px;
         padding: 0 20px;
@@ -242,34 +230,35 @@
         margin: 20px;
     }
 
+    hr {
+        color: #c4bbbb;
+    }
+    .hof-contributors {
+        margin: 20px;
+    }
     .speakers-keynote-picture {
         height: 325px;
         padding: 0 20px;
     }
-
     .speakers-talk {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
-
     .speakers-talk-picture {
         height: 250px;
         padding: 0 20px;
         margin: 40px 0;
     }
-
     .speakers-display {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .speakers-display-name {
         font-size: 27px;
         font-weight: 200;
     }
-
     .speakers-display-title {
         font-size: 20px;
         font-style: italic;
@@ -322,8 +311,62 @@
         color: #FFF5F5;
     }
 
+
+    .speaker-details {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    .speaker-details-name-item{
+        color: #3c3c3c;
+        display: flex;
+        justify-content: center;
+        font-size: 3.4rem;
+        width: 20%;
+        gap: 30px;
+        margin: 20px 0 20px 0;
+    }
+
+    .speaker-details-line {
+        display: flex;
+        justify-content: center;
+    }
+    .speaker-details-title-item {
+        color: #bc1321;
+        display: flex;
+        justify-content: center;
+        font-size: 1.4rem;
+        width: 20%;
+        gap: 30px;
+        margin: 4px;
+    }
+
+    .speaker-details-content-item {
+        color: #3c3c3c;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        width: 60%;
+        margin: 4px 0px 4px 2px;
+        text-align: justify;
+    }
+
+    .speaker-details-picture {
+        display: flex;
+        height: 325px;
+        justify-content: center;
+        margin: 40px 0px 40px 0px;
+    }
+
+    .speaker-details-bio {
+        display: flex;
+        justify-content: center;
+    }
+
+
     .footer {
-        color: #FFF;
+        color: #fff;
         padding: 20px 200px;
         background-color: #000;
         display: flex;
@@ -342,7 +385,6 @@
         color: #428bca;
         text-decoration: none;
     }
-
     .footer-newsletter {
         text-align: right;
     }
@@ -407,6 +449,7 @@
         }
 
         .sponsors-title>h2 {
+
             display: flex;
             justify-content: center;
             font-size: 1.9rem;
@@ -416,12 +459,10 @@
             height: 200px;
             padding: 0 20px;
         }
-
         .sponsors-gold-logo {
             height: 175px;
             padding: 0 10px;
         }
-
         .sponsors-silver-logo {
             height: 75px;
             padding: 0 10px;
@@ -452,7 +493,6 @@
         .footer-networks {
             text-align: center;
         }
-
         .footer-newsletter {
             text-align: center;
         }
@@ -461,7 +501,6 @@
             display: flex;
             justify-content: center;
         }
-
         .footer-newsletter-form {
             display: flex;
             flex-direction: column;
@@ -471,6 +510,7 @@
 
         .speakers-talk {
             display: flex;
+            justify-content: arround;
             flex-direction: column;
             row-gap: 30px;
         }
@@ -480,119 +520,25 @@
             justify-content: space-around;
             flex-direction: column;
         }
-    }
 
-    /* Tablet */
-    @media only screen and (max-width: 1280px) {
-        .centered-body {
-            padding: 20px;
-        }
-
-        .venue-reach-map {
-            border: 0;
-        }
-
-        .footer {
-            padding: 20px 20px;
-        }
-
-        .speakers-talk {
-            display: flex;
-            flex-direction: column;
-            row-gap: 30px;
-        }
-
-        .schedule-program {
-            width: 100%;
-            font-size: 1.5rem;
-        }
-    }
-
-    /*nav bar responsive*/
-    nav {
-        width: auto;
-        float: right;
-    }
-
-    nav ul {}
-
-    nav ul li {
-        float: left;
-    }
-
-    nav ul li:last-child {
-        padding-right: 0px;
-    }
-
-    nav ul li a {
-        color: #002e5b;
-        font-size: 18px;
-        padding: 5px 20px;
-        display: inline-block;
-        transition: all 0.5s ease 0s;
-    }
-
-    nav ul li a:hover {
-        background-color: #000;
-        color: red;
-        transition: all 0.5s ease 0s;
-    }
-
-    nav ul li a:hover i {
-        color: #fde428;
-        transition: all 0.5s ease 0s;
-    }
-
-    nav ul li a i {
-        padding-right: 10px;
-        color: #002e5b;
-        transition: all 0.5s ease 0s;
-    }
-
-    .toggle-menu ul {
-        display: table;
-        width: 25px;
-    }
-
-    .toggle-menu ul li {
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        margin-bottom: 4px;
-    }
-
-    .toggle-menu ul li:last-child {
-        margin-bottom: 0px;
-    }
-
-    input[type="checkbox"],
-    label {
-        display: none;
-    }
-
-    @media only screen and (max-width: 600px) {
         input[type="checkbox"] {
             position: absolute;
             top: -9999px;
             left: -9999px;
             background: none;
         }
-
         input[type="checkbox"]:focus {
             background: none;
         }
-
         label {
             float: right;
             padding: 8px 0px;
             display: inline-block;
             cursor: pointer;
         }
-
-        input[type="checkbox"]:checked~nav {
+        input[type="checkbox"]:checked ~ nav {
             display: block;
         }
-
         nav {
             display: none;
             position: absolute;
@@ -602,18 +548,15 @@
             padding: 0;
             z-index: 99;
         }
-
         nav ul {
             width: 100%;
         }
-
         nav ul li {
             float: none;
             padding: 0;
             width: 100%;
             display: table;
         }
-
         nav ul li a {
             color: #fff;
             font-size: 15px;
@@ -622,21 +565,74 @@
             width: 100%;
             border-bottom: 1px solid rgba(225, 225, 225, 0.1);
         }
-
         nav ul li a i {
             color: #fde428;
             padding-right: 13px;
         }
-
         .speakers-talk {
             display: flex;
+            justify-content: arround;
             flex-direction: column;
             row-gap: 30px;
         }
-
-        .schedule-program {
+        .schedule {
+            margin: 30px 0px 0px 0px;
+        }
+        .schedule-info {
+            display: flex;
+            justify-content: center;
+            font-size: 0.8rem;
+            gap: 30px;
+        }
+        .schedule-program-line {
+            display: flex;
+            justify-content: center;
+        }
+        .schedule-program-subject-item {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: 0.7rem;
+            width: 60%;
+            border: 1px solid #8f1414;
+            gap: 30px;
+            margin: 4px;
+        }
+        .schedule-program-subject-talk {
+            background-color: #3c3c3c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: 0.7rem;
+            width: 30%;
+            margin: 4px 0px 4px 2px;
+        }
+        .schedule-program-time-item {
+            background-color: #b75858;
+            color: #fff5f5;
+            display: flex;
+            justify-content: center;
+            font-size: 0.7rem;
+            width: 30%;
+            border: 1px solid #8f1414;
+            gap: 30px;
+        }
+        .schedule-program-title-item {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 18px 0px -6px 0px;
+        }
+        .schedule-program-subtitle-item > p {
+            margin: 0px;
+        }
+        .schedule-program-subtitle-item {
+            display: flex;
+            justify-content: center;
             font-size: 0.9rem;
-            border-spacing: 5px;
+            margin: 0px 0px 0px 0px;
+            flex-direction: column;
         }
 
         .sponsors-containers {
@@ -644,6 +640,38 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+
+        .schedule-program-subject-item {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            width: 60%;
+            border: 1px solid #8f1414;
+            gap: 30px;
+            margin: 4px;
+        }
+        .schedule-program-subject-talk {
+            background-color: #3c3c3c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            width: 30%;
+            margin: 4px 0px 4px 2px;
+        }
+        .schedule-program-time-item {
+            background-color: #b75858;
+            color: #fff5f5;
+            display: flex;
+            justify-content: center;
+            font-size: 1.1rem;
+            width: 30%;
+            border: 1px solid #8f1414;
+            gap: 30px;
+
         }
     }
 }

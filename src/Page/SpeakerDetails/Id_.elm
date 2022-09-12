@@ -1,6 +1,6 @@
-module Page.speakerDetails/id_ exposing (Model, Msg, Data, page)
+module Page.SpeakerDetails.Id_ exposing (Data, Model, Msg, page)
 
-import Components.DataStruct as DataStruct exposing (GlobalData)
+import Components.DataStruct as DataStruct exposing (GlobalData, Speaker)
 import Components.WebSiteStruct exposing (globalPageStructure)
 import DataSource exposing (DataSource)
 import Head
@@ -20,31 +20,42 @@ type alias Model =
 type alias Msg =
     Never
 
-type alias RouteParams = { speakerId : String }
+
+type alias RouteParams =
+    { id : String }
+
 
 page : Page RouteParams Data
 page =
     Page.prerender
-        {data = data
-         , head = head
-        ,routes=routes
-
+        { data = data
+        , head = head
+        , routes = routes
         }
         |> Page.buildNoState { view = view }
 
 
 routes : DataSource (List RouteParams)
-routes = DataSource.succeed( RouteParams.(""))
+routes =
+    DataStruct.dataSpeaker |> DataSource.map (List.map (\gd -> RouteParams gd.s.id))
 
-    -- define all the allowed routes (all possible slugs)
-    --Article.all |> DataSource.map (List.map (\article -> RouteParams article.slug))
+
+
+-- --DataSource.succeed( [{id="test"}])
+-- define all the allowed routes (all possible slugs)
+--Article.all |> DataSource.map (List.map (\article -> RouteParams article.slug))
+
 
 type alias Data =
     GlobalData
 
 
+filterSpeaker : String -> Speaker -> Bool
+filterSpeaker criteria sp =
+    sp.s.id == criteria
 
-data : RouteParams ->DataSource Data
+
+data : RouteParams -> DataSource Data
 data rp =
     DataStruct.data
 
@@ -69,6 +80,11 @@ head static =
         |> Seo.website
 
 
+extractSpeaker : String -> List Speaker -> Maybe Speaker
+extractSpeaker rp ls =
+    List.head (List.filter (\s -> filterSpeaker rp s) ls)
+
+
 view :
     Maybe PageUrl
     -> Shared.Model
@@ -76,5 +92,7 @@ view :
     -> View Msg
 view _ _ static =
     { title = "ScalaIO - Hall of fame"
-    , body = globalPageStructure static.data (View.Speakerdetails.view static.data)
+    , body =
+        globalPageStructure static.data
+            (View.Speakerdetails.view (extractSpeaker static.routeParams.id (List.concat [ static.data.speakers.keynote, static.data.speakers.talk ])))
     }
