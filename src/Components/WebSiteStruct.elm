@@ -57,7 +57,7 @@ navbar =
 sponsors : GlobalData -> Html msg
 sponsors data =
     div [ class "sponsors" ]
-        [hr[class "hr"][],
+        [
          div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
         , div [ class "sponsors-containers" ] (transformSponsor data.sponsors.gold Gold)
         ]
