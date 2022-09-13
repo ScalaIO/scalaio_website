@@ -10,7 +10,7 @@ import String exposing (..)
 
 viewLink : String -> Html msg
 viewLink path =
-    Html.a [ Attr.href ("/" ++path), class "uncommon-a" ] [ Html.text (String.replace "-" " " path |> capitalize) ]
+    Html.a [ Attr.href ("/" ++ path), class "uncommon-a" ] [ Html.text (String.replace "-" " " path |> capitalize) ]
 
 
 header : Html msg
@@ -24,41 +24,39 @@ header =
 
 navbar : Html msg
 navbar =
-    Html.header [class "navbar"][
-        Html.a [ Attr.href "/", class "uncommon-a" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ],
-        label[for "toggle-1", class "toggle-menu"][
-              ul[][
-                li [][],
-                li [][],
-                li [][]
-              ]
-            ],
-            input [type_  "checkbox", id "toggle-1"][],
-       nav []
-        [
-        ul[][
-        li [] [ viewLink "venue" ]
-        ,li [] [ viewLink "schedule" ]
-        , li [] [ viewLink "speakers" ]
-        , li [] [ viewLink "partners" ]
+    Html.header [ class "navbar" ]
+        [ Html.a [ Attr.href "/", class "uncommon-a" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ]
+        , label [ for "toggle-1", class "toggle-menu" ]
+            [ ul []
+                [ li [] []
+                , li [] []
+                , li [] []
+                ]
+            ]
+        , input [ type_ "checkbox", id "toggle-1" ] []
+        , nav []
+            [ ul []
+                [ li [] [ viewLink "venue" ]
+                , li [] [ viewLink "schedule" ]
+                , li [] [ viewLink "speakers" ]
+                , li [] [ viewLink "partners" ]
 
-        --, li [] [ viewLink "Talks" ]
-        --, li [] [ viewLink "Schedule" ]
-        , li [] [ viewLink "sponsorship" ]
-        , li [] [ viewLink "faq" ]
-        , li [] [ viewLink "hall-of-fame" ]
+                --, li [] [ viewLink "Talks" ]
+                --, li [] [ viewLink "Schedule" ]
+                , li [] [ viewLink "sponsorship" ]
+                , li [] [ viewLink "faq" ]
+                , li [] [ viewLink "hall-of-fame" ]
 
-        --, DropDown.view model |> Html.map wrapDd
-        ]
-        ]
+                --, DropDown.view model |> Html.map wrapDd
+                ]
+            ]
         ]
 
 
 sponsors : GlobalData -> Html msg
 sponsors data =
     div [ class "sponsors" ]
-        [
-         div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
+        [ div [ class "sponsors-containers" ] (transformSponsor data.sponsors.platine Platine)
         , div [ class "sponsors-containers" ] (transformSponsor data.sponsors.gold Gold)
         ]
 

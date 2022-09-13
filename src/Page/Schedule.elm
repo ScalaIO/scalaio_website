@@ -1,4 +1,4 @@
-module Page.Schedule exposing (Model, Msg, Data, page)
+module Page.Schedule exposing (Data, Model, Msg, page)
 
 import Components.DataStruct as DataStruct exposing (GlobalData)
 import Components.WebSiteStruct exposing (globalPageStructure)
@@ -20,8 +20,10 @@ type alias Model =
 type alias Msg =
     Never
 
+
 type alias RouteParams =
     {}
+
 
 page : Page RouteParams Data
 page =
@@ -39,6 +41,7 @@ type alias Data =
 data : DataSource Data
 data =
     DataStruct.data
+
 
 head :
     StaticPayload Data RouteParams

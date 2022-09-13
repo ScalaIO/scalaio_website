@@ -1,4 +1,4 @@
-module Components.Utils exposing (capitalize, transformSponsor, transformSpeaker)
+module Components.Utils exposing (capitalize, transformSpeaker, transformSponsor)
 
 import Components.DataStruct exposing (KindTalk, Speaker, Sponsor, SponsorKind, computeCssSpeaker, computeCssSponsor)
 import Html exposing (Html, a, div, img, text)
@@ -13,21 +13,20 @@ capitalize str =
 
 sponsorToUrl : SponsorKind -> Sponsor -> Html msg
 sponsorToUrl k s =
-   a [ Attr.href s.url, Attr.target "_blank", class "flex justify-center"  ] [ img [ src ("/assets/sponsors/logo-" ++ s.name ++ ".png"), alt s.name, class (computeCssSponsor k) ] [] ]
-
+    a [ Attr.href s.url, Attr.target "_blank", class "flex justify-center" ] [ img [ src ("/assets/sponsors/logo-" ++ s.name ++ ".png"), alt s.name, class (computeCssSponsor k) ] [] ]
 
 
 transformSponsor : List Sponsor -> SponsorKind -> List (Html msg)
 transformSponsor data k =
     List.map (sponsorToUrl k) data
 
+
 speakerFormat : KindTalk -> Speaker -> Html msg
 speakerFormat k s =
-     div[class "speakers-display"][
-        div[][img [ src ("/assets/speakers/" ++ s.picture ++ ".png"), alt s.name, class (computeCssSpeaker k) ] [text s.name]],
-        div[class "speakers-display-name"][text s.name],
-        div[class "speakers-display-title"][text s.title]
-
+    div [ class "speakers-display" ]
+        [ div [] [ img [ src ("/assets/speakers/" ++ s.picture ++ ".png"), alt s.name, class (computeCssSpeaker k) ] [ text s.name ] ]
+        , div [ class "speakers-display-name" ] [ text s.name ]
+        , div [ class "speakers-display-title" ] [ text s.title ]
         ]
 
 
