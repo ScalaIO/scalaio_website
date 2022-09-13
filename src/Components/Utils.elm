@@ -23,11 +23,13 @@ transformSponsor data k =
 
 speakerFormat : KindTalk -> Speaker -> Html msg
 speakerFormat k s =
-     div[class "speakers-display"][
-        div[][a [ Attr.href ("/speaker-details/" ++ s.s.id), class "flex justify-center"  ] [img [ src ("/assets/speakers/" ++ s.s.id ++ ".png"), alt s.s.name, class (computeCssSpeaker k) ] [text s.s.name]]],
-        div[class "speakers-display-name"][text s.s.name],
-        div[class "speakers-display-title"][text s.s.speakerTitle]
-
+    div [ class "speakers-display" ]
+        [ div []
+            [ a [ Attr.href ("/speaker-details/" ++ s.s.id), class "flex justify-center" ]
+                [ img [ src ("/assets/speakers/" ++ s.s.id ++ ".png"), alt s.s.name, class (computeCssSpeaker k) ] [ text s.s.name ] ]
+            ]
+        , div [ class "speakers-display-name" ] [ text s.s.name ]
+        , div [ class "speakers-display-title" ] [ text s.s.speakerTitle ]
         ]
 
 
