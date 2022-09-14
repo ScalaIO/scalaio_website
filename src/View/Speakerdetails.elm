@@ -1,8 +1,8 @@
 module View.Speakerdetails exposing (..)
 
 import Components.DataStruct exposing (Speaker, computeCssSpeaker)
-import Html exposing (Html, div, h2, img, text)
-import Html.Attributes exposing (alt, class, src)
+import Html exposing (Html, a, div, h2, img, text)
+import Html.Attributes as Attr exposing (alt, class, src)
 
 
 handleSpeaker : Maybe Speaker -> Html msg
@@ -26,6 +26,9 @@ handleSpeaker ms =
                 , div []
                     [ div [ class "speaker-details-talk-content-item" ] [ text speaker.t.description ]
                     ]
+                , div [][ div [ class "speaker-details-talk-content-item" ] [ a [   Attr.href ("/speakers"), class "flex justify-center" ]
+                                                                                              [text "Back"  ] ]
+                                    ]
                 ]
 
         Nothing ->
