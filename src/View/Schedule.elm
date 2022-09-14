@@ -5,6 +5,7 @@ import Html exposing (Html, a, div, h2, p, span, table, tbody, td, text, tr)
 import Html.Attributes as Attr exposing (class, colspan)
 
 
+
 view : GlobalData -> Html msg
 view gd =
     div [ class "schedule" ]
@@ -70,4 +71,5 @@ view gd =
                 , td [ class "schedule-program-subject-talk" ] [ text "Talk" ]
                 ]
             ]
+
         ]

@@ -70,12 +70,28 @@ type KindTalk
     | Talk
 
 
-type alias Speaker =
+
+type alias SpeakerData =
     { name : String
     , title : String
-    , picture : String
+    , speakerTitle : String
+    , id : String
+    , bio : String
+    , organization : String
+
     }
 
+
+type alias SpeakerTalk =
+    { talk_format : String
+    , description : String
+    , abstract : String
+    , audience_level : String
+    }
+
+type alias Speaker =
+    {s:SpeakerData
+    ,t:SpeakerTalk}
 
 type alias Speakers =
     { keynote : List Speaker
@@ -131,12 +147,34 @@ contributionDecoder =
         (D.field "contributors" contributorsDecoder)
 
 
+talkDecoder : D.Decoder SpeakerTalk
+talkDecoder= D.map4 SpeakerTalk
+            (D.field "talk_format" D.string)
+            (D.field "description" D.string)
+            (D.field "abstract" D.string)
+            (D.field "audience_level" D.string)
+
+speakerDataDecoder : D.Decoder SpeakerData
+speakerDataDecoder= D.map6 SpeakerData
+            (D.field "name" D.string)
+            (D.field "title" D.string)
+            (D.field "speaker-title" D.string)
+            (D.field "id" D.string)
+            (D.field "bio" D.string)
+            (D.field "organization" D.string)
+
+
+
 speakerDecoder : D.Decoder Speaker
 speakerDecoder =
-    D.map3 Speaker
-        (D.field "name" D.string)
-        (D.field "title" D.string)
-        (D.field "picture" D.string)
+        D.map2 Speaker
+            (speakerDataDecoder)
+            (talkDecoder)
+
+
+
+
+
 
 
 listSpeakerDecoder : D.Decoder (List Speaker)
@@ -167,3 +205,8 @@ globalData =
 data : DataSource GlobalData
 data =
     DataSource.File.jsonFile globalData "_data/scalaIO_data.json"
+
+
+dataSpeaker : DataSource (List Speaker)
+dataSpeaker =
+    DataSource.File.jsonFile globalData "_data/scalaIO_data.json" |> DataSource.map (\d -> List.concat [ d.speakers.talk, d.speakers.keynote ])

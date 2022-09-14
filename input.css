@@ -322,6 +322,82 @@
         color: #FFF5F5;
     }
 
+    .speaker-details {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0;
+        }
+
+        .speaker-details-name-item{
+            color: #3c3c3c;
+            display: flex;
+            justify-content: flex-start;
+            font-weight:bold;
+            font-size: 3.4rem;
+            margin: 0 200px;
+        }
+
+        .speaker-details-info {
+            display: flex;
+            justify-content: center;
+        }
+
+        .speaker-details-title {
+            color: #bc1321;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 3.4rem;
+            margin: 100px 0 0 200px;
+        }
+
+        .speaker-details-talk-title {
+            color: #3c3c3c;
+            display: flex;
+            font-weight:bold;
+            justify-content: flex-start;
+            font-size: 1.75rem;
+            margin: 0 250px;
+        }
+
+        .speaker-details-talk-info{
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 0 270px;
+        }
+
+        .speaker-details-content-item {
+            color: #3c3c3c;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            width: 60%;
+            margin: 10px 0px 4px 4px;
+            text-align: justify;
+        }
+
+        .speaker-details-talk-content-item {
+            color: #3c3c3c;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            width: 60%;
+            margin: 10px 0px 4px 250px;
+            text-align: justify;
+        }
+
+        .speaker-details-picture {
+            display: flex;
+            height: 250px;
+            width: 250px;
+            justify-content: center;
+            margin: 0px 20px 0px 0px;
+        }
+
+        .speaker-details-bio {
+            display: flex;
+            justify-content: center;
+        }
+
     .footer {
         color: #FFF;
         padding: 20px 200px;
