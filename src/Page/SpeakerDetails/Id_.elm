@@ -40,12 +40,6 @@ routes =
     DataStruct.dataSpeaker |> DataSource.map (List.map (\gd -> RouteParams gd.s.id))
 
 
-
--- --DataSource.succeed( [{id="test"}])
--- define all the allowed routes (all possible slugs)
---Article.all |> DataSource.map (List.map (\article -> RouteParams article.slug))
-
-
 type alias Data =
     GlobalData
 
