@@ -1,7 +1,7 @@
-module Components.Utils exposing (capitalize, transformSpeaker, transformSponsor)
+module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor)
 
 import Components.DataStruct exposing (KindTalk, Speaker, Sponsor, SponsorKind, computeCssSpeaker, computeCssSponsor)
-import Html exposing (Html, a, div, img, text)
+import Html exposing (Html, a, div, img, span, text)
 import Html.Attributes as Attr exposing (alt, class, src)
 import String exposing (..)
 
@@ -31,6 +31,22 @@ speakerFormat k s =
         , div [ class "speakers-display-name" ] [ text s.s.name ]
         , div [ class "speakers-display-title" ] [ text s.s.speakerTitle ]
         ]
+
+
+talkFormat : Speaker -> Html msg
+talkFormat s =
+    div [ class "talk-item" ]
+        [ div [ class "talk-item-title" ]
+            [ div [] [  text s.s.title ],
+             div [ class "talk-item-speaker" ] [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [text s.s.name ]]
+            ]
+        , div [class "talk-item-abstract"][text s.t.abstract]
+        ]
+
+
+transformSpeaker2Talk : List Speaker -> List (Html msg)
+transformSpeaker2Talk ls =
+    List.map talkFormat ls
 
 
 transformSpeaker : List Speaker -> KindTalk -> List (Html msg)

@@ -321,11 +321,16 @@
         color: #fff5f5;
     }
 
+    .schedule-talks-title{
+        font-size: 4rem;
+    }
+
     .speaker-details {
         display: flex;
         flex-direction: column;
         margin: 30px 0;
     }
+
 
     .speaker-details-name-item {
         color: #3c3c3c;
@@ -374,6 +379,10 @@
         text-align: justify;
     }
 
+    .speaker-details-talk-content-item > a {
+        margin: 0 5px 0 5px;
+        color: #bc1321;
+    }
     .speaker-details-talk-content-item {
         color: #3c3c3c;
         display: flex;
@@ -473,32 +482,6 @@
         margin-bottom: 5px;
     }
 
-    /* Tablet */
-    @media only screen and (max-width: 1280px) {
-        .centered-body {
-            padding: 20px;
-        }
-
-        .venue-reach-map {
-            border: 0;
-        }
-
-        .footer {
-            padding: 20px 20px;
-        }
-
-        .speakers-talk {
-            display: flex;
-            flex-direction: column;
-            row-gap: 30px;
-        }
-
-        .schedule-program {
-            width: 100%;
-            font-size: 1.5rem;
-        }
-    }
-
     /*nav bar responsive*/
     nav {
         width: auto;
@@ -561,6 +544,62 @@
     label {
         display: none;
     }
+
+    .talk-item{
+         display:flex;
+         justify-content:flex-start;
+         flex-direction:column;
+    }
+
+    .talk-item-title{
+         display:flex;
+         font-size:2rem;
+         font-weight: bold;
+         margin: 0 0 0 20px;
+         align-items:baseline;
+    }
+    .talk-item-speaker{
+        font-style:italic;
+        font-size:1.7rem;
+        margin: 0 0 0 10px;
+    }
+    .talk-item-speaker > a{
+       color:#bc1321;
+    }
+    .talk-item-abstract{
+        font-style:italic;
+        font-size:1.7rem;
+        margin: 10px 40px 10px 200px;
+        text-align: justify;
+
+    }
+
+    /* Tablet */
+        @media only screen and (max-width: 1280px) {
+            .centered-body {
+                padding: 20px;
+            }
+
+            .venue-reach-map {
+                border: 0;
+            }
+
+            .footer {
+                padding: 20px 20px;
+            }
+
+            .speakers-talk {
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+            }
+
+            .schedule-program {
+                width: 100%;
+                font-size: 1.5rem;
+            }
+
+        }
 
     @media only screen and (max-width: 600px) {
         .venue-reach-map {
@@ -712,6 +751,26 @@
             border-spacing: 5px;
         }
 
+        .schedule-info {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        .schedule-program-title {
+            font-size: 2.9rem;
+        }
+
+        .schedule-program-information {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #bc1321;
+        }
+
+        .schedule-talks-title{
+            font-size: 2.9rem;
+            margin: 50px 0 0 0;
+        }
+
         .sponsors-containers {
             padding: 20px;
             display: flex;
@@ -767,7 +826,9 @@
            display: flex;
         }
 
+
         .speaker-details-content-item {
+
             color: #3c3c3c;
             display: flex;
             justify-content: center;
@@ -799,6 +860,31 @@
             display: flex;
             justify-content: center;
         }
+
+        .talk-item-title{
+             display:flex;
+             font-size:1.1rem;
+             font-weight: bold;
+             margin: 0 0 0 20px;
+             align-items:baseline;
+             flex-direction: column;
+            }
+        .talk-item-speaker{
+            font-style:italic;
+            font-size:0.9rem;
+            margin: 0 0 0 10px;
+        }
+        .talk-item-speaker > a{
+           color:#bc1321;
+        }
+        .talk-item-abstract{
+            font-style:italic;
+            font-size:1rem;
+            margin: 10px 40px 10px 40px;
+            text-align: justify;
+
+        }
+
 
     }
 }

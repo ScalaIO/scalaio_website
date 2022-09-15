@@ -1,7 +1,8 @@
 module View.Schedule exposing (..)
 
 import Components.DataStruct exposing (GlobalData)
-import Html exposing (Html, a, div, h2, p, span, table, tbody, td, text, tr)
+import Components.Utils exposing (transformSpeaker2Talk)
+import Html exposing (Html, a, div, h2, hr, p, span, table, tbody, td, text, tr)
 import Html.Attributes as Attr exposing (class, colspan)
 
 
@@ -71,5 +72,8 @@ view gd =
                 , td [ class "schedule-program-subject-talk" ] [ text "Talk" ]
                 ]
             ]
-
+        , hr[][]
+        ,div [ class "schedule-talks-title" ]
+            [ div [] [ text "Talks" ]]
+        ,div [ class "schedule-talks-title" ]  (transformSpeaker2Talk (List.concat [gd.speakers.keynote, gd.speakers.talk]))
         ]
