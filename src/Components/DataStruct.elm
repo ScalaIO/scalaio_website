@@ -70,7 +70,6 @@ type KindTalk
     | Talk
 
 
-
 type alias SpeakerData =
     { name : String
     , title : String
@@ -78,7 +77,6 @@ type alias SpeakerData =
     , id : String
     , bio : String
     , organization : String
-
     }
 
 
@@ -89,9 +87,12 @@ type alias SpeakerTalk =
     , audience_level : String
     }
 
+
 type alias Speaker =
-    {s:SpeakerData
-    ,t:SpeakerTalk}
+    { s : SpeakerData
+    , t : SpeakerTalk
+    }
+
 
 type alias Speakers =
     { keynote : List Speaker
@@ -99,10 +100,58 @@ type alias Speakers =
     }
 
 
+type Type
+    = Single
+    | Double
+
+
+type alias ScheduleItem =
+    { typ : Type
+    , time : String
+    , items : List String
+    }
+
+
+type alias Schedule =
+    { items : List ScheduleItem
+    }
+
+
+decodeType : D.Decoder Type
+decodeType =
+    D.string
+        |> D.andThen
+            (\s ->
+                case s of
+                    "Single" ->
+                        D.succeed Single
+
+                    "Double" ->
+                        D.succeed Double
+
+                    _ ->
+                        D.fail "Type in Schedule not defined"
+            )
+
+
+sheduleItemDecoder : D.Decoder ScheduleItem
+sheduleItemDecoder =
+    D.map3 ScheduleItem
+        (D.field "typ" decodeType)
+        (D.field "time" D.string)
+        (D.field "items" (D.list D.string))
+
+
+listScheduleItemDecoder : D.Decoder (List ScheduleItem)
+listScheduleItemDecoder =
+    D.list sheduleItemDecoder
+
+
 type alias GlobalData =
     { sponsors : Sponsors
     , contributions : List Contribution
     , speakers : Speakers
+    , schedule : List ScheduleItem
     }
 
 
@@ -148,33 +197,30 @@ contributionDecoder =
 
 
 talkDecoder : D.Decoder SpeakerTalk
-talkDecoder= D.map4 SpeakerTalk
-            (D.field "talk_format" D.string)
-            (D.field "description" D.string)
-            (D.field "abstract" D.string)
-            (D.field "audience_level" D.string)
+talkDecoder =
+    D.map4 SpeakerTalk
+        (D.field "talk_format" D.string)
+        (D.field "description" D.string)
+        (D.field "abstract" D.string)
+        (D.field "audience_level" D.string)
+
 
 speakerDataDecoder : D.Decoder SpeakerData
-speakerDataDecoder= D.map6 SpeakerData
-            (D.field "name" D.string)
-            (D.field "title" D.string)
-            (D.field "speaker-title" D.string)
-            (D.field "id" D.string)
-            (D.field "bio" D.string)
-            (D.field "organization" D.string)
-
+speakerDataDecoder =
+    D.map6 SpeakerData
+        (D.field "name" D.string)
+        (D.field "title" D.string)
+        (D.field "speaker-title" D.string)
+        (D.field "id" D.string)
+        (D.field "bio" D.string)
+        (D.field "organization" D.string)
 
 
 speakerDecoder : D.Decoder Speaker
 speakerDecoder =
-        D.map2 Speaker
-            (speakerDataDecoder)
-            (talkDecoder)
-
-
-
-
-
+    D.map2 Speaker
+        speakerDataDecoder
+        talkDecoder
 
 
 listSpeakerDecoder : D.Decoder (List Speaker)
@@ -196,10 +242,11 @@ contributionsDecoder =
 
 globalData : D.Decoder GlobalData
 globalData =
-    D.map3 GlobalData
+    D.map4 GlobalData
         (D.field "sponsors" sponsorsItemDecoder)
         (D.field "contributions" contributionsDecoder)
         (D.field "speakers" speakersDecoder)
+        (D.field "schedule" listScheduleItemDecoder)
 
 
 data : DataSource GlobalData

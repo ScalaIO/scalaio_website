@@ -1,8 +1,8 @@
-module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor)
+module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor,transformeScheduleItem)
 
-import Components.DataStruct exposing (KindTalk, Speaker, Sponsor, SponsorKind, computeCssSpeaker, computeCssSponsor)
-import Html exposing (Html, a, div, img, span, text)
-import Html.Attributes as Attr exposing (alt, class, src)
+import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), computeCssSpeaker, computeCssSponsor)
+import Html exposing (Html, a, div, img, span, td, text, tr)
+import Html.Attributes as Attr exposing (alt, class, colspan, src)
 import String exposing (..)
 
 
@@ -37,10 +37,10 @@ talkFormat : Speaker -> Html msg
 talkFormat s =
     div [ class "talk-item" ]
         [ div [ class "talk-item-title" ]
-            [ div [] [  text s.s.title ],
-             div [ class "talk-item-speaker" ] [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [text s.s.name ]]
+            [ div [] [ text s.s.title ]
+            , div [ class "talk-item-speaker" ] [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [ text s.s.name ] ]
             ]
-        , div [class "talk-item-abstract"][text s.t.abstract]
+        , div [ class "talk-item-abstract" ] [ text s.t.abstract ]
         ]
 
 
@@ -52,3 +52,26 @@ transformSpeaker2Talk ls =
 transformSpeaker : List Speaker -> KindTalk -> List (Html msg)
 transformSpeaker data k =
     List.map (speakerFormat k) data
+
+
+transformeScheduleItem : ScheduleItem -> Html msg
+transformeScheduleItem si =
+    case si.typ of
+        Single ->
+            tr [ class "schedule-program-line" ]
+                (List.concat
+                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
+                    , List.map (\i -> td [ class "schedule-program-subject-item", colspan 2 ] [ text i ]) si.items
+                    ]
+                )
+
+        Double ->
+            tr [ class "schedule-program-line" ]
+                (List.concat
+                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
+                    , List.map (\i -> td [ class "schedule-program-subject-talk" ] [ text i ]) si.items
+                    ]
+                )
+
+
+

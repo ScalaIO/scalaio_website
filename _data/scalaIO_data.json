@@ -316,6 +316,78 @@
         "additional_info": null
       }
     ]
-  }
+  },
+  "schedule" : [
+    {
+      "typ": "Single",
+      "time": "08:00 - 09:00",
+      "items" : ["Registration"]
+
+    },{
+      "typ": "Single",
+      "time": "09:00 - 09:20",
+      "items" : ["Introduction"]
+
+    },{
+      "typ": "Single",
+      "time": "09:25 - 10:20",
+      "items" : ["Opening Keynote"]
+
+    },{
+      "typ": "Double",
+      "time": "10:30 - 11:00",
+      "items" : ["talk", "talk"]
+
+    },{
+      "typ": "Double",
+      "time": "11:05 - 11:35",
+      "items" : ["talk", "talk"]
+
+    },{
+      "typ": "Double",
+      "time": "11:40 - 12:25",
+      "items" : ["talk", "talk"]
+
+    },{
+      "typ": "Single",
+      "time": "12h25 - 13:15",
+      "items" : ["Lunch break"]
+
+    },{
+      "typ": "Double",
+      "time": "13:15 - 13:50",
+      "items" : ["Talk", "talk"]
+
+    },{
+      "typ": "Double",
+      "time": "13:55 - 14:35",
+      "items" : ["Talk", "talk"]
+
+    },{
+      "typ": "Double",
+      "time": "14:40 - 15:25",
+      "items" : ["Talk", "talk"]
+
+    },{
+      "typ": "Double",
+      "time": "15:30 - 16:15",
+      "items" : ["Talk", "talk"]
+
+    },{
+      "typ": "Single",
+      "time": "16:15 - 16:35",
+      "items" : ["Coffee Break"]
+
+    },{
+      "typ": "Double",
+      "time": "16:35 - 17:20",
+      "items" : ["Talk", "talk"]
+
+    },{
+      "typ": "Single",
+      "time": "17:25 - 18:20",
+      "items" : ["Closing Keynote"]
+    }
+  ]
 }
 
