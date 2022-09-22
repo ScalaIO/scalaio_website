@@ -340,17 +340,17 @@
     },{
       "typ": "Double",
       "time": "10:30 - 11:00",
-      "items" : ["talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Double",
       "time": "11:05 - 11:35",
-      "items" : ["talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Double",
       "time": "11:40 - 12:25",
-      "items" : ["talk", "talk"]
+      "items" : ["talk", "Talk"]
 
     },{
       "typ": "Single",
@@ -360,22 +360,22 @@
     },{
       "typ": "Double",
       "time": "13:15 - 13:50",
-      "items" : ["Talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Double",
       "time": "13:55 - 14:35",
-      "items" : ["Talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Double",
       "time": "14:40 - 15:25",
-      "items" : ["Talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Double",
       "time": "15:30 - 16:15",
-      "items" : ["Talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Single",
@@ -385,7 +385,7 @@
     },{
       "typ": "Double",
       "time": "16:35 - 17:20",
-      "items" : ["Talk", "talk"]
+      "items" : ["Talk", "Talk"]
 
     },{
       "typ": "Single",
