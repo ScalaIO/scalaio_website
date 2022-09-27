@@ -6,7 +6,6 @@ import Html exposing (Html, a, div, h2, hr, p, span, table, tbody, td, text, tr)
 import Html.Attributes as Attr exposing (class, colspan)
 
 
-
 view : GlobalData -> Html msg
 view gd =
     div [ class "schedule" ]
@@ -22,8 +21,8 @@ view gd =
         , p [ class "schedule-program-information" ] [ text "The schedule will be published later." ]
         , table [ class "schedule-program" ]
             (List.map transformeScheduleItem gd.schedule)
-            , hr[][]
-        ,div [ class "schedule-talks-title" ]
-            [ div [] [ text "Talks" ]]
-        ,div [ class "schedule-talks-title" ]  (transformSpeaker2Talk (List.concat [gd.speakers.keynote, gd.speakers.talk]))
+        , hr [] []
+        , div [ class "schedule-talks-title" ]
+            [ div [] [ text "Talks" ] ]
+        , div [ class "schedule-talks-title" ] (transformSpeaker2Talk (List.concat [ gd.speakers.keynote, gd.speakers.talk ]))
         ]

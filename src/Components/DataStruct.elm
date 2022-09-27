@@ -103,6 +103,8 @@ type alias Speakers =
 type Type
     = Single
     | Double
+    | Lunch
+    | AfterLunch
 
 
 type alias ScheduleItem =
@@ -128,6 +130,12 @@ decodeType =
 
                     "Double" ->
                         D.succeed Double
+
+                    "Lunch" ->
+                        D.succeed Lunch
+
+                    "AfterLunch" ->
+                        D.succeed AfterLunch
 
                     _ ->
                         D.fail "Type in Schedule not defined"

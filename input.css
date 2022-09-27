@@ -301,8 +301,8 @@
         border-collapse: separate;
         text-align: center;
         width: 60%;
-        border-spacing: 10px;
         font-size: 2rem;
+        border-spacing: 10px;
     }
 
     .schedule-program-time-item {
@@ -314,15 +314,35 @@
     .schedule-program-subject-item {
         background-color: #000;
         color: #fff5f5;
+        width: 35%;
     }
 
     .schedule-program-subject-talk {
         background-color: #3c3c3c;
         color: #fff5f5;
+        width: 35%;
+    }
+
+    .schedule-program-subject-launch {
+        background-color: #000;
+        color: #fff5f5;
+        position: relative;
+        width: 35%;
     }
 
     .schedule-talks-title{
         font-size: 4rem;
+    }
+
+    .schedule-program-subject-launch::after{
+        content: '';
+        background-color: black;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        z-index: 1;
+        min-width: 100%;
+        min-height: 10px;
     }
 
     .speaker-details {

@@ -1,8 +1,8 @@
-module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor,transformeScheduleItem)
+module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor, transformeScheduleItem)
 
 import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), computeCssSpeaker, computeCssSponsor)
 import Html exposing (Html, a, div, img, span, td, text, tr)
-import Html.Attributes as Attr exposing (alt, class, colspan, src)
+import Html.Attributes as Attr exposing (alt, class, colspan, rowspan, src)
 import String exposing (..)
 
 
@@ -73,5 +73,19 @@ transformeScheduleItem si =
                     ]
                 )
 
+        Lunch ->
+            tr [ class "schedule-program-line" ]
+                (List.concat
+                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
+                    , List.map (\i -> td [ class "schedule-program-subject-item", colspan 2 ] [ text i ]) si.items
+                    ]
+                )
 
-
+        AfterLunch ->
+            tr [ class "schedule-program-line" ]
+                (List.concat
+                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
+                    , List.map (\i -> td [ class "schedule-program-subject-talk" ] [ text i ]) si.items
+                    , [ td [ class "schedule-program-subject-launch" ] [] ]
+                    ]
+                )

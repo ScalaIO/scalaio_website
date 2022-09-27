@@ -353,14 +353,13 @@
       "items" : ["talk", "Talk"]
 
     },{
-      "typ": "Single",
+      "typ": "Lunch",
       "time": "12h25 - 13:15",
       "items" : ["Lunch break"]
-
     },{
-      "typ": "Double",
+      "typ": "AfterLunch",
       "time": "13:15 - 13:50",
-      "items" : ["Talk", "Talk"]
+      "items" : ["Quickie"]
 
     },{
       "typ": "Double",
