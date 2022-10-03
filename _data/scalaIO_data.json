@@ -178,7 +178,7 @@
       {
         "name": "Nicolas Rinaudo",
         "id": "nicolas-rinaudo",
-        "speaker-title" : "Scala & FP enthusiast",
+        "speaker-title": "Scala & FP enthusiast",
         "email": "nicolas@nrinaudo.com",
         "avatar": "https://secure.gravatar.com/avatar/3d4cd92195bb4a21bed5eade58836f05?s=500",
         "location": "Paris, France",
@@ -206,7 +206,8 @@
         "confirmed": true,
         "created_at": "2022-08-23T19:57:02.997Z",
         "additional_info": null
-      },{
+      },
+      {
         "name": "Jules Ivanic",
         "id": "jules-ivanic",
         "speaker-title": "Functional Programmer",
@@ -238,7 +239,8 @@
         "confirmed": true,
         "created_at": "2022-08-23T13:34:00.299Z",
         "additional_info": null
-      },{
+      },
+      {
         "name": "Julien Truffaut",
         "id": "julien-truffaut",
         "speaker-title": "FP & Scala instructor",
@@ -262,7 +264,8 @@
         "confirmed": false,
         "created_at": "2022-08-09T12:31:58.325Z",
         "additional_info": null
-      },{
+      },
+      {
         "name": "Daniel Beskin",
         "id": "daniel-beskin",
         "speaker-title": "Tech lead",
@@ -291,8 +294,8 @@
       },
       {
         "name": "Chris Kipp",
-        "id" : "chris-kipp",
-        "speaker-title" : "Maintainer on Scalameta/metals",
+        "id": "chris-kipp",
+        "speaker-title": "Maintainer on Scalameta/metals",
         "email": "ckipp@protonmail.com",
         "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/62165/me.jpeg",
         "location": "Den Haag",
@@ -318,78 +321,343 @@
         "confirmed": true,
         "created_at": "2022-09-06T14:25:04.983Z",
         "additional_info": null
+      },
+      {
+        "name": "Loïc Knuchel",
+        "id": "loic-knuchel",
+        "speaker-title": "Développeur Scala repenti",
+        "email": "loicknuchel@gmail.com",
+        "avatar": "https://secure.gravatar.com/avatar/f755e6e8914df5cbaa74d30dd7de1ae2?s=500",
+        "location": "France",
+        "bio": "Développeur Scala repenti.  \r\nPrincipal Engineer chez Doctolib, je m'attache à améliorer la qualité de code de l'ensemble de l'organisation.  \r\nCréateur de Azimutt, je cherche à simplifier radicalement l'exploration de bases de données relationnelles.",
+        "twitter": "loicknuchel",
+        "url": "https://azimutt.app",
+        "organization": "Doctolib",
+        "shirt_size": "Men's XL",
+        "talk_format": "Talk (45 minutes)",
+        "title": "Elm, un langage simple et purement fonctionnel pour le front end",
+        "abstract": "Si comme moi tu détestes les bugs et que tu dois faire du front, la solution est là: Elm.\nIl n'est pas just robuste et simple, il porte aussi des choix radicaux qui m'ont fait voir la programmation fonctionnelle sous un nouveau jour, même après 8 ans de Scala ^^\nViens plonger dans ce nouvel univers!",
+        "description": "Il y a un an, je me lançais dans un nouveau side-projet, [Azimutt](https://azimutt.app), qui devait être essentiellement du front end.  \r\nBien sûr j'aurais pu choisir TypeScript et React de manière consensuelle, mais avec mon background de programmation fonctionnelle je voulais quelque chose de plus robuste qui me permettent de fortement limiter les bugs.  \r\nC'est comme ça que j'ai découvert [Elm](https://elm-lang.org), un langage aux choix radicaux:\r\n\r\n- programmation fonctionnelle pure\r\n- simplicité extrème\r\n- écosystème isolé\r\n- pas d'exceptions\r\n- et bien d'autres\r\n\r\nDepuis un an je découvre son écosystème et sa communauté, et après [30k LOC](https://github.com/azimuttapp/azimutt) je vous propose de découvrir Elm, ce que j'en retiens et comment je l'utilise pour Azimutt.",
+        "notes": "",
+        "audience_level": "All",
+        "tags": [
+          "Elm",
+          "programmation fonctionnelle",
+          "front end"
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-15T21:33:38.764Z",
+        "additional_info": null
+      },
+      {
+        "name": "Pierre Dal-Pra",
+        "id": "pierre-dal-pra",
+        "speaker-title": "Half Scala developer, half devops",
+        "email": "dalpra.pierre@gmail.com",
+        "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/84691/0884269D-9BE9-44EE-8323-AFE6DB745408.jpeg",
+        "location": "France",
+        "bio": "Half Scala developer, half devops, often nicknamed as \"that sbt guy\" by my coworkers :)\r\nCurrently working at Stuart, I love working with in the FP ecosystem at large, from Scala (of course) to Elm, and of course Nix :)",
+        "twitter": "pierre_dalpra",
+        "url": "https://github.com/pdalpra",
+        "organization": "Stuart",
+        "shirt_size": "Men's M",
+        "talk_format": "Lightning Talk (~5-10 minutes)",
+        "title": "Nix: FP for your packages and deployments",
+        "abstract": "FP and especially immutability helps us everyday reason about the code we write.\nBut what about applying FP to package management ?\nIn this talk, I'll show you how Nix is an answer to that question and its benefits, from your development environments to configuring your OS.",
+        "description": "Nix, with its rich package ecosystem and other projects like NixOs or NixOps, is one of the most active projects on Github.\r\n\r\nAt its core, its purely functional programming language and package management system helps you push the functional programming principles down to managing your development environments and even your OS or fleet of machines in production.\r\nIts concepts push reproducability far beyond what Docker or configuration management tools can offer, along the capacity to trivially rollback any change in a safe way.\r\n\r\nIn this talk, I will introduce you to the Nix language and concepts, and concrete uses cases that you could leverage today at work or for your personal use.",
+        "notes": "There is no specific technical requirements to that talk, it is aimed at being an introduction to Nix and its concepts.\r\nI believe it's interesting to talk about Nix since people in Scala community picked up interest about it.\r\nOne notable example is Typelevel, who is providing Nix-based development enviroments for many of its projects and has essentially introduced the [Typelevel dev shell](https://github.com/typelevel/typelevel-nix).\r\n\r\nAlthough I'm no Nix expert, I've worked a lot with Nix for my personal use and have introduced Nix at work, to use it for our development environments.\r\n\r\nOn speaker experience : I often do internal talks and have been a speaker at a past ScalaIO conference.",
+        "audience_level": "All",
+        "tags": [
+          "nix"
+        ],
+        "rating": 80,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-08-05T09:26:10.794Z",
+        "additional_info": null
+      },
+      {
+        "name": "Guillaume Martres",
+        "id": "guillaume-martres",
+        "speaker-title": "Freshly graduated from a PhD at EPFL",
+        "email": "smarter@ubuntu.com",
+        "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/22879/mug_square.jpg",
+        "location": "Lausanne, Switzerland",
+        "bio": "Freshly graduated from a PhD at EPFL where I worked on the [Scala 3 compiler](http://dotty.epfl.ch), currently looking for a job.",
+        "twitter": "",
+        "url": "http://guillaume.martres.me/",
+        "organization": "",
+        "shirt_size": "Men's L",
+        "talk_format": "Talk (45 minutes)",
+        "title": "Secrets of the Scala Type System",
+        "abstract": "Given a value x of type T, what is the type of x.m? This is easy to answer if T is a class, but what if T is an intersection, a union or contains wildcards?\nIn this talk we'll explore this and other aspects of the type system,\nthus equipping you with the tools to reason about your code confidently!",
+        "description": "In this talk I will describe in details and with examples several aspects of the\r\nScala type system that are not common knowledge, like how \r\nmember selection works in general and how type members and type parameters are related.\r\n\r\nWhile I will primarily be talking about the behavior of Scala 3, I will point out some of the\r\nkey differences with Scala 2 along the way.\r\n\r\nAfterwards, you should find it easier to understand the behavior and error messages\r\nof the compiler, and API design should become a little bit easier.\r\n\r\nThis talk will be based both on my experience working on the Scala 3 compiler as\r\nwell as my PhD thesis, where I formalized a subset of Scala in details. But you won't\r\nneed advanced knowledge of Scala to be able to understand it.",
+        "notes": "",
+        "audience_level": "Intermediate",
+        "tags": [
+          "Scala",
+          "Typechecker",
+          "Scala 3"
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-11T19:18:00.862Z",
+        "additional_info": null
+      },
+      {
+        "name": "Nicolas Francois",
+        "id": "nicolas-francois",
+        "speaker-title": "Software Engineer",
+        "email": "koisell.dev@gmail.com",
+        "avatar": "https://secure.gravatar.com/avatar/60ce696d34afb6224f06ca29cae9098e?s=500",
+        "location": "Unknown",
+        "bio": "I'm a Software Engineer at mediarithmics with some Ops flavor. I work mainly in Scala on both FP and OOP way.\r\nArchitecture astronaut I love to explore how to construct highly scalable and robust systems from small programming constructs to global infrastructure level.",
+        "twitter": "Koisell",
+        "url": "",
+        "organization": "mediarithmics",
+        "shirt_size": "Men's L",
+        "talk_format": "Talk (45 minutes)",
+        "title": "Type/Test/Whatever Driven Development: Partage d'expérience",
+        "abstract": "De nombreuses personnes vantent les mérites de méthode de développement autour des tests ou du système de types.\nPourtant il est facile de se perdre dans de nombreuses et diverses implémentations.\nAprès plusieurs années à expérimenter avec, je vous propose de partager ce que j'en ai appris.",
+        "description": "De nombreuses personnes vantent les mérites de méthode de développement autour des tests ou du système de types.\r\nPourtant il est facile de se perdre dans de nombreuses et diverses implémentations.\r\nAprès plusieurs années à expérimenter avec ces techniques je vous propose de partager ce que j'en ai appris et comment je les ai intégrées en tant que développeur Scala.\r\nUne fois leur concept acquis elles amélioreront votre confort et votre efficacité de développement.\r\n\r\nDans ce talk vous (re)découvrirez\r\n  - l'importance de l'emplacement des tests\r\n  - pourquoi jeter certains tests\r\n  - qu'il est possible de faire du pair programming avec scalac\r\n  - comment améliorer vos logs grace aux tests\r\n  - et bien d'autres choses 🥳\r\n",
+        "notes": "",
+        "audience_level": "All",
+        "tags": [
+          "TDD"
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-13T11:30:03.600Z",
+        "additional_info": null
+      },
+      {
+        "name": "Matthieu Baechler",
+        "id": "matthieu-baechler",
+        "speaker-title": "Veteran backen developper",
+        "email": "matthieu+papercall@baechler.family",
+        "avatar": "https://secure.gravatar.com/avatar/2b11006452ad591a7ec38c3c4da874ad?s=500",
+        "location": "Unknown",
+        "bio": "I'm a veteran backend developer, living in the south of France (Ardèche) and working remotely at Conduktor.\r\nI wrote Java for years and I'm now mainly writing Scala on a daily basis.\r\nMy domains of interest are FP, reactive programming, distributed architecture, CQRS/ES and performance analysis.\r\n",
+        "twitter": "m_baechler",
+        "url": "",
+        "organization": "Conduktor",
+        "shirt_size": "Men's S",
+        "talk_format": "Talk (45 minutes)",
+        "title": "When stateless APIs are not enough: deep dive into a reactive backend design",
+        "abstract": "There are two kinds of Single Page Application design: either you build on top of REST resources or you embrace backend-for-frontend style.\nWe'll show you how to model your backend with ZStream and mapAccumZIO to implement a low latency incremental service to deliver the best of both designs.",
+        "description": "There are two kinds of Single Page Application design: either you build on top of REST resources or you embrace backend-for-frontend style (using GraphQL or not).\r\nThe former is very common but has a lot of drawbacks: it may be very chatty and you give a lot of responsibilities to the frontend.\r\nThe latter solves both of these problems but you lose the nice incremental loading of data and the latency of a request is now the latency of the slowest piece of data.\r\nThe slower the resources you need to work with, the worse the situation is.\r\nNow, let's say that in addition, you want the application to be reactive and display data as they are available. Adding some polling would just make the problem worse.\r\nSo we tried to engineer a solution to have the best of both worlds: short latency, incremental loading, updates without polling, coarse grain resources, and cancellation.\r\nWe'll show you how to model your backend with ZStream and mapAccumZIO to implement a finite state machine and deliver these promises while keeping a clean and maintainable codebase.",
+        "notes": "I will have a co-presenter for this Talk, we'll show some code and some diagrams but it won't be a live coding session",
+        "audience_level": "Intermediate",
+        "tags": [
+          "scala",
+          "zio",
+          "api design"
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-14T15:24:23.931Z",
+        "additional_info": null
+      },
+      {
+        "name": "NOUGUIER Olivier",
+        "id": "nouguier-olivier",
+        "speaker-title": "Software (Scala) Engineer",
+        "email": "olivier.nouguier@gmail.com",
+        "avatar": "https://secure.gravatar.com/avatar/b2484ef33a94ebdcd47de7d3dff41515?s=500",
+        "location": "Unknown",
+        "bio": "Scala addict, JVM, js && SN\r\nAkka && ZIO fan boy - crypto newbie\r\nFather",
+        "twitter": "oNouguier",
+        "url": "https://cheleb.github.io/zio-pravega/",
+        "organization": "Ledger",
+        "shirt_size": "Men's M",
+        "talk_format": "Talk (45 minutes)",
+        "title": "ZIO Streaming connector for Pravega",
+        "abstract": "pravega.io is an elastic, consistent and durable Streaming platform. ZIO pravega leverages ZIO Streaming to give full access to Stream (topic) and to KV tables.\nTransaction support and consistent concurrent write were implemented with \nZIO resources management, error handling and retries policies.",
+        "description": "My favorite approach to a new framework, is to try to contribute to it ! Then I learn quickly the level of maturity of code and documentation, and more importantly the welcoming of the community and maintainers.\r\n\r\nZIO was not an exception, and clearly, is was a very instructive journey (and still it is).\r\n\r\n[zio-pravega](https://github.com/cheleb/zio-pravega/) allowed me to understand how ZIO Streaming compares to Akka Stream. [pravega](https://www.pravega.io) was chosen because I've already write the [alpakka connector](https://doc.akka.io/docs/alpakka/current/pravega.html).\r\n\r\nThis connector illustrate the power a ZIO resources management, error handling and retry policies to implements transactional stream writes and concurrent consistent optimistic write a Key Value Table  in a (few) snap of the fingers.\r\n\r\nI will present quickly ZIO and ZStream, and then how easy it is to extends to your needs.\r\n\r\n\r\n",
+        "notes": "I'm really an enthusiast ZIO early adopters. I've discovered an over welcoming community.\r\nDeveloper experience with ZIO is by far the best of my life. I even find the time to write [documentation](https://cheleb.github.io/zio-pravega/)  !\r\n\r\nI will be able to adapt to new comer to ZIO or more intermediate level. ",
+        "audience_level": "All",
+        "tags": [
+          "Scala",
+          "ZIO",
+          "Streaming"
+        ],
+        "rating": 83.33333333333333,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-07-19T22:41:24.054Z",
+        "additional_info": null
+      },
+      {
+        "name": "Agnès Maury",
+        "id": "agnes-maury",
+        "speaker-title": "Author, Developer",
+        "email": "agnesm.dev@gmail.com",
+        "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/84987/_S2A6858.jpg",
+        "location": "Nantes",
+        "bio": "Développeuse passionnée et évangéliste SCALA, j'aime les chats 🐱, les jeux vidéos et le Japon. J'aime le travail bien fait et cherche toujours la meilleure façon de faire les choses sans réinventer la roue. Au quotidien, je m'applique à cultiver une vision du travail qui rime avec sens et performance. 🌟",
+        "twitter": "maury_agnes",
+        "url": "https://portfolio.agnesm.dev/",
+        "organization": "Palo IT Nantes",
+        "shirt_size": "Women's L",
+        "talk_format": "Talk (45 minutes)",
+        "title": "Ivre et au chômage, elle décide d'écrire un livre sur le Scala en plein Covid",
+        "abstract": "REX sur l'écriture d'un premier livre : comment s'est arrivé ? pourquoi j'ai accepté ? par quelles étapes de dépression suis-je passée ?",
+        "description": "REX sur l'écriture d'un premier livre : comment s'est arrivé ? pourquoi j'ai accepté ? par quelles étapes de dépression suis-je passée ? Je vais parler des relations avec l'équipe éditoriale, des délais, des étapes de la réalisation d'un livre du jour 1 avec les premières lignes jusqu'à la livraison. Je ne m'arrête pas là, on va parler de marketing, publicité, impression, sortie officielle du livre et pourquoi je ne referai plus ça.",
+        "notes": "Ce talk était à l'origine donné sur 20 minutes. Je peux le rallonger ou prévoir une période de questions plus longue.",
+        "audience_level": "All",
+        "tags": [
+          "scala",
+          "rex",
+          "livre"
+        ],
+        "rating": 60,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-07-20T07:44:46.343Z",
+        "additional_info": null
+      },
+      {
+        "name": "Alexandre Archambault",
+        "id": "alexandre-archambault",
+        "speaker-title": "Software engineer",
+        "email": "alexandre.archambault@gmail.com",
+        "avatar": "https://secure.gravatar.com/avatar/53419e71ca110cf547e4104d8220a133?s=500",
+        "location": "Paris",
+        "bio": "I've been doing Scala professionally since 2013, in ad tech, finance, then full time in open source, focusing on Scala tooling.\r\n\r\nI'm the main author of [coursier](https://github.com/coursier/coursier), [Almond](https://github.com/almond-sh/almond), and more recently [Scala CLI](https://github.com/VirtusLab/scala-cli), developed with VirtusLab. I also contributed to [shapeless](https://github.com/milessabin/shapeless), [Ammonite](https://github.com/com-lihaoyi/Ammonite), and have smaller contributions in numerous other Scala projects.",
+        "twitter": "alxarchambault",
+        "url": "https://github.com/alexarchambault",
+        "organization": "VirtusLab",
+        "shirt_size": "Men's S",
+        "talk_format": "Short talk (25 minutes)",
+        "title": "Adding Python support to Scala tooling",
+        "abstract": "What if Scala developers could seamlessly interact with the Python ecosystem? ScalaPy brings us closer to that dream, and tools such as coursier or Scala CLI are gaining early support for it, which we'll review in that talk.",
+        "description": "What if Scala developers could seamlessly interact with the ecosystem of Python, the most popular programming language in the world? While [ScalaPy](https://github.com/scalapy/scalapy) brings us closer to that dream, Scala tooling needs to be adapted to interact with Python.\r\n\r\nIn this talk, we'll review early efforts made in that direction in [coursier](https://github.com/coursier/coursier) and [Scala CLI](https://scala-cli.virtuslab.org), allowing users to easily run programs mixing Scala and Python code. We'll also discuss what's missing to make the Scala + Python developer's journey easier.",
+        "notes": "\"technical requirements\": This talk should assume basic familiarity with Scala and its tooling. It should discuss and demo Scala + Python (via ScalaPy), using Scala CLI and coursier.\r\n\r\n\"why you're the best person to speak on this subject\": I'm the original author of both coursier and Scala CLI, and also recently authored their early ScalaPy support (that itself relies on [python-native-libs](https://github.com/scalapy/python-native-libs), that was initiated during a Google Summer of code project that I co-mentored).",
+        "audience_level": "Intermediate",
+        "tags": [
+          "Python",
+          "Scala CLI",
+          "ScalaPy",
+          "coursier"
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-25T20:34:39.970Z",
+        "additional_info": null
       }
     ]
   },
-  "schedule" : [
+  "schedule": [
     {
       "typ": "Single",
       "time": "08:00 - 09:00",
-      "items" : ["Registration"]
-
-    },{
+      "items": [
+        "Registration"
+      ]
+    },
+    {
       "typ": "Single",
       "time": "09:00 - 09:20",
-      "items" : ["Introduction"]
-
-    },{
+      "items": [
+        "Introduction"
+      ]
+    },
+    {
       "typ": "Single",
       "time": "09:25 - 10:20",
-      "items" : ["Opening Keynote"]
-
-    },{
+      "items": [
+        "Opening Keynote"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "10:30 - 11:00",
-      "items" : ["Talk", "Talk"]
-
-    },{
+      "items": [
+        "Talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "11:05 - 11:35",
-      "items" : ["Talk", "Talk"]
-
-    },{
+      "items": [
+        "Talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "11:40 - 12:25",
-      "items" : ["talk", "Talk"]
-
-    },{
+      "items": [
+        "talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Lunch",
       "time": "12h25 - 13:15",
-      "items" : ["Lunch break"]
-    },{
+      "items": [
+        "Lunch break"
+      ]
+    },
+    {
       "typ": "AfterLunch",
       "time": "13:15 - 13:50",
-      "items" : ["Quickie"]
-
-    },{
+      "items": [
+        "Quickie"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "13:55 - 14:35",
-      "items" : ["Talk", "Talk"]
-
-    },{
+      "items": [
+        "Talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "14:40 - 15:25",
-      "items" : ["Talk", "Talk"]
-
-    },{
+      "items": [
+        "Talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "15:30 - 16:15",
-      "items" : ["Talk", "Talk"]
-
-    },{
+      "items": [
+        "Talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Single",
       "time": "16:15 - 16:35",
-      "items" : ["Coffee Break"]
-
-    },{
+      "items": [
+        "Coffee Break"
+      ]
+    },
+    {
       "typ": "Double",
       "time": "16:35 - 17:20",
-      "items" : ["Talk", "Talk"]
-
-    },{
+      "items": [
+        "Talk",
+        "Talk"
+      ]
+    },
+    {
       "typ": "Single",
       "time": "17:25 - 18:20",
-      "items" : ["Closing Keynote"]
+      "items": [
+        "Closing Keynote"
+      ]
     }
   ]
 }
