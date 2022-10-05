@@ -582,6 +582,33 @@
         "additional_info": null
       },
       {
+        "name": "Jamie Thompson",
+        "id": "jamie-thompson",
+        "speaker-title": "Software developer on Scala3 and Tasty",
+        "email": "alexandre.archambault@gmail.com",
+        "avatar": "https://secure.gravatar.com/avatar/53419e71ca110cf547e4104d8220a133?s=500",
+        "location": "Paris",
+        "bio": "One of the main contributors to \nTASTy Query as an engineer at the Scala Center",
+        "twitter": "-",
+        "url": "",
+        "organization": "EPFL",
+        "shirt_size": "Men's S",
+        "talk_format": "talk (45 minutes)",
+        "title": "Discover TASTy Query: The library for Scala whole program analysis",
+        "abstract": "Discover the future impact of TASTy \nQuery: a single, cross-platform API to answer all semantic questions \nabout Scala programs, no compiler required. Already used in Metals’ \ndebugger, TASTy Query will validate APIs do not break compatibility. \nLearn to build an analysis to improve your own code.",
+        "description": "TASTy (Scala 3’s intermediate binary \nrepresentation) stores all the signatures and implementations of Scala \ndefinitions - essentially it is the whole program. Discover in this talk\n why TASTy Query is the single cross-platform API to realise the \npotential of TASTy. Supporting Scala.js and the JVM, TASTy Query has a \nsimpler API than the compiler, that is designed from the Scala user’s \npoint of view. Learn why it will be crucial to library’s for preserving \ncompatibility between API versions. We will show you also how to build \ntools and analyses on top of TASTy-Query, for example how Metals’ \ndebugger leverages TASTy-Query’s support for Scala 2 and Java APIs.",
+        "notes": "",
+        "audience_level": "Intermediate",
+        "tags": [
+
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-25T20:34:39.970Z",
+        "additional_info": null
+      },
+      {
         "name": "Thomas Franco",
         "id": "thomas-franco",
         "speaker-title": "CTO of StrangeBee",
