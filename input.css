@@ -172,6 +172,7 @@
     .partners-logo {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .centered-body-title {
@@ -216,7 +217,7 @@
     }
 
     .sponsors-gold-logo {
-        height: 150px;
+        height: 120px;
         width: auto;
         margin: 0 10px;
     }
@@ -228,6 +229,11 @@
 
     .sponsors-jaimescala-logo {
         height: 70px;
+        padding: 0 5px;
+    }
+
+    .sponsors-community-logo {
+        height: 120px;
         padding: 0 5px;
     }
 
