@@ -499,6 +499,35 @@
         "additional_info": null
       },
       {
+        "name": "Luc Duzan",
+        "id": "luc-duzan",
+        "speaker-title": "Backend developer at Conduktor",
+        "email": "stroky.l@gmail.com",
+        "avatar": "https://secure.gravatar.com/avatar/2b11006452ad591a7ec38c3c4da874ad?s=500",
+        "location": "Unknown",
+        "bio": "Backend developer at Conduktor",
+        "twitter": "",
+        "url": "",
+        "organization": "Conduktor",
+        "shirt_size": "Men's S",
+        "talk_format": "Talk (45 minutes)",
+        "title": "When stateless APIs are not enough: deep dive into a reactive backend design",
+        "abstract": "There are two kinds of Single Page Application design: either you build on top of REST resources or you embrace backend-for-frontend style.\nWe'll show you how to model your backend with ZStream and mapAccumZIO to implement a low latency incremental service to deliver the best of both designs.",
+        "description": "There are two kinds of Single Page Application design: either you build on top of REST resources or you embrace backend-for-frontend style (using GraphQL or not).\r\nThe former is very common but has a lot of drawbacks: it may be very chatty and you give a lot of responsibilities to the frontend.\r\nThe latter solves both of these problems but you lose the nice incremental loading of data and the latency of a request is now the latency of the slowest piece of data.\r\nThe slower the resources you need to work with, the worse the situation is.\r\nNow, let's say that in addition, you want the application to be reactive and display data as they are available. Adding some polling would just make the problem worse.\r\nSo we tried to engineer a solution to have the best of both worlds: short latency, incremental loading, updates without polling, coarse grain resources, and cancellation.\r\nWe'll show you how to model your backend with ZStream and mapAccumZIO to implement a finite state machine and deliver these promises while keeping a clean and maintainable codebase.",
+        "notes": "I will have a co-presenter for this Talk, we'll show some code and some diagrams but it won't be a live coding session",
+        "audience_level": "Intermediate",
+        "tags": [
+          "scala",
+          "zio",
+          "api design"
+        ],
+        "rating": 0,
+        "state": "accepted",
+        "confirmed": false,
+        "created_at": "2022-09-14T15:24:23.931Z",
+        "additional_info": null
+      },
+      {
         "name": "Olivier Nouguier",
         "id": "nouguier-olivier",
         "speaker-title": "Software (Scala) Engineer",
