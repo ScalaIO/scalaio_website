@@ -24,6 +24,7 @@ computeCssSponsor k =
 
         Community ->
             "sponsors-community-logo"
+
         Silver ->
             "sponsors-silver-logo"
 

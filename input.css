@@ -163,13 +163,15 @@
     }
 
     .partners {
-        padding: 20px 20px;
-        flex-direction: column;
+        display: grid;
+        grid-gap: 70px;
+        padding-bottom: 40px;
     }
+
 
     .partners-logo {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .centered-body-title {
@@ -208,24 +210,15 @@
         justify-content: center;
     }
 
-    .sponsors-title > h2 {
-        display: flex;
-        justify-content: center;
-    }
-
     .sponsors-platine-logo {
         height: 275px;
         padding: 0 20px;
     }
 
     .sponsors-gold-logo {
-        height: 200px;
-        padding: 0 10px;
-    }
-
-    .sponsors-gold-logo {
-        height: 190px;
-        padding: 0 10px;
+        height: 150px;
+        width: auto;
+        margin: 0 10px;
     }
 
     .sponsors-silver-logo {
