@@ -170,6 +170,7 @@
     .partners-logo {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .centered-body-title {
