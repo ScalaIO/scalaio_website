@@ -23,14 +23,19 @@
         "name": "starlake",
         "url": "https://www.starlake.ai"
       },{
-        "name": "ziverge",
-        "url": "https://ziverge.com/"
-      },{
         "name": "teads",
         "url": "https://www.teads.com"
       }
     ],
-    "silver": [
+
+    "community": [
+      {
+        "name": "ziverge",
+        "url": "https://ziverge.com/"
+      }
+    ],
+
+      "silver": [
       {
         "name": "hawk",
         "url": "https://hawk-tech.io/"

@@ -13,6 +13,8 @@ view gd =
         , div [ class "partners-logo" ] (transformSponsor gd.sponsors.platine SponsorKind.Platine)
         , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "Gold Sponsor" ] ]
         , div [ class "partners-logo" ] (transformSponsor gd.sponsors.gold SponsorKind.Gold)
+        , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "Community Sponsor" ] ]
+        , div [ class "partners-logo" ] (transformSponsor gd.sponsors.community SponsorKind.Community)
         , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "Silver Sponsor" ] ]
         , div [ class "partners-logo" ] (transformSponsor gd.sponsors.silver SponsorKind.Silver)
         , div [ Attr.class "sponsors-title" ] [ h2 [] [ text "J'aime Scala Sponsor" ] ]

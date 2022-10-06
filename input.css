@@ -223,6 +223,11 @@
         padding: 0 10px;
     }
 
+    .sponsors-gold-logo {
+        height: 190px;
+        padding: 0 10px;
+    }
+
     .sponsors-silver-logo {
         height: 75px;
         padding: 0 5px;
@@ -670,6 +675,11 @@
 
         .sponsors-gold-logo {
             height: 175px;
+            padding: 0 10px;
+        }
+
+        .sponsors-community-logo {
+            height: 165px;
             padding: 0 10px;
         }
 

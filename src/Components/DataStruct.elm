@@ -8,6 +8,7 @@ import OptimizedDecoder as D
 type SponsorKind
     = Platine
     | Gold
+    | Community
     | Silver
     | JaimeScala
 
@@ -21,6 +22,8 @@ computeCssSponsor k =
         Gold ->
             "sponsors-gold-logo"
 
+        Community ->
+            "sponsors-community-logo"
         Silver ->
             "sponsors-silver-logo"
 
@@ -47,6 +50,7 @@ type alias Sponsor =
 type alias Sponsors =
     { platine : List Sponsor
     , gold : List Sponsor
+    , community : List Sponsor
     , silver : List Sponsor
     , jaimeScala : List Sponsor
     }
@@ -177,9 +181,10 @@ listSponsorDecoder =
 
 sponsorsItemDecoder : D.Decoder Sponsors
 sponsorsItemDecoder =
-    D.map4 Sponsors
+    D.map5 Sponsors
         (D.field "platine" listSponsorDecoder)
         (D.field "gold" listSponsorDecoder)
+        (D.field "community" listSponsorDecoder)
         (D.field "silver" listSponsorDecoder)
         (D.field "jaimescala" listSponsorDecoder)
 
