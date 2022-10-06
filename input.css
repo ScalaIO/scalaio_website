@@ -400,7 +400,7 @@
         font-size: 1.2rem;
         width: 60%;
         margin: 10px 0px 4px 4px;
-        text-align: justify;
+        text-align: left;
     }
 
     .speaker-details-talk-content-item > a {
@@ -414,7 +414,7 @@
         font-size: 1.2rem;
         width: 60%;
         margin: 10px 0px 4px 250px;
-        text-align: justify;
+        text-align: left;
     }
 
     .speaker-details-picture {
@@ -886,22 +886,10 @@
 
 
         .speaker-details-content-item {
-
-            color: #3c3c3c;
-            display: flex;
-            justify-content: center;
-            font-size: 1.2rem;
-            width: 95%;
             margin: 10px 0px 4px 0px;
-            text-align: justify;
-            font-style: italic;
         }
 
         .speaker-details-talk-content-item {
-           color: #3c3c3c;
-           display: flex;
-           justify-content: center;
-           font-size: 1.2rem;
            width: 95%;
            margin: 10px 0px 0px 0px;
         }
