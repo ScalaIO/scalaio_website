@@ -25,13 +25,16 @@
       },{
         "name": "teads",
         "url": "https://www.teads.com"
+      },{
+        "name": "ziverge",
+        "url": "https://ziverge.com/"
       }
     ],
 
     "community": [
       {
-        "name": "ziverge",
-        "url": "https://ziverge.com/"
+        "name": "zio",
+        "url": "https://zio.dev/"
       }
     ],
 
