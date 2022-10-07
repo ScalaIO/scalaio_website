@@ -159,7 +159,7 @@
     }
 
     .centered-body {
-        padding: 20px 300px;
+        padding: 20px 250px;
     }
 
     .partners {
@@ -213,23 +213,31 @@
 
     .sponsors-platine-logo {
         height: 275px;
-        padding: 0 20px;
+        padding: 0 40px;
     }
 
     .sponsors-gold-logo {
         height: 150px;
         width: auto;
-        margin: 0 10px;
+        margin: 0 40px;
     }
 
     .sponsors-silver-logo {
-        height: 75px;
-        padding: 0 5px;
+        object-fit: contain;
+        max-height: 75px;
+        max-width: 200px;
+        width: auto;
+        height: auto;
+        padding: 0 20px;
     }
 
     .sponsors-jaimescala-logo {
-        height: 70px;
-        padding: 0 5px;
+        object-fit: contain;
+        max-height: 70px;
+        max-width: 170px;
+        width: auto;
+        height: auto;
+        padding: 0 20px;
     }
 
     .sponsors-community-logo {
@@ -669,28 +677,22 @@
 
         .sponsors-platine-logo {
             height: 170px;
-            padding: 0 20px;
         }
 
         .sponsors-gold-logo {
             height: 175px;
-            padding: 0 10px;
         }
 
         .sponsors-community-logo {
             height: 165px;
-            padding: 0 10px;
         }
 
         .sponsors-silver-logo {
-            height: 75px;
-            padding: 0 10px;
+            padding: 10px 0;
         }
 
         .sponsors-jaimescala-logo {
-            height: 70px;
-            padding: 0 5px;
-            margin: 5px 0;
+            padding: 10px 0;
         }
 
         .sponsor-link {
