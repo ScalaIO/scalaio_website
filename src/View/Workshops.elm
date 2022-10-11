@@ -1,9 +1,9 @@
 module View.Workshops exposing (..)
 
 import Components.DataStruct exposing (GlobalData)
-import Components.Utils exposing (transformSpeaker2Talk, transformWorkshop, transformeScheduleItem)
-import Html exposing (Html, div, h2, hr, p, table, text)
-import Html.Attributes exposing (class)
+import Components.Utils exposing ( transformWorkshop)
+import Html exposing (Html, a, div, h2, text)
+import Html.Attributes as Attr exposing (class)
 
 
 view : GlobalData -> Html msg
@@ -17,7 +17,8 @@ view gd =
             [ div [] [ text (String.append "Workshop schedule : " gd.ws.horaires) ]
             ]
         , div [ class "workshop-info workshop-info-warning" ]
-            [ div [] [ text "Workshop ticket included pass conference. It can be buy from our ticketing " ]
+            [ div [] [ text "Workshop ticket included pass conference. It can be buy from our ",
+             a [ Attr.href "/", Attr.target "_blank" ] [ text "ticketing" ]]
             ]
         , div [ class "workshop-content" ] (transformWorkshop gd.ws.workshops)
         ]

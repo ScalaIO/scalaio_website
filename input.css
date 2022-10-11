@@ -724,6 +724,11 @@
 
         }
 
+    .warning-focus{
+    text-decoration:underline;
+    font-weight: bold;
+    }
+
     @media only screen and (max-width: 600px) {
         .venue-reach-map {
             border: 0;
