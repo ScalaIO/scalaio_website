@@ -404,9 +404,7 @@
     }
 
    .workshop-item-description {
-        font-style:italic;
         font-size:1.2rem;
-        text-align: justify;
     }
 
     .workshop-content{
