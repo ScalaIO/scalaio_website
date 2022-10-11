@@ -22,23 +22,23 @@
       {
         "name": "starlake",
         "url": "https://www.starlake.ai"
-      },{
+      },
+      {
         "name": "teads",
         "url": "https://www.teads.com"
-      },{
+      },
+      {
         "name": "ziverge",
         "url": "https://ziverge.com/"
       }
     ],
-
     "community": [
       {
         "name": "zio",
         "url": "https://zio.dev/"
       }
     ],
-
-      "silver": [
+    "silver": [
       {
         "name": "hawk",
         "url": "https://hawk-tech.io/"
@@ -186,7 +186,8 @@
         "confirmed": false,
         "created_at": "2022-08-09T12:31:58.325Z",
         "additional_info": null
-      },{
+      },
+      {
         "name": "Adam fraser",
         "speaker-title": "Co-founder of Ziverge, Solution Architect",
         "id": "adam-fraser",
@@ -637,7 +638,6 @@
         "notes": "",
         "audience_level": "Intermediate",
         "tags": [
-
         ],
         "rating": 0,
         "state": "accepted",
@@ -754,7 +754,8 @@
       "typ": "AfterLunch",
       "time": "13:15 - 13:50",
       "items": [
-        "Quickie","Quickie"
+        "Quickie",
+        "Quickie"
       ]
     },
     {
@@ -803,6 +804,33 @@
         "Closing Keynote"
       ]
     }
-  ]
+  ],
+  "workshopData": {
+    "address": "81 rue de Clichy, Paris, 75009",
+    "horaires": "Thursday, November 3rd, 2022. From 8 am to 5 pm",
+    "workshops": [
+      {
+        "title": "Building Bulletproof Backend and Mobile Apps with ZIO",
+        "description": "In this workshop you will go from \"0 to 60\" with ZIO, starting with the definition of a ZIO workflow and building up to building your own web application with ZIO. In the process you will learn about ZIO's powerful operators for concurrency and resource safety and see how they make it easy for us to build powerful, resilient applications.",
+        "nbPlaces":"20",
+        "lang":"EN"
+      },{
+        "title": "Error Handling and Data Modeling in Scala",
+        "description": "coming soon",
+        "nbPlaces":"12",
+        "lang":"EN"
+      },{
+        "title": "ELM",
+        "description": "Un langage qu’on Elm !\n\n(oui bon c’est pourri comme jeu de mot, pas beaucoup d’inspiration)\n\nVous êtes un développeur “Backend” et vous souhaitez proposer une (jolie ?) interface graphique à vos utilisateurs ? Mais peut-être que…\n\n- \uD83D\uDE31 Javascript vous effraie ? \uD83D\uDE31\n- \uD83E\uDD14 vous vous êtes perdus dans les milliers de façons de faire du “React“ ? \uD83E\uDD14\n- \uD83E\uDDD9\uD83C\uDFFC\u200D♂️ CSS s’apparente à de la magie noire à vos yeux  ? \uD83E\uDDD9\uD83C\uDFFC\u200D♂️\n\nCet atelier vous propose de découvrir Elm, un “langage exquis pour des web apps fiables”. Venez découvrir :\n\n- \uD83D\uDC9A son compilateur qui vous aidera à progresser facilement ! \uD83D\uDC9A\n- \uD83C\uDFD7️ la simplicité de son système de types, transformant votre code en jeu de légo \uD83C\uDFD7️\n- \uD83D\uDD8C️ comment gérer simplement le style \uD83D\uDD8C️",
+        "nbPlaces":"10",
+        "lang":"FR"
+      },{
+        "title": "Introduction à Scala",
+        "description": "coming soon",
+        "nbPlaces":"15",
+        "lang":"FR"
+      }
+    ]
+  }
 }
 

@@ -38,11 +38,9 @@ navbar =
             [ ul []
                 [ li [] [ viewLink "venue" ]
                 , li [] [ viewLink "schedule" ]
+                , li [] [ viewLink "workshops" ]
                 , li [] [ viewLink "speakers" ]
                 , li [] [ viewLink "partners" ]
-
-                --, li [] [ viewLink "Talks" ]
-                --, li [] [ viewLink "Schedule" ]
                 , li [] [ viewLink "sponsorship" ]
                 , li [] [ viewLink "faq" ]
                 , li [] [ viewLink "hall-of-fame" ]

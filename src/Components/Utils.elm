@@ -1,6 +1,6 @@
-module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor, transformeScheduleItem)
+module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor, transformeScheduleItem, transformWorkshop)
 
-import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), computeCssSpeaker, computeCssSponsor)
+import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), Workshop, computeCssSpeaker, computeCssSponsor)
 import Html exposing (Html, a, div, img, span, td, text, tr)
 import Html.Attributes as Attr exposing (alt, class, colspan, rowspan, src)
 import String exposing (..)
@@ -48,7 +48,6 @@ transformSpeaker2Talk : List Speaker -> List (Html msg)
 transformSpeaker2Talk ls =
     List.map talkFormat ls
 
-
 transformSpeaker : List Speaker -> KindTalk -> List (Html msg)
 transformSpeaker data k =
     List.map (speakerFormat k) data
@@ -89,3 +88,18 @@ transformeScheduleItem si =
                     , [ td [ class "schedule-program-subject-launch" ] [] ]
                     ]
                 )
+
+
+workshopFormat : Workshop -> Html msg
+workshopFormat s =
+    div [ class "workshop-item" ]
+        [ div [ class "workshop-item-title" ]
+            [ div [] [ text s.title  ]
+            , div [ class "workshop-item-nb-places" ] [ span[class "workshop-item-title-info"][ text ( String.append  (String.append s.nbPlaces " places - ") s.lang)]  ]
+            ]
+        , div [ class "workshop-item-description" ] [ text s.description ]
+        ]
+
+transformWorkshop : List Workshop -> List (Html msg)
+transformWorkshop ls =
+    List.map workshopFormat ls

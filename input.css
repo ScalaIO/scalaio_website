@@ -357,6 +357,68 @@
         min-height: 10px;
     }
 
+    .workshop {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .workshop-info {
+                text-align: center;
+                font-size: 1.4rem;
+            }
+    .workshop-info-warning {
+       color: #bc1321;
+    }
+
+    .workshop-info-details{
+            font-weight: bold;
+            color: #3c3c3c;
+    }
+
+    .workshop-program-title {
+
+                font-size: 2.9rem;
+            }
+
+    .workshop-item{
+             display:flex;
+             justify-content:flex-start;
+             flex-direction:column;
+        }
+
+    .workshop-item-title{
+             display:flex;
+              color: #bc1321;
+             font-size:2rem;
+             font-weight: bold;
+             margin: 0 0 0 20px;
+             align-items:baseline;
+        }
+
+    .workshop-item-title-info{
+            color: #3c3c3c;
+    }
+
+    .workshop-item-nb-places{
+            font-style:italic;
+            font-size:1.7rem;
+            margin: 0 0 0 10px;
+        }
+
+   .workshop-item-description {
+        font-style:italic;
+        font-size:1.7rem;
+        margin: 10px 40px 10px 200px;
+        text-align: justify;
+    }
+
+    .workshop-content{
+                font-size: 2.9rem;
+                margin: 50px 0 0 0;
+            }
+
     .speaker-details {
         display: flex;
         flex-direction: column;

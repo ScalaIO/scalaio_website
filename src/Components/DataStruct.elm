@@ -160,12 +160,26 @@ listScheduleItemDecoder =
     D.list sheduleItemDecoder
 
 
+type alias Workshop = {
+            title:String,
+            description:String,
+            nbPlaces:String,
+            lang:String
+        }
+
+type alias WorkshopData = {
+            address:String,
+            horaires:String,
+            workshops: List Workshop
+        }
+
 type alias GlobalData =
-    { sponsors : Sponsors
-    , contributions : List Contribution
-    , speakers : Speakers
-    , schedule : List ScheduleItem
-    }
+            { sponsors : Sponsors
+            , contributions : List Contribution
+            , speakers : Speakers
+            , schedule : List ScheduleItem
+            , ws: WorkshopData
+            }
 
 
 sponsorDecoder : D.Decoder Sponsor
@@ -254,13 +268,38 @@ contributionsDecoder =
     D.list contributionDecoder
 
 
+
+workshopDecoder: D.Decoder Workshop
+workshopDecoder =
+            D.map4 Workshop
+                (D.field "title" D.string)
+                (D.field "description" D.string)
+                (D.field "nbPlaces" D.string)
+                (D.field "lang" D.string)
+
+workshopsDecoder : D.Decoder (List Workshop)
+workshopsDecoder =
+    D.list workshopDecoder
+
+
+
+workshopData: D.Decoder WorkshopData
+workshopData =
+    D.map3 WorkshopData
+     (D.field "address" D.string)
+     (D.field "horaires" D.string)
+     (D.field "workshops" workshopsDecoder)
+
+
+
 globalData : D.Decoder GlobalData
 globalData =
-    D.map4 GlobalData
+    D.map5 GlobalData
         (D.field "sponsors" sponsorsItemDecoder)
         (D.field "contributions" contributionsDecoder)
         (D.field "speakers" speakersDecoder)
         (D.field "schedule" listScheduleItemDecoder)
+        (D.field "workshopData" workshopData)
 
 
 data : DataSource GlobalData
