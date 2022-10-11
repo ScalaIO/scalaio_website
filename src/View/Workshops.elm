@@ -17,7 +17,7 @@ view gd =
             [ div [] [ text (String.append "Workshop schedule : " gd.ws.horaires) ]
             ]
         , div [ class "workshop-info workshop-info-warning" ]
-            [ div [] [ text "Workshop ticket included pass conference. It can be buy from our ticketing" ]
+            [ div [] [ text "Workshop ticket included pass conference. It can be buy from our ticketing " ]
             ]
         , div [ class "workshop-content" ] (transformWorkshop gd.ws.workshops)
         ]
