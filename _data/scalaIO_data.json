@@ -826,7 +826,7 @@
         "lang":"(FR)"
       },{
         "title": "Introduction au langage Scala et la programmation fonctionnelle",
-        "description": "coming soon",
+        "description": "Vous voulez de bonnes fondations pour commencer votre projet en Scala ! Ce workshop devrait vous permettre d'avoir les connaissances nécessaires pour comprendre et écrire du Scala au quotidien.\n\nAinsi, on va passer en revues quelques fonctionnalités avancées de Scala et de cartographier l’écosystème Scala.",
         "nbPlaces":"15",
         "lang":"(FR)"
       }
