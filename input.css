@@ -383,41 +383,38 @@
             }
 
     .workshop-item{
-             display:flex;
-             justify-content:flex-start;
-             flex-direction:column;
-        }
+
+    }
 
     .workshop-item-title{
-             display:flex;
-              color: #bc1321;
-             font-size:2rem;
-             font-weight: bold;
-             margin: 0 0 0 20px;
-             align-items:baseline;
-        }
+        color: #bc1321;
+        font-size:2rem;
+        font-weight: bold;
+        margin: 0 0 0 20px;
+    }
 
     .workshop-item-title-info{
-            color: #3c3c3c;
+        color: #3c3c3c;
     }
 
     .workshop-item-nb-places{
-            font-style:italic;
-            font-size:1.7rem;
-            margin: 0 0 0 10px;
-        }
+        font-style:italic;
+        font-size:1.7rem;
+        margin: 0 0 0 10px;
+    }
 
    .workshop-item-description {
         font-style:italic;
-        font-size:1.7rem;
-        margin: 10px 40px 10px 200px;
+        font-size:1.2rem;
         text-align: justify;
     }
 
     .workshop-content{
-                font-size: 2.9rem;
-                margin: 50px 0 0 0;
-            }
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 60px;
+    }
 
     .speaker-details {
         display: flex;
@@ -715,6 +712,16 @@
             .schedule-program {
                 width: 100%;
                 font-size: 1.5rem;
+            }
+
+            .workshop-item-title{
+                display:flex;
+                flex-direction: column;
+                margin: 0
+            }
+
+            .workshop-item-nb-places{
+                margin: 0
             }
 
         }

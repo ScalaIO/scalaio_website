@@ -1,7 +1,7 @@
 module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor, transformWorkshop, transformeScheduleItem)
 
 import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), Workshop, computeCssSpeaker, computeCssSponsor)
-import Html exposing (Html, a, div, img, span, td, text, tr)
+import Html exposing (Html, a, div, h2, img, span, td, text, tr)
 import Html.Attributes as Attr exposing (alt, class, colspan, rowspan, src)
 import String exposing (..)
 
@@ -94,10 +94,7 @@ transformeScheduleItem si =
 workshopFormat : Workshop -> Html msg
 workshopFormat s =
     div [ class "workshop-item" ]
-        [ div [ class "workshop-item-title" ]
-            [ div [] [ text s.title ]
-            , div [ class "workshop-item-nb-places" ] [ span [ class "workshop-item-title-info" ] [ text (String.append (String.append s.nbPlaces " places - ") s.lang) ] ]
-            ]
+        [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text (String.append (String.append s.nbPlaces " places - ") s.lang) ] ]
         , div [ class "workshop-item-description" ] [ text s.description ]
         ]
 

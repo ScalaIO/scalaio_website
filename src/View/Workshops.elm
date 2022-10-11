@@ -8,12 +8,11 @@ import Html.Attributes exposing (class)
 
 view : GlobalData -> Html msg
 view gd =
-    div [ class "workshop" ]
+    div [ class "centered-body" ]
         [ h2 [ class "workshop-program-title" ]
             [ text "Workshop 2022 Program" ]
         , div [ class "workshop-info" ]
-            [ div [] [ text (String.append "Workshop venue address : " gd.ws.address) ]
-            ]
+            [ div [] [ text (String.append "Workshop venue address : " gd.ws.address) ] ]
         , div [ class "workshop-info" ]
             [ div [] [ text (String.append "Workshop schedule : " gd.ws.horaires) ]
             ]
