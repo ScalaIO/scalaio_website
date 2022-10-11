@@ -56,7 +56,7 @@ view =
                 , div [ class "venue-reach-hotel-link" ]
                     [ img [ src "/assets/icons/airbnb.svg", class "icon-venue" ] []
                     , a
-                        [ href "https://www.airbnb.com/s/Paris/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&price_filter_input_type=0&query=Paris&place_id=ChIJD7fiBh9u5kcRYJSMaMOCCwQ&date_picker_type=calendar&checkin=2022-11-03&checkout=2022-11-04&adults=1&source=structured_search_input_header&search_type=autocomplete_click"
+                        [ href "https://www.airbnb.com/s/69-Rue-Boissi%C3%A8re--Paris--France/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&price_filter_input_type=0&query=69%20Rue%20Boissi%C3%A8re%2C%20Paris&date_picker_type=calendar&checkin=2022-11-03&checkout=2022-11-04&adults=1&source=structured_search_input_header&search_type=autocomplete_click&price_filter_num_nights=1&place_id=ChIJOcH4ZvBv5kcRDhZM0ol6uNc"
                         , target "_blank"
                         ]
                         [ text "Access to pre setup link on Air-bnb" ]
