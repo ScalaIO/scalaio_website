@@ -1,4 +1,4 @@
-module Page.Workshops exposing (Model, Msg, Data, page)
+module Page.Workshops exposing (Data, Model, Msg, page)
 
 import Components.DataStruct as DataStruct exposing (GlobalData)
 import Components.WebSiteStruct exposing (globalPageStructure)
@@ -20,8 +20,10 @@ type alias Model =
 type alias Msg =
     Never
 
+
 type alias RouteParams =
     {}
+
 
 page : Page RouteParams Data
 page =
