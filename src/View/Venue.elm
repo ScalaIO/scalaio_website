@@ -64,7 +64,7 @@ view =
                 , div [ class "venue-reach-hotel-link" ]
                     [ img [ src "/assets/icons/booking.svg", class "icon-venue" ] []
                     , a
-                        [ href "https://www.booking.com/searchresults.fr.html?label=msn-APBgIvrZ0FSl3i_Ja_RdBg-80470634554589%3Atikwd-16659123052%3Aloc-66%3Anes%3Amte%3Alp127187%3Adec%3Aqsreservation+hotel&sid=2ce13fa2392ff8d5a7742054d77884aa&aid=393655&lang=fr&sb_lp=1&src=index&error_url=https%3A%2F%2Fwww.booking.com%2Findex.fr.html%3Faid%3D393655%26label%3Dmsn-APBgIvrZ0FSl3i_Ja_RdBg-80470634554589%253Atikwd-16659123052%253Aloc-66%253Anes%253Amte%253Alp127187%253Adec%253Aqsreservation%2520hotel%26sid%3D2ce13fa2392ff8d5a7742054d77884aa%26sb_price_type%3Dtotal%26%26&ss=Paris%2C+%C3%8Ele-de-France%2C+France&is_ski_area=&checkin_year=2022&checkin_month=11&checkin_monthday=3&checkout_year=2022&checkout_month=11&checkout_monthday=4&group_adults=1&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&ss_raw=Paris&ac_position=0&ac_langcode=fr&ac_click_type=b&dest_id=-1456928&dest_type=city&iata=PAR&place_id_lat=48.85668&place_id_lon=2.351476&search_pageview_id=3cfb982781e500e7&search_pageview_id=3cfb982781e500e7&search_selected=true&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0&nflt=pri%3D2%3Bpri%3D1"
+                        [ href "https://www.booking.com/searchresults.fr.html?ss=69+Rue+Boissi%C3%A8re+75116+Paris&sb_travel_purpose=business&ssne=69+Rue+Boissi%C3%A8re+75116+Paris&ssne_untouched=69+Rue+Boissi%C3%A8re+75116+Paris&label=msn-APBgIvrZ0FSl3i_Ja_RdBg-80470634554589%3Atikwd-16659123052%3Aloc-66%3Anes%3Amte%3Alp127187%3Adec%3Aqsreservation+hotel&sid=2ce13fa2392ff8d5a7742054d77884aa&aid=393655&lang=fr&sb=1&src_elem=sb&src=searchresults&latitude=48.8685335&longitude=2.2869771&checkin=2022-11-03&checkout=2022-11-05&group_adults=1&no_rooms=1&group_children=0#map_opened"
                         , target "_blank"
                         ]
                         [ text "Access to pre setup link on Booking.com" ]
@@ -72,7 +72,7 @@ view =
                 , div [ class "venue-reach-hotel-link" ]
                     [ img [ src "/assets/icons/hotelscom.svg", class "icon-venue" ] []
                     , a
-                        [ href "https://fr.hotels.com/Hotel-Search?adults=1&d1=2022-11-03&d2=2022-11-04&destination=Paris%2C%20France&endDate=2022-11-04&latLong=48.856696%2C2.351761&regionId=2734&selected=&semdtl=&sort=RECOMMENDED&startDate=2022-11-03&theme=&useRewards=false&userIntent="
+                        [ href "https://fr.hotels.com/Hotel-Search?adults=1&d1=2022-11-03&d2=2022-11-04&destination=Porte-Dauphine%2C%20Paris%2C%20France&directFlights=false&endDate=2022-11-04&hotels-destination=69%20Rue%20Boissi%C3%A8re%2C%2075116%20Paris%2C%20France&l10n=%5Bobject%20Object%5D&latLong=48.86563%2C2.28617&localDateFormat=dd%2FMM%2Fyyyy&mapBounds=48.85531%2C2.26395&mapBounds=48.87595%2C2.30839&neighborhood=&partialStay=false&poi=&pwaOverlay=map&regionId=553248635212955974&selected=&semdtl=&sort=RECOMMENDED&startDate=2022-11-03&theme=&useRewards=false&userIntent="
                         , target "_blank"
                         ]
                         [ text "Access to pre setup link on Hotels.com" ]
