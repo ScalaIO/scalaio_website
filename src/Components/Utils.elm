@@ -94,7 +94,8 @@ transformeScheduleItem si =
 workshopFormat : Workshop -> Html msg
 workshopFormat s =
     div [ class "workshop-item" ]
-        [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text (String.append (String.append s.nbPlaces " places - ") s.lang) ] ]
+        --[ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text (String.append (String.append s.nbPlaces " places - ") s.lang) ] ]
+        [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]
         , div [ class "workshop-item-description" ] [ text s.description ]
         ]
 
