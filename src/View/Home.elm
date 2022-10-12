@@ -20,7 +20,7 @@ view =
     div [ Attr.class "home" ]
         [ h2 [ Attr.class "home-title" ] [ text "We open sales for workshops! " ]
         , p []
-            [ text "Those workshops will take place on "
+            [ text "Those ", a [ Attr.href "/workshops" ] [ text "workshops" ], text " will take place on "
             , span [ class "warning-focus" ] [ text "Thursday, 3 November" ]
             , text " on the day before conference. "
             , span [ class "warning-focus" ] [ text "Number of seats are limited." ]
