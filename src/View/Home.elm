@@ -18,23 +18,24 @@ cfp =
 view : Html msg
 view =
     div [ Attr.class "home" ]
-        [ h2 [Attr.class "home-title"] [ text "We open sales for workshops! " ]
+        [ h2 [ Attr.class "home-title" ] [ text "We open sales for workshops! " ]
         , p []
             [ text "Those workshops will take place on "
             , span [ class "warning-focus" ] [ text "Thursday, 3 November" ]
             , text " on the day before conference. "
             , span [ class "warning-focus" ] [ text "Number of seats are limited." ]
-            , text " To attend to it, you should buy combo tickets dedicated (1 workshop + 1 conference ticket)."]
+            , text " To attend to it, you should buy combo tickets dedicated (1 workshop + 1 conference ticket)."
+            ]
         , p [] [ text " Notice that if you already have a conference ticket, we’ll refund you after your purchase." ]
         , p []
             [ text "Those workshop will be hosted as well with the help of "
             , a [ Attr.href "https://www.ambient-it.net/", Attr.target "_blank" ] [ text "Ambient-it" ]
             , text " which allow training funding from “OPCO” (Les opérateurs de compétences) to french workers."
-            , text "If you have any questions, there is an email : workshops@scala.io"
+            , text " If you have any questions, there is an email : workshops@scala.io"
             ]
-            , hr[][text "xxxxxxxxxxxxxxxxxxxxxxxxxxx"]
+        , hr [ class "home-hr" ] [ text "xxxxxxxxxxxxxxxxxxxxxxxxxxx" ]
         , h2 [ Attr.class "home-title" ] [ text "Buy your ticket for edition 2022 now" ]
-        , p [] [ text "ScalaIO is a community based, non-profit event. See our ", a [ Attr.href "/faq", Attr.target "_blank" ] [ text "F.A.Q" ], p [] [ text " for more information." ] ]
+        , p [] [ text "ScalaIO is a community based, non-profit event. See our ", a [ Attr.href "/faq", Attr.target "_blank" ] [ text "F.A.Q" ], text " for more information." ]
         , iframe
             [ Attr.src "https://yurplan.com/event/Scala-IO-2022/88496/tickets/widget?widget=dGlja2V0aW5nV2lkZ2V0WXBfODY1MzdfODk1MDQ%3D&from=widget_89504&wversion=1&culture=fr"
             , class "home-ticketing"
