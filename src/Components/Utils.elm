@@ -36,9 +36,9 @@ speakerFormat k s =
 talkFormat : Speaker -> Html msg
 talkFormat s =
     div [ class "talk-item" ]
-        [ div [ class "talk-item-title" ]
-            [ div [] [ text s.s.title ]
-            , div [ class "talk-item-speaker" ] [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [ text s.s.name ] ]
+        [ h2 [ class "talk-item-title" ]
+            [ text s.s.title
+            , span [ class "talk-item-speaker" ] [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [ text s.s.name ] ]
             ]
         , div [ class "talk-item-abstract" ] [ text s.t.abstract ]
         ]

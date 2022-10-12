@@ -24,5 +24,5 @@ view gd =
         , hr [] []
         , div [ class "schedule-talks-title" ]
             [ div [] [ text "Talks" ] ]
-        , div [ class "schedule-talks-title" ] (transformSpeaker2Talk (List.concat [ gd.speakers.keynote, gd.speakers.talk ]))
+        , div [ class "talk-content centered-body" ] (transformSpeaker2Talk (List.concat [ gd.speakers.keynote, gd.speakers.talk ]))
         ]

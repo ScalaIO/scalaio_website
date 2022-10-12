@@ -355,40 +355,37 @@
         background-color: black;
         position: absolute;
         top: -10px;
-        left: 0px;
+        left: 0;
         z-index: 1;
         min-width: 100%;
         min-height: 10px;
     }
 
     .workshop {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .workshop-info {
-                text-align: center;
-                font-size: 1.4rem;
-            }
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
     .workshop-info-warning {
        color: #bc1321;
     }
 
     .workshop-info-details{
-            font-weight: bold;
-            color: #3c3c3c;
+        font-weight: bold;
+        color: #3c3c3c;
     }
 
     .workshop-program-title {
-
-                font-size: 2.9rem;
-            }
-
-    .workshop-item{
-
+        font-size: 2.9rem;
     }
+
 
     .workshop-item-title{
         color: #bc1321;
@@ -662,33 +659,35 @@
         display: none;
     }
 
+    .talk-content{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
     .talk-item{
          display:flex;
-         justify-content:flex-start;
          flex-direction:column;
     }
 
     .talk-item-title{
-         display:flex;
-         font-size:2rem;
-         font-weight: bold;
-         margin: 0 0 0 20px;
-         align-items:baseline;
+        color:#bc1321;
+        font-size:1.7rem;
+        font-weight: bold;
+        margin: 0 0 0 20px;
     }
+
     .talk-item-speaker{
-        font-style:italic;
         font-size:1.7rem;
         margin: 0 0 0 10px;
     }
-    .talk-item-speaker > a{
-       color:#bc1321;
-    }
-    .talk-item-abstract{
-        font-style:italic;
-        font-size:1.7rem;
-        margin: 10px 40px 10px 200px;
-        text-align: justify;
 
+    .talk-item-speaker > a{
+        color: black;
+    }
+
+    .talk-item-abstract{
+        font-size:1.2rem;
     }
 
     /* Tablet */
