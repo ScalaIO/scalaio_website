@@ -836,8 +836,8 @@
         "lang":"(FR)"
       },{
         "title": "Introduction au langage Scala et la programmation fonctionnelle",
-        "trainer": "Jonathan Winandy",
-        "photo": "jonathan-winandy",
+        "trainer": "Jonathan Winandy & François Sarradin",
+        "photo": "univalence",
         "description": "Vous souhaitez démarrer et monter en compétence sur le langage Scala?\nCe workshop vous permettra d’acquérir les connaissances nécessaires pour lire, comprendre et écrire des programmes Scala au quotidien. Durant cette session, nous explorons également le paradigme fonctionnel indissociable de Scala.\nNous passerons en revues les fonctionnalités simples et avancées du langage. Nous ferons par ailleurs une cartographie de l’écosystème Scala.",
         "nbPlaces":"15",
         "lang":"(FR)"

@@ -106,7 +106,7 @@ workshopFormat s =
     div [ class "workshop-item" ]
         [ div [ class "workshop-item-trainer" ]
             [ div [ class "workshop-item-photo", style "background-image" ("url(\"/assets/speakers/" ++ s.photo ++ ".png\")") ] [ text "" ]
-            , span [ class "workshop-item-trainer" ] [ text s.trainer ]
+            , span [ class "workshop-item-name" ] [ text s.trainer ]
             ]
         , div []
             [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]

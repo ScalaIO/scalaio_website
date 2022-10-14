@@ -402,6 +402,10 @@
         align-items: center;
     }
 
+    .workshop-item-name{
+        text-align: center;
+    }
+
     .workshop-item-photo{
         width: 240px;
         height: 300px;
