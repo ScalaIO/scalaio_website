@@ -390,12 +390,29 @@
         font-size: 2.9rem;
     }
 
+    .workshop-item{
+        display: flex;
+        gap: 30px;
+    }
+
+    .workshop-item-trainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .workshop-item-photo{
+        width: 240px;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+    }
 
     .workshop-item-title{
         color: #bc1321;
         font-size:2rem;
         font-weight: bold;
-        margin: 0 0 0 20px;
+        text-align: left;
     }
 
     .workshop-item-title-info{
@@ -719,6 +736,10 @@
                 font-size: 1.5rem;
             }
 
+            .workshop-item{
+                flex-direction: column;
+            }
+
             .workshop-item-title{
                 display:flex;
                 flex-direction: column;
@@ -728,7 +749,6 @@
             .workshop-item-nb-places{
                 margin: 0
             }
-
         }
 
     .warning-focus{

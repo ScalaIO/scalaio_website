@@ -2,7 +2,7 @@ module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker
 
 import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), Workshop, computeCssSpeaker, computeCssSponsor)
 import Html exposing (Html, a, div, h2, img, p, span, td, text, tr)
-import Html.Attributes as Attr exposing (alt, class, colspan, rowspan, src)
+import Html.Attributes as Attr exposing (alt, class, colspan, rowspan, src, style)
 import String exposing (..)
 
 
@@ -100,11 +100,18 @@ workshopDescriptionFormatting description =
 
 workshopFormat : Workshop -> Html msg
 workshopFormat s =
-    div [ class "workshop-item" ]
-        --[ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text (String.append (String.append s.nbPlaces " places - ") s.lang) ] ]
-        [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]
-        , div [ class "workshop-item-description" ] (workshopDescriptionFormatting s.description)
-        ]
+    div [ class "workshop-item" ] [
+        div [ class "workshop-item-trainer" ] [
+            div [ class "workshop-item-photo", style "background-image" ("url(\"/assets/speakers/" ++ s.photo ++ ".png\")") ] [ text ""],
+            span [ class "workshop-item-trainer" ] [ text s.trainer ]
+        ],
+        div []
+            [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]
+            , div [ class "workshop-item-description" ] (workshopDescriptionFormatting s.description)
+            ]
+
+    ]
+
 
 
 transformWorkshop : List Workshop -> List (Html msg)

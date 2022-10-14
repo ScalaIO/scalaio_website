@@ -162,6 +162,8 @@ listScheduleItemDecoder =
 
 type alias Workshop =
     { title : String
+    , trainer: String
+    , photo: String
     , description : String
     , nbPlaces : String
     , lang : String
@@ -272,8 +274,10 @@ contributionsDecoder =
 
 workshopDecoder : D.Decoder Workshop
 workshopDecoder =
-    D.map4 Workshop
+    D.map6 Workshop
         (D.field "title" D.string)
+        (D.field "trainer" D.string)
+        (D.field "photo" D.string)
         (D.field "description" D.string)
         (D.field "nbPlaces" D.string)
         (D.field "lang" D.string)
