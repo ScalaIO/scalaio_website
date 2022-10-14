@@ -162,8 +162,8 @@ listScheduleItemDecoder =
 
 type alias Workshop =
     { title : String
-    , trainer: String
-    , photo: String
+    , trainer : String
+    , photo : String
     , description : String
     , nbPlaces : String
     , lang : String

@@ -90,28 +90,29 @@ transformeScheduleItem si =
                     ]
                 )
 
-toParagraph: String -> Html msg
+
+toParagraph : String -> Html msg
 toParagraph content =
     p [] [ text content ]
+
 
 workshopDescriptionFormatting : String -> List (Html msg)
 workshopDescriptionFormatting description =
     String.split "\n" description |> List.map toParagraph
 
+
 workshopFormat : Workshop -> Html msg
 workshopFormat s =
-    div [ class "workshop-item" ] [
-        div [ class "workshop-item-trainer" ] [
-            div [ class "workshop-item-photo", style "background-image" ("url(\"/assets/speakers/" ++ s.photo ++ ".png\")") ] [ text ""],
-            span [ class "workshop-item-trainer" ] [ text s.trainer ]
-        ],
-        div []
+    div [ class "workshop-item" ]
+        [ div [ class "workshop-item-trainer" ]
+            [ div [ class "workshop-item-photo", style "background-image" ("url(\"/assets/speakers/" ++ s.photo ++ ".png\")") ] [ text "" ]
+            , span [ class "workshop-item-trainer" ] [ text s.trainer ]
+            ]
+        , div []
             [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]
             , div [ class "workshop-item-description" ] (workshopDescriptionFormatting s.description)
             ]
-
-    ]
-
+        ]
 
 
 transformWorkshop : List Workshop -> List (Html msg)
