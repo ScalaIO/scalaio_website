@@ -40,6 +40,14 @@
       {
         "name": "ambient-it",
         "url": "https://www.ambient-it.net/"
+      },
+      {
+        "name": "univalence",
+        "url": "https://univalence.io/"
+      },
+      {
+        "name": "fptower",
+        "url": "https://www.fp-tower.com/"
       }
     ],
     "silver": [
@@ -68,10 +76,6 @@
       {
         "name": "univalence",
         "url": "https://univalence.io/"
-      },
-      {
-        "name": "fptower",
-        "url": "https://www.fp-tower.com/"
       }
     ]
   },

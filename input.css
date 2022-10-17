@@ -247,11 +247,11 @@
 
     .sponsors-community-logo {
         object-fit: contain;
-        max-height: 120px;
+        max-height: 80px;
         max-width: 300px;
         width: auto;
         height: auto;
-        padding: 0 5px;
+        padding: 0 20px;
     }
 
     hr {
@@ -831,7 +831,7 @@
         }
 
         .sponsors-community-logo {
-            height: 165px;
+            height: 145px;
         }
 
         .sponsors-silver-logo {
