@@ -62,6 +62,10 @@
       {
         "name": "umatr",
         "url": "https://www.umatr.io/embedded"
+      },
+      {
+        "name": "clever",
+        "url": "https://www.clever-cloud.com/"
       }
     ],
     "jaimescala": [
