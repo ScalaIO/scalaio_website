@@ -48,6 +48,10 @@
       {
         "name": "fptower",
         "url": "https://www.fp-tower.com/"
+      },
+      {
+        "name": "scalacenter",
+        "url": "https://scala.epfl.ch/"
       }
     ],
     "silver": [
