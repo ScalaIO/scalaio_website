@@ -110,6 +110,7 @@ workshopFormat s =
             ]
         , div []
             [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]
+            , div [] [text "Formation : ",a [class "workshop-item-link",  Attr.href s.link, Attr.target "_blank" ] [text s.link]]
             , div [ class "workshop-item-description" ] (workshopDescriptionFormatting s.description)
             ]
         ]

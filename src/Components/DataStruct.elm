@@ -167,6 +167,7 @@ type alias Workshop =
     , description : String
     , nbPlaces : String
     , lang : String
+    , link : String
     }
 
 
@@ -274,13 +275,14 @@ contributionsDecoder =
 
 workshopDecoder : D.Decoder Workshop
 workshopDecoder =
-    D.map6 Workshop
+    D.map7 Workshop
         (D.field "title" D.string)
         (D.field "trainer" D.string)
         (D.field "photo" D.string)
         (D.field "description" D.string)
         (D.field "nbPlaces" D.string)
         (D.field "lang" D.string)
+        (D.field "link" D.string)
 
 
 workshopsDecoder : D.Decoder (List Workshop)
