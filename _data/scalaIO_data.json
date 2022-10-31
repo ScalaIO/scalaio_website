@@ -205,7 +205,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-08-09T12:31:58.325Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Adam fraser",
@@ -230,7 +231,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-08-09T12:31:58.325Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       }
     ],
     "talk": [
@@ -264,7 +266,8 @@
         "state": "accepted",
         "confirmed": true,
         "created_at": "2022-08-23T19:57:02.997Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Jules Ivanic",
@@ -297,7 +300,8 @@
         "state": "accepted",
         "confirmed": true,
         "created_at": "2022-08-23T13:34:00.299Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Julien Truffaut",
@@ -322,7 +326,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-08-09T12:31:58.325Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Daniel Beskin",
@@ -408,7 +413,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-09-15T21:33:38.764Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang": "fr"
       },
       {
         "name": "Pierre Dal-Pra",
@@ -423,9 +429,9 @@
         "organization": "Stuart",
         "shirt_size": "Men's M",
         "talk_format": "Lightning Talk (~5-10 minutes)",
-        "title": "Nix: FP for your packages and deployments",
-        "abstract": "FP and especially immutability helps us everyday reason about the code we write.\nBut what about applying FP to package management ?\nIn this talk, I'll show you how Nix is an answer to that question and its benefits, from your development environments to configuring your OS.",
-        "description": "Nix, with its rich package ecosystem and other projects like NixOs or NixOps, is one of the most active projects on Github.\r\n\r\nAt its core, its purely functional programming language and package management system helps you push the functional programming principles down to managing your development environments and even your OS or fleet of machines in production.\r\nIts concepts push reproducability far beyond what Docker or configuration management tools can offer, along the capacity to trivially rollback any change in a safe way.\r\n\r\nIn this talk, I will introduce you to the Nix language and concepts, and concrete uses cases that you could leverage today at work or for your personal use.",
+        "title": "Nix: la FP pour vos livrables et déploiements",
+        "abstract": "L'immutabilité nous aide quotidiennement à raisonner sur le code que nous lisons et écrivons. Et si on l'appliquait à nos livrables et déploiements ?\nJe vous montrerais comment Nix propose de répondre à cette question, aussi bien pour produire vos livrables, vos environnements de dev ou la configuration d'un OS.",
+        "description": "Nix, avec son riche écosystème de paquets, est l'un des projets les plus actifs de Gtihub.\n\nEn son cœur, un langage et un gestionnaire de paquets purement fonctionnels étendent certains aspects de la programmation fonctionnelle bien au delà de ce que d'autre outils, comme Docker, peuvent apporter.\n\nDans ce talk, je vous présenterais les grans concepts de Nix, et des cas concrets d'utilisation que vous pourrez appliquer aussi bien pour vous qu'au travail.",
         "notes": "There is no specific technical requirements to that talk, it is aimed at being an introduction to Nix and its concepts.\r\nI believe it's interesting to talk about Nix since people in Scala community picked up interest about it.\r\nOne notable example is Typelevel, who is providing Nix-based development enviroments for many of its projects and has essentially introduced the [Typelevel dev shell](https://github.com/typelevel/typelevel-nix).\r\n\r\nAlthough I'm no Nix expert, I've worked a lot with Nix for my personal use and have introduced Nix at work, to use it for our development environments.\r\n\r\nOn speaker experience : I often do internal talks and have been a speaker at a past ScalaIO conference.",
         "audience_level": "All",
         "tags": [
@@ -435,7 +441,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-08-05T09:26:10.794Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "fr"
       },
       {
         "name": "Guillaume Martres",
@@ -491,7 +498,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-09-13T11:30:03.600Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "fr"
       },
       {
         "name": "Matthieu Baechler",
@@ -520,7 +528,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-09-14T15:24:23.931Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Luc Duzan",
@@ -549,7 +558,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-09-14T15:24:23.931Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Olivier Nouguier",
@@ -578,7 +588,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-07-19T22:41:24.054Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "en"
       },
       {
         "name": "Agnès Maury",
@@ -607,7 +618,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-07-20T07:44:46.343Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "fr"
       },
       {
         "name": "Alexandre Archambault",
@@ -688,7 +700,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-09-25T20:34:39.970Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "fr"
       },
       {
         "name": "Vincent Debergue",
@@ -713,7 +726,8 @@
         "state": "accepted",
         "confirmed": false,
         "created_at": "2022-09-25T20:34:39.970Z",
-        "additional_info": null
+        "additional_info": null,
+        "lang" : "fr"
       }
     ]
   },
