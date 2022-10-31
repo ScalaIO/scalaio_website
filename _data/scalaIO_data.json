@@ -273,12 +273,12 @@
         "name" : "Sébastien Doeraene",
         "id" : "sebastien-doeraene",
         "talk_format" : "Talk (45 minutes)",
-        "description" : "",
-        "abstract": "",
+        "description" : "Starting from scratch, we build a small Scala.js application with a minimal, live-editable bar chart. We show a setup for a fast save-refresh cycle. We use the following technologies:\n\nVS Code with Metals as IDE\nsbt, with the sbt-scalajs plugin\nVite, a fast JavaScript packager and development server\nLaminar, a Scala.js UI library based on FRP (Functional Reactive Programming)\nChart.js, a JavaScript library to display nice graphs\nScalablyTyped, to get static types for Chart.js\nA significant portion of the talk focuses on Laminar and its FRP model. We do not talk about the server-side aspects.",
+        "abstract": "Starting from scratch, we build a small Scala.js (https://www.scala-js.org/) application with a minimal, live-editable bar chart. We show a setup for a fast save-refresh cycle. We use Metals, sbt, Vite, Laminar, Chart.js and ScalablyTyped. Includes an intro to the FRP model of Laminar.",
         "audience_level" : "",
-        "title" : "",
+        "title" : "Getting started with Scala.js, Laminar and Vite",
         "speaker-title" : "",
-        "bio" : "",
+        "bio" : "Sébastien Doeraene is a compiler/runtime systems hacker and a Scala enthusiast. Best known as the author of Scala.js, he is now technical director of the Scala Center. He holds a PhD from EPFL, having worked under the supervision of Prof. Martin Odersky, and a master’s degree in computer science engineering from Université catholique de Louvain in Belgium. When he is not busy coding, he sings in choirs and a cappella groups such as the Ensemble Vocal Évohé, or composes for said choirs.",
         "organization" : ""
       },
       {
@@ -794,7 +794,7 @@
     {
       "time": "11:40 - 12:25",
       "left": {
-        "title": "???",
+        "title": "Getting started with Scala.js, Laminar and Vite",
         "speaker": "Sébastien Doeraene",
         "lang": "en",
         "kind": "Talk"
@@ -840,7 +840,7 @@
       },
       "right": {
         "title": "Overall journey of 8 years product development",
-        "speaker": "Vincent Debergue",
+        "speaker": "Vincent Debergue & Thomas Franco",
         "lang": "fr",
         "kind": "Talk"
       }
