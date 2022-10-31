@@ -1,8 +1,8 @@
-module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor, transformWorkshop, transformeScheduleItem)
+module Components.Utils exposing (capitalize, transformSpeaker, transformSpeaker2Talk, transformSponsor, transformWorkshop)
 
-import Components.DataStruct exposing (KindTalk, Schedule, ScheduleItem, Speaker, Sponsor, SponsorKind, Type(..), Workshop, computeCssSpeaker, computeCssSponsor)
-import Html exposing (Html, a, div, h2, img, p, span, td, text, tr)
-import Html.Attributes as Attr exposing (alt, class, colspan, rowspan, src, style)
+import Components.DataStruct exposing (Lang(..), PresentationKind, ScheduleItem, Speaker, Sponsor, SponsorKind, Workshop, computeCssSpeaker, computeCssSponsor)
+import Html exposing (Html, a, div, h2, img, p, span, text)
+import Html.Attributes as Attr exposing (alt, class, src, style)
 import String exposing (..)
 
 
@@ -21,7 +21,7 @@ transformSponsor data k =
     List.map (sponsorToUrl k) data
 
 
-speakerFormat : KindTalk -> Speaker -> Html msg
+speakerFormat : PresentationKind -> Speaker -> Html msg
 speakerFormat k s =
     div [ class "speakers-display" ]
         [ div []
@@ -38,7 +38,8 @@ talkFormat s =
     div [ class "talk-item" ]
         [ h2 [ class "talk-item-title" ]
             [ text s.s.title
-            , span [ class "talk-item-speaker" ] [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [ text s.s.name ] ]
+            , span [ class "talk-item-speaker" ]
+                [ a [ Attr.href ("/speaker-details/" ++ s.s.id) ] [ text s.s.name ] ]
             ]
         , div [ class "talk-item-abstract" ] [ text s.t.abstract ]
         ]
@@ -49,46 +50,9 @@ transformSpeaker2Talk ls =
     List.map talkFormat ls
 
 
-transformSpeaker : List Speaker -> KindTalk -> List (Html msg)
+transformSpeaker : List Speaker -> PresentationKind -> List (Html msg)
 transformSpeaker data k =
     List.map (speakerFormat k) data
-
-
-transformeScheduleItem : ScheduleItem -> Html msg
-transformeScheduleItem si =
-    case si.typ of
-        Single ->
-            tr [ class "schedule-program-line" ]
-                (List.concat
-                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
-                    , List.map (\i -> td [ class "schedule-program-subject-item", colspan 2 ] [ text i ]) si.items
-                    ]
-                )
-
-        Double ->
-            tr [ class "schedule-program-line" ]
-                (List.concat
-                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
-                    , List.map (\i -> td [ class "schedule-program-subject-talk" ] [ text i ]) si.items
-                    ]
-                )
-
-        Lunch ->
-            tr [ class "schedule-program-line" ]
-                (List.concat
-                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
-                    , List.map (\i -> td [ class "schedule-program-subject-item", colspan 2 ] [ text i ]) si.items
-                    ]
-                )
-
-        AfterLunch ->
-            tr [ class "schedule-program-line" ]
-                (List.concat
-                    [ [ td [ class "schedule-program-time-item" ] [ text si.time ] ]
-                    , List.map (\i -> td [ class "schedule-program-subject-talk" ] [ text i ]) si.items
-                    , [ td [ class "schedule-program-subject-launch" ] [] ]
-                    ]
-                )
 
 
 toParagraph : String -> Html msg
@@ -110,7 +74,7 @@ workshopFormat s =
             ]
         , div []
             [ h2 [ class "workshop-item-title" ] [ text s.title, span [ class "workshop-item-nb-places workshop-item-title-info" ] [ text s.lang ] ]
-            , div [] [text "Formation : ",a [class "workshop-item-link",  Attr.href s.link, Attr.target "_blank" ] [text s.link]]
+            , div [] [ text "Formation : ", a [ class "workshop-item-link", Attr.href s.link, Attr.target "_blank" ] [ text s.link ] ]
             , div [ class "workshop-item-description" ] (workshopDescriptionFormatting s.description)
             ]
         ]

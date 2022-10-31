@@ -32,13 +32,19 @@ computeCssSponsor k =
             "sponsors-jaimescala-logo"
 
 
-computeCssSpeaker : KindTalk -> String
+computeCssSpeaker : PresentationKind -> String
 computeCssSpeaker k =
     case k of
         Keynote ->
             "speakers-keynote-picture"
 
         Talk ->
+            "speakers-talk-picture"
+
+        Quickie ->
+            "speakers-talk-picture"
+
+        Short ->
             "speakers-talk-picture"
 
 
@@ -70,11 +76,6 @@ type alias Contribution =
     }
 
 
-type KindTalk
-    = Keynote
-    | Talk
-
-
 type alias SpeakerData =
     { name : String
     , title : String
@@ -90,7 +91,7 @@ type alias SpeakerTalk =
     , description : String
     , abstract : String
     , audience_level : String
-    , lang : String
+    , lang : Lang
     }
 
 
@@ -106,61 +107,165 @@ type alias Speakers =
     }
 
 
-type Type
-    = Single
-    | Double
-    | Lunch
-    | AfterLunch
+type PresentationKind
+    = Talk
+    | Quickie
+    | Short
+    | Keynote
 
 
-type alias ScheduleItem =
-    { typ : Type
-    , time : String
-    , items : List String
-    , ids : Maybe (List String)
-    }
+type Lang
+    = EN
+    | FR
 
 
-type alias Schedule =
-    { items : List ScheduleItem
-    }
+type alias PresentationData =
+    { title : String, speaker : String, lang : Lang, kind : PresentationKind }
 
 
-decodeType : D.Decoder Type
-decodeType =
+type BreakKind
+    = Lunch
+    | Coffee
+    | Registration
+    | Introduction
+    | Empty
+    | Party
+
+
+type alias BreakData =
+    { kind : BreakKind }
+
+
+type ScheduleItem
+    = Presentation PresentationData
+    | Break BreakData
+
+
+type alias AloneData =
+    { time : String, item : ScheduleItem }
+
+
+type alias DoubleData =
+    { time : String, left : ScheduleItem, right : ScheduleItem }
+
+
+type ScheduleRow
+    = Alone AloneData
+    | Double DoubleData
+
+
+presentationKindDecoder : D.Decoder PresentationKind
+presentationKindDecoder =
     D.string
         |> D.andThen
             (\s ->
                 case s of
-                    "Single" ->
-                        D.succeed Single
+                    "Talk" ->
+                        D.succeed Talk
 
-                    "Double" ->
-                        D.succeed Double
+                    "Quickie" ->
+                        D.succeed Quickie
 
-                    "Lunch" ->
-                        D.succeed Lunch
+                    "Short" ->
+                        D.succeed Short
 
-                    "AfterLunch" ->
-                        D.succeed AfterLunch
+                    "Keynote" ->
+                        D.succeed Keynote
 
                     _ ->
-                        D.fail "Type in Schedule not defined"
+                        D.fail "Type in PresentationKind not defined"
             )
 
 
-sheduleItemDecoder : D.Decoder ScheduleItem
-sheduleItemDecoder =
-    D.map4 ScheduleItem
-        (D.field "typ" decodeType)
+breakKindDecoder : D.Decoder BreakKind
+breakKindDecoder =
+    D.string
+        |> D.andThen
+            (\s ->
+                case s of
+                    "Lunch" ->
+                        D.succeed Lunch
+
+                    "Coffee" ->
+                        D.succeed Coffee
+
+                    "Registration" ->
+                        D.succeed Registration
+
+                    "Introduction" ->
+                        D.succeed Introduction
+
+                    "Empty" ->
+                        D.succeed Empty
+
+                    "Party" ->
+                        D.succeed Party
+
+                    _ ->
+                        D.fail "Type in BreakKind not defined"
+            )
+
+
+langDecoder : D.Decoder Lang
+langDecoder =
+    D.string
+        |> D.andThen
+            (\s ->
+                case s of
+                    "en" ->
+                        D.succeed EN
+
+                    "fr" ->
+                        D.succeed FR
+
+                    _ ->
+                        D.fail "Type in Lang not defined"
+            )
+
+
+sheduleItemBreakDecoder : D.Decoder BreakData
+sheduleItemBreakDecoder =
+    D.map BreakData
+        (D.field "kind" breakKindDecoder)
+
+
+sheduleItemPresentationDecoder : D.Decoder PresentationData
+sheduleItemPresentationDecoder =
+    D.map4 PresentationData
+        (D.field "title" D.string)
+        (D.field "speaker" D.string)
+        (D.field "lang" langDecoder)
+        (D.field "kind" presentationKindDecoder)
+
+
+scheduleItemDecoder : D.Decoder ScheduleItem
+scheduleItemDecoder =
+    D.oneOf [ D.map Break sheduleItemBreakDecoder, D.map Presentation sheduleItemPresentationDecoder ]
+
+
+sheduleRowAloneDecoder : D.Decoder AloneData
+sheduleRowAloneDecoder =
+    D.map2 AloneData
         (D.field "time" D.string)
-        (D.field "items" (D.list D.string))
-        (D.optionalField "ids" (D.list D.string))
+        (D.field "item" scheduleItemDecoder)
 
 
-listScheduleItemDecoder : D.Decoder (List ScheduleItem)
-listScheduleItemDecoder =
-    D.list sheduleItemDecoder
+sheduleRowDoubleDecoder : D.Decoder DoubleData
+sheduleRowDoubleDecoder =
+    D.map3 DoubleData
+        (D.field "time" D.string)
+        (D.field "left" scheduleItemDecoder)
+        (D.field "right" scheduleItemDecoder)
+
+
+sheduleRowDecoder : D.Decoder ScheduleRow
+sheduleRowDecoder =
+    D.oneOf [ D.map Alone sheduleRowAloneDecoder, D.map Double sheduleRowDoubleDecoder ]
+
+
+listScheduleRowDecoder : D.Decoder (List ScheduleRow)
+listScheduleRowDecoder =
+    D.list sheduleRowDecoder
 
 
 type alias Workshop =
@@ -185,7 +290,7 @@ type alias GlobalData =
     { sponsors : Sponsors
     , contributions : List Contribution
     , speakers : Speakers
-    , schedule : List ScheduleItem
+    , schedule : List ScheduleRow
     , ws : WorkshopData
     }
 
@@ -239,7 +344,7 @@ talkDecoder =
         (D.field "description" D.string)
         (D.field "abstract" D.string)
         (D.field "audience_level" D.string)
-        (D.map (Maybe.withDefault "en") (D.optionalField "lang" D.string))
+        (D.map (Maybe.withDefault EN) (D.optionalField "lang" langDecoder))
 
 
 speakerDataDecoder : D.Decoder SpeakerData
@@ -308,7 +413,7 @@ globalData =
         (D.field "sponsors" sponsorsItemDecoder)
         (D.field "contributions" contributionsDecoder)
         (D.field "speakers" speakersDecoder)
-        (D.field "schedule" listScheduleItemDecoder)
+        (D.field "schedule" listScheduleRowDecoder)
         (D.field "workshopData" workshopData)
 
 

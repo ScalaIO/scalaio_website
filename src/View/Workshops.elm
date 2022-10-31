@@ -2,7 +2,7 @@ module View.Workshops exposing (..)
 
 import Components.DataStruct exposing (GlobalData)
 import Components.Utils exposing (transformWorkshop)
-import Html exposing (Html, a, div, h2, text, br, b)
+import Html exposing (Html, a, b, br, div, h2, text)
 import Html.Attributes as Attr exposing (class)
 
 
@@ -12,14 +12,16 @@ view gd =
         [ h2 [ class "workshop-program-title" ]
             [ text "Workshop 2022 Program" ]
         , div [ class "workshop-info" ]
-            [ b [] [text "Workshop venue address : "] , text gd.ws.address ]
+            [ b [] [ text "Workshop venue address : " ], text gd.ws.address ]
         , div [ class "workshop-info" ]
-            [ b [] [text  "Workshop schedule : "] , text gd.ws.horaires ]
-        , div [class "workshop-info"]
-            [ b [] [text "Scala Spree : "] , text "Thurday, Novembre 3rd. From 1:30 pm to 5h30 pm, same venue."
+            [ b [] [ text "Workshop schedule : " ], text gd.ws.horaires ]
+        , div [ class "workshop-info" ]
+            [ b [] [ text "Scala Spree : " ]
+            , text "Thurday, Novembre 3rd. From 1:30 pm to 5h30 pm, same venue."
             , br [] []
             , text "More informations for the opensource spreee "
-            , a [Attr.href "https://github.com/scalacenter/sprees#paris-france-thursday-3rd-november-2022"] [text "Here."]]
+            , a [ Attr.href "https://github.com/scalacenter/sprees#paris-france-thursday-3rd-november-2022" ] [ text "Here." ]
+            ]
         , div [ class "workshop-info workshop-info-warning" ]
             [ div []
                 [ text "Workshop ticket include pass conference. It can be bought from our "

@@ -1,7 +1,7 @@
 module View.Speakers exposing (..)
 
-import Components.DataStruct as SponsorKind exposing (GlobalData, KindTalk(..), SponsorKind)
-import Components.Utils exposing (transformSpeaker, transformSponsor)
+import Components.DataStruct exposing (GlobalData, PresentationKind(..), SponsorKind)
+import Components.Utils exposing (transformSpeaker)
 import Html exposing (Html, div, h2, text)
 import Html.Attributes as Attr exposing (class)
 

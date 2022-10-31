@@ -338,10 +338,52 @@
         width: 35%;
     }
 
+    .flag {
+        width: 20px;
+        height: 20px;
+        float:left;
+        margin-right: 5px;
+    }
+
+    .schedule-program-subject-talk-title {
+        font-weight: bold;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .schedule-program-subject-talk-information {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .schedule-program-subject-talk-speaker {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .schedule-program-subject-talk-kind {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
     .schedule-program-subject-talk {
-        background-color: #3c3c3c;
+        background-color: #464646;
         color: #fff5f5;
         width: 35%;
+        padding: 5px 10px;
+        height: 70px;
+    }
+
+    .schedule-program-subject-talk-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
     }
 
     .schedule-program-subject-launch {

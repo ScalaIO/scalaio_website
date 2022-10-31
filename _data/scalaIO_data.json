@@ -745,136 +745,167 @@
   },
   "schedule": [
     {
-      "typ": "Single",
       "time": "08:00 - 09:00",
-      "items": [
-        "Registration"
-      ]
+      "item": { "kind": "Registration" }
     },
     {
-      "typ": "Single",
       "time": "09:00 - 09:20",
-      "items": [
-        "Introduction"
-      ]
+      "item": { "kind": "Introduction" }
     },
     {
-      "typ": "Single",
       "time": "09:25 - 10:20",
-      "items": ["Opening Keynote"],
-      "ids" : ["martin-odersky"]
+      "item": {
+        "title": "Opening Keynote",
+        "speaker": "Martin Oderski",
+        "lang": "en",
+        "kind": "Keynote"
+      }
     },
     {
-      "typ": "Double",
       "time": "10:30 - 11:00",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids" : [
-        "matthieu-baechler",
-        "guillaume-martres"
-      ]
+      "left": {
+        "title": "When stateless APIs are not enough: deep dive into a reactive backend design",
+        "speaker": "Matthieu Baechler & Luc Duzan",
+        "lang": "en",
+        "kind": "Short"
+      },
+      "right": {
+        "title": "Secrets of the Scala Type System",
+        "speaker": "Guillaume Martres",
+        "lang": "en",
+        "kind": "Short"
+      }
     },
     {
-      "typ": "Double",
       "time": "11:05 - 11:35",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids" : [
-        "alexandre-archambault",
-        "jules-ivanic"
-      ]
+      "left": {
+        "title": "Adding Python support to Scala tooling",
+        "speaker": "Alexandre Archambault",
+        "lang": "en",
+        "kind": "Short"
+      },
+      "right": {
+        "title": "Cost-effective and easy to maintain GraphQL API integration tests with zio-test and Caliban",
+        "speaker": "Jules Ivanic",
+        "lang": "en",
+        "kind": "Short"
+      }
     },
     {
-      "typ": "Double",
       "time": "11:40 - 12:25",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids" : [
-        "sebastien-doeraene",
-        "daniel-beskin"
-      ]
+      "left": {
+        "title": "???",
+        "speaker": "Sébastien Doeraene",
+        "lang": "en",
+        "kind": "Talk"
+      },
+      "right": {
+        "title": "Category Theory as a Tool for Thought",
+        "speaker": "Daniel Beskin",
+        "lang": "en",
+        "kind": "Talk"
+      }
     },
     {
-      "typ": "Lunch",
       "time": "12h25 - 13:15",
-      "items": [
-        "Lunch break"
-      ]
+      "item": { "kind": "Lunch" }
     },
     {
-      "typ": "AfterLunch",
-      "time": "13:15 - 13:50",
-      "items": [
-        "Lightning talks"
-      ],
-      "ids": ["agnes-maury", "pierre-dal-pra"]
+      "time": "13:15 - 13:30",
+      "left": {
+        "title": "Ivre et au chômage, elle décide d'écrire un livre sur le Scala en plein Covid",
+        "speaker": "Agnès Maury",
+        "lang": "fr",
+        "kind": "Quickie"
+      },
+      "right": { "kind": "Empty" }
     },
     {
-      "typ": "Double",
+      "time": "13:30 - 13:45",
+      "left": {
+        "title": "Nix: la FP pour vos livrables et déploiements",
+        "speaker": "Pierre Dal-Pra",
+        "lang": "fr",
+        "kind": "Quickie"
+      },
+      "right": { "kind": "Empty" }
+    },
+    {
       "time": "13:55 - 14:35",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids": [
-        "julien-truffaut",
-        "vincent-debergue"
-      ]
+      "left": {
+        "title": "Implicit parameters, when to use them (or not)!",
+        "speaker": "Julien Truffaut",
+        "lang": "en",
+        "kind": "Talk"
+      },
+      "right": {
+        "title": "Overall journey of 8 years product development",
+        "speaker": "Vincent Debergue",
+        "lang": "fr",
+        "kind": "Talk"
+      }
     },
     {
-      "typ": "Double",
       "time": "14:40 - 15:25",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids": [
-        "nicolas-rinaudo",
-        "nicolas-francois"
-      ]
+      "left": {
+        "title": "Function reuse is just wishful thinking",
+        "speaker": "Nicolas Rinaudo",
+        "lang": "en",
+        "kind": "Talk"
+      },
+      "right": {
+        "title": "Type/Test/Whatever Driven Development: Partage d'expérience",
+        "speaker": "Nicolas Francois",
+        "lang": "fr",
+        "kind": "Talk"
+      }
     },
     {
-      "typ": "Double",
       "time": "15:30 - 16:15",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids": [
-        "chris-kipp",
-        "loic-knuchel"
-      ]
+      "left": {
+        "title": "The Journey of a Dotty Diagnostic",
+        "speaker": "Chris Kipp",
+        "lang": "en",
+        "kind": "Talk"
+      },
+      "right": {
+        "title": "Elm, un langage simple et purement fonctionnel pour le front end",
+        "speaker": "Loïc Knuchel",
+        "lang": "fr",
+        "kind": "Talk"
+      }
     },
     {
-      "typ": "Single",
       "time": "16:15 - 16:35",
-      "items": [
-        "Coffee Break"
-      ]
+      "item": { "kind":  "Coffee"}
     },
     {
-      "typ": "Double",
       "time": "16:35 - 17:20",
-      "items": [
-        "Talk",
-        "Talk"
-      ],
-      "ids": [
-        "jamie-thompson",
-        "nouguier-olivier"
-      ]
+      "left": {
+        "title": "Discover TASTy Query: The library for Scala whole program analysis",
+        "speaker": "Jamie Thompson",
+        "lang": "en",
+        "kind": "Talk"
+      },
+      "right": {
+        "title": "ZIO Streaming connector for Pravega",
+        "speaker": "Olivier Nouguier",
+        "lang": "en",
+        "kind": "Talk"
+      }
     },
     {
-      "typ": "Single",
       "time": "17:25 - 18:20",
-      "items": ["Closing Keynote"],
-      "ids" : ["adam-fraser"]
+      "item": {
+        "title": "Closing Keynote",
+        "speaker": "Adam fraser",
+        "lang": "en",
+        "kind": "Keynote"
+      }
+    },
+    {
+      "time": "19:00 - ???",
+      "item": { "kind":  "Party"}
     }
   ],
   "workshopData": {
