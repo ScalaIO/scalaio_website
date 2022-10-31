@@ -90,6 +90,7 @@ type alias SpeakerTalk =
     , description : String
     , abstract : String
     , audience_level : String
+    , lang : String
     }
 
 
@@ -116,6 +117,7 @@ type alias ScheduleItem =
     { typ : Type
     , time : String
     , items : List String
+    , ids : Maybe (List String)
     }
 
 
@@ -149,10 +151,11 @@ decodeType =
 
 sheduleItemDecoder : D.Decoder ScheduleItem
 sheduleItemDecoder =
-    D.map3 ScheduleItem
+    D.map4 ScheduleItem
         (D.field "typ" decodeType)
         (D.field "time" D.string)
         (D.field "items" (D.list D.string))
+        (D.optionalField "ids" (D.list D.string))
 
 
 listScheduleItemDecoder : D.Decoder (List ScheduleItem)
@@ -231,11 +234,12 @@ contributionDecoder =
 
 talkDecoder : D.Decoder SpeakerTalk
 talkDecoder =
-    D.map4 SpeakerTalk
+    D.map5 SpeakerTalk
         (D.field "talk_format" D.string)
         (D.field "description" D.string)
         (D.field "abstract" D.string)
         (D.field "audience_level" D.string)
+        (D.map (Maybe.withDefault "en") (D.optionalField "lang" D.string))
 
 
 speakerDataDecoder : D.Decoder SpeakerData
