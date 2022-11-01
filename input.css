@@ -369,6 +369,7 @@
         font-size: 14px;
         margin: 0;
         padding: 0;
+        text-align: right;
     }
 
     .schedule-program-subject-talk {
@@ -850,6 +851,18 @@
     }
 
     @media only screen and (max-width: 600px) {
+        .schedule-program-subject-talk-content {
+            gap: 20px;
+        }
+        .schedule-program-subject-talk-information {
+            flex-direction: column;
+            justify-content: left;
+        }
+
+        .schedule-program-subject-talk-kind {
+            text-align: left;
+        }
+
         .venue-reach-map {
             border: 0;
             width: 100%;
