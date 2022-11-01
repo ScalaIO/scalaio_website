@@ -277,9 +277,9 @@
         "abstract": "Starting from scratch, we build a small Scala.js (https://www.scala-js.org/) application with a minimal, live-editable bar chart. We show a setup for a fast save-refresh cycle. We use Metals, sbt, Vite, Laminar, Chart.js and ScalablyTyped. Includes an intro to the FRP model of Laminar.",
         "audience_level" : "",
         "title" : "Getting started with Scala.js, Laminar and Vite",
-        "speaker-title" : "",
+        "speaker-title" : "Compiler/runtime systems hacker,\r\nScala enthusiast",
         "bio" : "Sébastien Doeraene is a compiler/runtime systems hacker and a Scala enthusiast. Best known as the author of Scala.js, he is now technical director of the Scala Center. He holds a PhD from EPFL, having worked under the supervision of Prof. Martin Odersky, and a master’s degree in computer science engineering from Université catholique de Louvain in Belgium. When he is not busy coding, he sings in choirs and a cappella groups such as the Ensemble Vocal Évohé, or composes for said choirs.",
-        "organization" : ""
+        "organization" : "EPFL"
       },
       {
         "name": "Jules Ivanic",
