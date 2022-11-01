@@ -117,7 +117,6 @@ view gd =
         , h2 [ class "schedule-program-title" ]
             [ text "ScalaIO 2022 Program" ]
         , p [ class "schedule-program-information" ] [ text "The CFP is closed. " ]
-        , p [ class "schedule-program-information" ] [ text "The schedule will be published soon." ]
         , table [ class "schedule-program" ]
             (List.map renderScheduleRow gd.schedule)
         , hr [] []
