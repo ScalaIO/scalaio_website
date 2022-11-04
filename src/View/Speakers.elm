@@ -10,7 +10,7 @@ view : GlobalData -> Html msg
 view gd =
     div []
         [ div [ Attr.class "flex justify-center" ] [ h2 [] [ text "Keynote" ] ]
-        , div [ class "flex justify-around" ] (transformSpeaker gd.speakers.keynote Keynote)
+        , div [ class "keynote-speaker" ] (transformSpeaker gd.speakers.keynote Keynote)
         , div [ Attr.class "flex justify-center" ] [ h2 [] [ text "Talks" ] ]
         , div [ class "speakers-talk" ] (transformSpeaker gd.speakers.talk Talk)
         ]

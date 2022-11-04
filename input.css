@@ -728,6 +728,13 @@
         display: none;
     }
 
+    .keynote-speaker {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 50px
+    }
+
     .talk-content{
         display: flex;
         flex-direction: column;
