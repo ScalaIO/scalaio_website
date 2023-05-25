@@ -18,4 +18,6 @@ cfp =
 view : Html msg
 view =
     div [ Attr.class "home" ]
-        [ p [ Attr.class "home-title" ] [ text "Scala.io 2022 is already over 🤧" ], p [ Attr.class "home-title" ] [ text "Thank you for coming and see you the 26th and 27th of October 2023 for our 10 years edition !" ] ]
+        [ p [ Attr.class "home-title" ] [ text "ScalaIO 2023 is coming 😊" ],
+         p [ Attr.class "home-title" ]
+          [ text "Stay tune ! 🔥" ] ]

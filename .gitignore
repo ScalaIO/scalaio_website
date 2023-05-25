@@ -7,3 +7,4 @@ dist/
 public/style.css
 */**/.DS_Store
 .DS_Store
+.tool-versions

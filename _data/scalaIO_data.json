@@ -1,94 +1,19 @@
 {
   "sponsors": {
     "platine": [
-      {
-        "name": "lunatech",
-        "url": "https://lunatech.com/"
-      },
-      {
-        "name": "strangebee",
-        "url": "https://www.strangebee.com/"
-      }
+
     ],
     "gold": [
-      {
-        "name": "reach5",
-        "url": "https://www.reachfive.com/"
-      },
-      {
-        "name": "gatling",
-        "url": "https://gatling.io/"
-      },
-      {
-        "name": "starlake",
-        "url": "https://www.starlake.ai"
-      },
-      {
-        "name": "teads",
-        "url": "https://www.teads.com"
-      },
-      {
-        "name": "ziverge",
-        "url": "https://ziverge.com/"
-      }
+
     ],
     "community": [
-      {
-        "name": "zio",
-        "url": "https://zio.dev/"
-      },
-      {
-        "name": "ambient-it",
-        "url": "https://www.ambient-it.net/"
-      },
-      {
-        "name": "univalence",
-        "url": "https://univalence.io/"
-      },
-      {
-        "name": "fptower",
-        "url": "https://www.fp-tower.com/"
-      },
-      {
-        "name": "scalacenter",
-        "url": "https://scala.epfl.ch/"
-      }
+
     ],
     "silver": [
-      {
-        "name": "hawk",
-        "url": "https://hawk-tech.io/"
-      },
-      {
-        "name": "colisweb",
-        "url": "https://www.colisweb.com"
-      },
-      {
-        "name": "umatr",
-        "url": "https://www.umatr.io/embedded"
-      },
-      {
-        "name": "clever",
-        "url": "https://www.clever-cloud.com/"
-      }
+
     ],
     "jaimescala": [
-      {
-        "name": "besodo",
-        "url": "https://besedo.com/"
-      },
-      {
-        "name": "fptower",
-        "url": "https://www.fp-tower.com/"
-      },
-      {
-        "name": "rudder",
-        "url": "https://www.rudder.io/"
-      },
-      {
-        "name": "univalence",
-        "url": "https://univalence.io/"
-      }
+
     ]
   },
   "contributions": [

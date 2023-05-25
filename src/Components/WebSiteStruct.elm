@@ -18,7 +18,7 @@ header =
     div [ Attr.class "header" ]
         [ img [ src "/assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
         , h1 [ Attr.class "header-title" ] [ Html.text "The Scala event in France!" ]
-        , span [ Attr.class "header-teaser" ] [ Html.text "Workshops / Spree, November 3rd and Conference, November 4th - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ] ]
+        , span [ Attr.class "header-teaser" ] [ Html.text "October 26th and 27th - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ] ]
         ]
 
 
@@ -37,11 +37,11 @@ navbar =
         , nav []
             [ ul []
                 [ li [] [ viewLink "venue" ]
-                , li [] [ viewLink "schedule" ]
-                , li [] [ viewLink "workshops" ]
-                , li [] [ viewLink "speakers" ]
-                , li [] [ viewLink "partners" ]
-                , li [] [ viewLink "sponsorship" ]
+                --, li [] [ viewLink "schedule" ]
+                --, li [] [ viewLink "workshops" ]
+                --, li [] [ viewLink "speakers" ]
+                --, li [] [ viewLink "partners" ]
+                --, li [] [ viewLink "sponsorship" ]
                 , li [] [ viewLink "faq" ]
                 , li [] [ viewLink "hall-of-fame" ]
 
