@@ -18,7 +18,7 @@ header =
     div [ Attr.class "header" ]
         [ img [ src "/assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
         , h1 [ Attr.class "header-title" ] [ Html.text "The Scala event in France!" ]
-        , span [ Attr.class "header-teaser" ] [ Html.text "October 26th and 27th - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ] ]
+        , span [ Attr.class "header-teaser" ] [ Html.text "Thursday, October 26th and Friday, October 27th - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ] ]
         ]
 
 
