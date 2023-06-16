@@ -40,7 +40,7 @@ navbar =
                 --, li [] [ viewLink "schedule" ]
                 --, li [] [ viewLink "workshops" ]
                 --, li [] [ viewLink "speakers" ]
-                --, li [] [ viewLink "partners" ]
+                , li [] [ viewLink "partners" ]
                 , li [] [ viewLink "sponsorship" ]
                 , li [] [ viewLink "faq" ]
                 , li [] [ viewLink "hall-of-fame" ]
