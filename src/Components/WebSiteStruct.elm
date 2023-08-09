@@ -36,14 +36,16 @@ navbar =
         , input [ type_ "checkbox", id "toggle-1" ] []
         , nav []
             [ ul []
-                [ li [] [ viewLink "venue" ]
+                [
+                -- li [] [ viewLink "venue" ]
                 --, li [] [ viewLink "schedule" ]
                 --, li [] [ viewLink "workshops" ]
                 --, li [] [ viewLink "speakers" ]
-                , li [] [ viewLink "partners" ]
-                , li [] [ viewLink "sponsorship" ]
-                , li [] [ viewLink "faq" ]
-                , li [] [ viewLink "hall-of-fame" ]
+                --, li [] [ viewLink "partners" ]
+                --, li [] [ viewLink "sponsorship" ]
+                --, li [] [ viewLink "faq" ]
+                --,
+                 li [] [ viewLink "hall-of-fame" ]
 
                 --, DropDown.view model |> Html.map wrapDd
                 ]
