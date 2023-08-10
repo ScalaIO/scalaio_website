@@ -14,30 +14,20 @@ cfp =
             ]
         ]
 
+cancel : Html msg
+cancel =
+    div [ class "home-news" ]
+        [ h2 [ Attr.class "home-title" ]
+         [ text "Regrettably, we must announce the cancellation of the scheduled ScalaIO conference. After extensive deliberation, we couldn't meet the necessary conditions to deliver the event you deserve"
+
+    ]
+
+   ]
 
 view : Html msg
 view =
     div [ Attr.class "home" ]
-      [cfp, h2 [ Attr.class "home-title" ] [ text "Buy your ticket for edition 2023 now" ]
-              , p [] [ text "ScalaIO is a community based, non-profit event. See our ", a [ Attr.href "/faq", Attr.target "_blank" ] [ text "F.A.Q" ], text " for more information." ]
-              , iframe
-                  [ Attr.src "https://yurplan.com/events/Scala-IO-2023/105180/tickets/widget?widget=dGlja2V0aW5nV2lkZ2V0WXBfMTAzMTU2XzEwNjU2Nw%3D%3D&from=widget_106567&wversion=1&culture=fr"
-                  , class "home-ticketing"
-                  ]
-                  []
-              , node "script"
-                  [ Attr.type_ "text/javascript"
-                  , Attr.src "https://assets.yurplan.com/yurplan-v1/dist/widget.js"
-                  ]
-                  []
-              , div [ class "home-ticketing-disclaimer" ]
-                  [ text "If you get an error buying through the Iframe, please try using the  "
-                  , a [ Attr.href "https://yurplan.com/event/Scala-IO-2023/105180", Attr.target "_blank", class "href-link" ] [ text " minisite" ]
-                  , text " and "
-                  , a [ Attr.href "mailto:contact@scala.io", Attr.target "_blank", class "href-link" ] [ text "let us know" ]
-                  , text "."
-                  ]
-              ]
+      [cancel,div [Attr.class "home-title"] [text "ScalaIO team"]]
 
       --  [ p [ Attr.class "home-title" ] [ text "ScalaIO 2023 is coming 😊" ],
       --  p [ Attr.class "home-title" ]
