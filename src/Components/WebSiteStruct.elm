@@ -3,29 +3,35 @@ module Components.WebSiteStruct exposing (globalPageStructure)
 import Components.DataStruct exposing (GlobalData, Sponsor, SponsorKind(..), computeCssSponsor)
 import Components.Footer exposing (footer)
 import Components.Utils exposing (capitalize, transformSponsor)
-import Html exposing (Html, div, h1, h3, hr, img, input, label, li, nav, p, span, text, ul)
+import Html exposing (Html, div, h1, h3, hr, img, input, label, li, nav, p, span, text, ul, a)
 import Html.Attributes as Attr exposing (..)
 import String exposing (..)
 
 
 viewLink : String -> Html msg
 viewLink path =
-    Html.a [ Attr.href ("/" ++ path), class "uncommon-a" ] [ Html.text (String.replace "-" " " path |> capitalize) ]
+    a [ Attr.href ("/" ++ path), class "uncommon-a" ] [ text (String.replace "-" " " path |> capitalize) ]
 
 
 header : Html msg
 header =
     div [ Attr.class "header" ]
-        [ img [ src "/assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] []
-        , h1 [ Attr.class "header-title" ] [ Html.text "The Scala event in France!" ]
-        , span [ Attr.class "header-teaser" ] [ Html.text "Thursday, October 26th and Friday, October 27th - ", Html.span [ Attr.class "red" ] [ Html.text "Paris" ] ]
+        [ 
+            img [ src "/assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] [],
+            h1 [ Attr.class "header-title" ] [ text "The Scala event in France!" ],
+            span [ Attr.class "header-teaser" ] [
+                text "TBD (Range from 12-13th February to 22-23th) - ",
+                span [ Attr.class "red" ] [ text "Nantes" ],
+                span [ ] [text " @ "],
+                a [ Attr.href "https://maps.app.goo.gl/o22S4SjA2v11R6ef8"] [text "Le Palace"]
+            ]
         ]
 
 
 navbar : Html msg
 navbar =
     Html.header [ class "navbar" ]
-        [ Html.a [ Attr.href "/", class "uncommon-a" ] [ Html.text "Scala", Html.span [ Attr.class "red" ] [ Html.text "IO" ] ]
+        [ a [ Attr.href "/", class "uncommon-a" ] [ text "Scala", span [ Attr.class "red" ] [ text "IO" ] ]
         , label [ for "toggle-1", class "toggle-menu" ]
             [ ul []
                 [ li [] []

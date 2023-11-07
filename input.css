@@ -56,6 +56,11 @@
         margin: 40px;
     }
 
+    .list-no-vmargin {
+        list-style-type: circle;
+        margin-left: 40px;
+    }
+
     .wrapper {
         box-sizing: border-box;
         min-height: 100%;
@@ -111,7 +116,6 @@
         margin-top: 0;
         text-align: center;
         font-size: 1.45em;
-        text-decoration:line-through;
     }
 
     .home {
@@ -675,9 +679,6 @@
         float: right;
     }
 
-    nav ul {
-    }
-
     nav ul li {
         float: left;
     }
@@ -937,11 +938,6 @@
 
         .footer-newsletter-form {
             display: flex;
-            justify-content: center;
-        }
-
-        .footer-newsletter-form {
-            display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 10px;
@@ -973,7 +969,7 @@
         label {
             float: right;
             padding: 8px 0px;
-            display: inline-block;
+            display: block;
             cursor: pointer;
         }
 
@@ -1014,12 +1010,6 @@
         nav ul li a i {
             color: #fde428;
             padding-right: 13px;
-        }
-
-        .speakers-talk {
-            display: flex;
-            flex-direction: column;
-            row-gap: 30px;
         }
 
         .schedule-program {
