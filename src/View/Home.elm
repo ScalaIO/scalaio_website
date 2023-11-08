@@ -7,7 +7,7 @@ import Html.Attributes as Attr exposing (class, style)
 cfp : Html msg
 cfp =
     div [ class "home-news" ]
-        [ h2 [ Attr.class "home-title" ] [ text "Call for paper for edition 2023 is open" ]
+        [ h2 [ Attr.class "home-title" ] [ text "Call fDr paper for edition 2023 is open" ]
         , div [ class "cfp" ]
             [ span [ Attr.class "cfp-icon" ] [ text "💡" ]
             , p [] [ text "We actively are looking for speakers. If you want to share some functional programming aspect with us, feel free to fulfill ", a [ Attr.href "https://www.papercall.io/scalaio2023", Attr.target "_blank" ] [ text "your submission" ], text "." ]
