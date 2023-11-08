@@ -8,3 +8,5 @@ public/style.css
 */**/.DS_Store
 .DS_Store
 .tool-versions
+pnpm-lock.yaml
+.vscode
