@@ -1,6 +1,6 @@
 module View.Home exposing (view)
 
-import Html exposing (Html, a, div, h2, hr, iframe, node, p, span, text)
+import Html exposing (Html, a, div, h2, hr, iframe, node, p, span, text, ul, li)
 import Html.Attributes as Attr exposing (class, style)
 
 
@@ -14,20 +14,22 @@ cfp =
             ]
         ]
 
-cancel : Html msg
-cancel =
+comeback : Html msg
+comeback =
     div [ class "home-news" ]
-        [ h2 [ Attr.class "home-title" ]
-         [ text "Regrettably, we must announce the cancellation of the scheduled ScalaIO conference. After extensive deliberation, we couldn't meet the necessary conditions to deliver the event you deserve"
-
-    ]
-
-   ]
+        [ 
+            h2 [ Attr.class "home-title" ] [ text "Scala.IO comes back!" ],
+            p [] [ text "We are happy to announce that Scala.IO will be back early 2024! To fine-tune the organization, we need to collect some information from you about your availabilities and other things. Please fill this form as precisely as possible for us :-)", ul [ Attr.class "list-no-vmargin"] [
+                li [] [a [ Attr.href "https://forms.gle/FcA2JprHk4L6Qx6g9", Attr.target "_blank" ] [ text "English version"]],
+                li [] [a [ Attr.href "https://forms.gle/E4VCTCPXiSdujV1c7", Attr.target "_blank"] [ text "Version Française"]]
+                ]
+            ]
+        ]
 
 view : Html msg
 view =
     div [ Attr.class "home" ]
-      [cancel,div [Attr.class "home-title"] [text "ScalaIO team"]]
+      [comeback,div [Attr.class "home-title"] [text "ScalaIO team"]]
 
       --  [ p [ Attr.class "home-title" ] [ text "ScalaIO 2023 is coming 😊" ],
       --  p [ Attr.class "home-title" ]
