@@ -1,6 +1,6 @@
 module View.Home exposing (view)
 
-import Html exposing (Html, a, div, h2, hr, iframe, node, p, span, text, ul, li)
+import Html exposing (Html, a, b, div, h2, hr, iframe, li, node, p, span, text, ul)
 import Html.Attributes as Attr exposing (class, style)
 
 
@@ -18,12 +18,13 @@ comeback : Html msg
 comeback =
     div [ class "home-news" ]
         [ 
-            h2 [ Attr.class "home-title" ] [ text "Scala.IO comes back!" ],
-            p [] [ text "We are happy to announce that Scala.IO will be back early 2024! To fine-tune the organization, we need to collect some information from you about your availabilities and other things. Please fill this form as precisely as possible for us :-)", ul [ Attr.class "list-no-vmargin"] [
-                li [] [a [ Attr.href "https://forms.gle/FcA2JprHk4L6Qx6g9", Attr.target "_blank" ] [ text "English version"]],
-                li [] [a [ Attr.href "https://forms.gle/E4VCTCPXiSdujV1c7", Attr.target "_blank"] [ text "Version Française"]]
-                ]
-            ]
+            h2 [ Attr.class "home-title" ] [ text "Save the date!" ],
+            p [] [
+              text "We are happy to announce that ScalaIO will take place on ",
+              b [] [ text "February 15th - 16th 2024" ],
+              text ". More information incoming soon."
+            ],
+            p [ Attr.align "center" ] [ text "See you there!" ]
         ]
 
 view : Html msg
