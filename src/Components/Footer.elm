@@ -62,7 +62,8 @@ footer =
     div [ class "footer" ]
         [ div [ class "footer-menu" ]
             [ networks
-            , newsletter
+            -- FIXME: does not work (mailchimp 404)
+            --, newsletter
             ]
         , copyright
         ]
