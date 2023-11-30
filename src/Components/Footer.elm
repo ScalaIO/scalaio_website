@@ -18,7 +18,7 @@ newsletter =
         [ h3 [] [ text "Newsletter" ]
         , p [] [ text "Subscribe to our newsletter and be the first to know about our news !" ]
         , Html.form
-            [ action "https://scala.us13.list-manage.com/subscribe/post?u=32bc8243e81ad6b3dde9a6717&amp;id=c28c7e3f2b"
+            [ action "https://pm.us21.list-manage.com/subscribe/post?u=4b3f57c730963d7046d571d18&amp;id=66f1c9c459&amp;f_id=008ae1e6f0"
             , method "post"
             , id "mc-embedded-subscribe-form"
             , name "mc-embedded-subscribe-form"
@@ -39,6 +39,7 @@ newsletter =
                 , Attr.name "EMAIL"
                 , Attr.class "required email form-control"
                 , Attr.id "mce-EMAIL"
+                , Attr.style "color" "black"
                 ]
                 []
             , button [ Attr.type_ "submit", Attr.class "footer-newsletter-form-button" ] [ text "Subscribe" ]
@@ -61,9 +62,6 @@ footer : Html msg
 footer =
     div [ class "footer" ]
         [ div [ class "footer-menu" ]
-            [ networks
-            -- FIXME: does not work (mailchimp 404)
-            --, newsletter
-            ]
+            [ networks, newsletter]
         , copyright
         ]
