@@ -20,7 +20,7 @@ header =
             img [ src "/assets/logos/scalaio/scalaio_short.svg", alt "scalaio logo" ] [],
             h1 [ Attr.class "header-title" ] [ text "The Scala event in France!" ],
             span [ Attr.class "header-teaser" ] [
-                text "TBD (Range from 12-13th February to 22-23th) - ",
+                text "February 15th - 16th / ",
                 span [ Attr.class "red" ] [ text "Nantes" ],
                 span [ ] [text " @ "],
                 a [ Attr.href "https://maps.app.goo.gl/o22S4SjA2v11R6ef8"] [text "Le Palace"]
