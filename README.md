@@ -1,3 +1,12 @@
+# :warning: Repository Archived :warning:
+
+---
+
+## Attention Contributors and Users
+
+This repository is now **archived** and **no longer actively maintained**
+
+
 # Scala.IO conferences website
 
 This repository host the code for the website: https://scala.io/.
